@@ -22,10 +22,10 @@ h2 {
 
 .button-container {
     margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(5, auto); /* key change */
+    display: flex;
+    justify-content: center;
     gap: 20px;
-    justify-content: center; /* keeps layout centered */
+    flex-wrap: wrap;
 }
 
 .game-button {
