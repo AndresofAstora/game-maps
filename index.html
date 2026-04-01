@@ -52,6 +52,25 @@
         transform: scale(1.08);
         background-color: #222;
     }
+    .game-image span {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+/* hover: lighten + grow */
+.game-image:hover::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.game-image:hover {
+    transform: scale(1.08);
+}
 </style>
 </head>
 
@@ -61,23 +80,19 @@
 <h2>By ANDRESOFASTORA</h2>
 
 <div class="button-container">
-    <a href="./silksong.html" class="game-card">
-        <img src="images/cover-silksong.jpg" alt="Silksong">
+    <a href="./silksong.html" class="game-button game-image" style="--bg:url('images/silksong.jpg')">
         <span>Hollow Knight: Silksong</span>
     </a>
 
-    <a href="./mortalshell.html" class="game-card">
-        <img src="images/cover-mortalshell.jpg" alt="Mortal Shell">
+    <a href="./mortalshell.html" class="game-button game-image" style="--bg:url('images/mortalshell.jpg')">
         <span>Mortal Shell</span>
     </a>
 
-    <a href="./liesofp.html" class="game-card">
-        <img src="images/cover-liesofp.jpg" alt="Lies of P">
+    <a href="./liesofp.html" class="game-button game-image" style="--bg:url('images/liesofp.jpg')">
         <span>Lies of P</span>
     </a>
 
-    <a href="./megabytepunch.html" class="game-card">
-        <img src="images/cover-megabytepunch.jpg" alt="Megabyte Punch">
+    <a href="./megabytepunch.html" class="game-button game-image" style="--bg:url('images/megabytepunch.jpg')">
         <span>Megabyte Punch</span>
     </a>
 </div>
