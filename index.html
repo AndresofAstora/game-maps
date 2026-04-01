@@ -44,6 +44,7 @@
         border-radius: 10px;
         color: white;
         font-size: 16px;
+        text-decoration: none;
         cursor: pointer;
         transition: transform 0.2s ease, background-color 0.2s ease;
     }
@@ -52,15 +53,25 @@
         transform: scale(1.08);
         background-color: #222;
     }
-    .game-image span {
+.game-image {
     position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 10px;
-    text-align: center;
+    width: 220px;
+    height: 120px;
+    padding: 0;
+    overflow: hidden;
+
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 80% dark overlay */
+.game-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: background 0.2s ease;
 }
 
 /* hover: lighten + grow */
