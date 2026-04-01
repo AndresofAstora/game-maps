@@ -35,11 +35,11 @@ h2 {
     border: 2px solid #444;
     border-radius: 10px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease;
 
-    width: 180px;           /* consistent size */
+    width: 180px;
     text-align: center;
 }
 
