@@ -1,41 +1,76 @@
 const MEGABYTE_MAPS = {
   map1: {
-    title: "Factory Zone",
+    title: "Electro Caves 1",
     image: "../assets/megabyte-map1.jpg",
     categories: {
-      enemies: [
-        { coords: [300, 400], label: "Enemy Spawn A" }
+      Start: [
+        { coords: [300, 400], label: "Start" }
       ],
-      items: [
-        { coords: [500, 600], label: "Upgrade Core" }
+      End: [
+        { coords: [500, 600], label: "End" }
       ],
-      secrets: [
-        { coords: [700, 200], label: "Hidden Room" }
+      Ckeckpoint: [
+        { coords: [700, 200], label: "Checkpoint" }
+      ],
+       Bit Chest: [
+        { coords: [800, 300], label: "Bit Chest" }
+      ],
+       Part Chest: [
+        { coords: [900, 400], label: "Part Chest" }
+      ],
+       Color Capsule: [
+        { coords: [1000, 500], label: "Color Capsule" }
       ]
     }
   },
 
   map2: {
-    title: "Junkyard",
+    title: "Electro Caves 2",
     image: "../assets/megabyte-map2.jpg",
     categories: {
-      enemies: [
-        { coords: [200, 300], label: "Scrap Bot" }
+      Start: [
+        { coords: [300, 400], label: "Start" }
       ],
-      items: [],
-      secrets: []
+      End: [
+        { coords: [500, 600], label: "End" }
+      ],
+      Ckeckpoint: [
+        { coords: [700, 200], label: "Checkpoint" }
+      ],
+       Bit Chest: [
+        { coords: [800, 300], label: "Bit Chest" }
+      ],
+       Part Chest: [
+        { coords: [900, 400], label: "Part Chest" }
+      ],
+       Color Capsule: [
+        { coords: [1000, 500], label: "Color Capsule" }
+      ]
     }
   },
 
   map3: {
-    title: "Sky Platform",
+    title: "Electro Caves 3",
     image: "../assets/megabyte-map3.jpg",
     categories: {
-      enemies: [],
-      items: [
-        { coords: [600, 500], label: "Jet Booster" }
+      Start: [
+        { coords: [300, 400], label: "Start" }
       ],
-      secrets: []
+      End: [
+        { coords: [500, 600], label: "End" }
+      ],
+      Ckeckpoint: [
+        { coords: [700, 200], label: "Checkpoint" }
+      ],
+       Bit Chest: [
+        { coords: [800, 300], label: "Bit Chest" }
+      ],
+       Part Chest: [
+        { coords: [900, 400], label: "Part Chest" }
+      ],
+       Color Capsule: [
+        { coords: [1000, 500], label: "Color Capsule" }
+      ]
     }
   }
 };
