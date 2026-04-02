@@ -87,3 +87,29 @@ h2 {
     opacity: 0.9;
     width: auto; 
 }
+.map-container {
+  display: flex;
+  height: 100vh;
+}
+
+#map {
+  flex: 1;
+}
+
+.legend {
+  width: 260px;
+  background: #0a0a0a;
+  padding: 15px;
+  border-right: 1px solid #222;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
