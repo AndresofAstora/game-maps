@@ -1,7 +1,7 @@
 const MEGABYTE_MAPS = {
   map1: {
     title: "Electro Caves 1",
-    image: "../assets/megabyte-map1.jpg",
+    image: "../assets/megabyte-map1.png",
     categories: {
       Start: [
         { coords: [300, 400], label: "Start" }
@@ -26,7 +26,7 @@ const MEGABYTE_MAPS = {
 
   map2: {
     title: "Electro Caves 2",
-    image: "../assets/megabyte-map2.jpg",
+    image: "../assets/megabyte-map2.png",
     categories: {
       Start: [
         { coords: [300, 400], label: "Start" }
@@ -51,7 +51,7 @@ const MEGABYTE_MAPS = {
 
   map3: {
     title: "Electro Caves 3",
-    image: "../assets/megabyte-map3.jpg",
+    image: "../assets/megabyte-map3.png",
     categories: {
       Start: [
         { coords: [300, 400], label: "Start" }
