@@ -12,7 +12,7 @@
 <div class="map-container">
 
   <div class="legend" id="legend">
-    <h3 id="title"></h3>
+    <h3 id="Electro Caves - Stage 1"></h3>
   </div>
 
   <div id="map"></div>
@@ -35,9 +35,12 @@ const map = initMap("map", data.image);
 initMap("map", data.image, (map) => {
 
   const icons = {
-    enemies: createIcon("../assets/marker-enemy.png"),
-    items: createIcon("../assets/marker-item.png"),
-    secrets: createIcon("../assets/marker-secret.png")
+    Start: createIcon("../assets/marker-megabyte-start.png"),
+    End: createIcon("../assets/marker-megabyte-start.png"),
+    Checkpoint: createIcon("../assets/marker-megabyte-checkpoint.png")
+    Bit Chest: createIcon("../assets/marker-megabyte-bitchest.png")
+    Part Chest: createIcon("../assets/marker-megabyte-partchest.png")
+    Color Capsule: createIcon("../assets/marker-megabyte-color.png"
   };
 
   const layers = {};
