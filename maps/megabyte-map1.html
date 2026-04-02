@@ -12,7 +12,7 @@
 <div class="map-container">
 
   <div class="legend" id="legend">
-    <h3 id="Electro Caves - Stage 1"></h3>
+    <h3 id="title"></h3>
   </div>
 
   <div id="map"></div>
@@ -29,11 +29,11 @@ const data = MEGABYTE_MAPS[mapKey];
 
 document.getElementById("title").innerText = data.title;
 
-const map = initMap("map", data.image);
-
 // CUSTOM ICONS (your assets)
 initMap("map", data.image, (map) => {
-
+  // marker setup
+});
+  
   const icons = {
     Start: createIcon("../assets/marker-megabyte-start.png"),
     End: createIcon("../assets/marker-megabyte-start.png"),
