@@ -1,7 +1,7 @@
 const MEGABYTE_MAPS = {
   map1: {
     title: "Electro Caves 1",
-    image: "../assets/megabyte-map1.jpg",
+    image: "../assets/megabyte-map1.png",
     categories: {
       Start: [{coords:[100,200], label:"Start Point"}],
       End: [{coords:[800,1200], label:"End Point"}],
