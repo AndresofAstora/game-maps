@@ -32,25 +32,22 @@ document.getElementById("title").innerText = data.title;
 const map = initMap("map", data.image);
 
 // CUSTOM ICONS (your assets)
-const icons = {
-  enemies: createIcon("../assets/marker-enemy.png", 32),
-  items: createIcon("../assets/marker-item.png", 28),
-  secrets: createIcon("../assets/marker-secret.png", 30)
-};
+initMap("map", data.image, (map) => {
 
-const layers = {};
+  const icons = {
+    enemies: createIcon("../assets/marker-enemy.png"),
+    items: createIcon("../assets/marker-item.png"),
+    secrets: createIcon("../assets/marker-secret.png")
+  };
 
-// Build layers dynamically
-Object.keys(data.categories).forEach(category => {
-  const layer = L.layerGroup().addTo(map);
-  layers[category] = layer;
+  const layers = {};
 
-  addMarkers(map, data.categories[category], layer, icons[category]);
+  Object.keys(data.categories).forEach(category => {
+    const layer = L.layerGroup().addTo(map);
+    layers[category] = layer;
+
+    addMarkers(map, data.categories[category], layer, icons[category]);
+  });
+
+  buildLegend(map, layers);
 });
-
-// Build legend UI
-buildLegend(map, layers);
-</script>
-
-</body>
-</html>
