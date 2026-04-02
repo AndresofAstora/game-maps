@@ -1,34 +1,18 @@
 function initMap(mapId, imageUrl, callback) {
   const img = new Image();
-
   img.onload = function () {
-    const width = img.width;
-    const height = img.height;
-
-    const map = L.map(mapId, {
-      crs: L.CRS.Simple,
-      minZoom: -2,
-      maxZoom: 2,
-      zoomControl: true
-    });
-
-    const bounds = [[0, 0], [height, width]];
-
+    const width = img.width, height = img.height;
+    const map = L.map(mapId, { crs: L.CRS.Simple, minZoom: -2, maxZoom: 2, zoomControl: true });
+    const bounds = [[0,0],[height,width]];
     L.imageOverlay(imageUrl, bounds).addTo(map);
     map.fitBounds(bounds);
-
     callback(map, bounds);
   };
-
   img.src = imageUrl;
 }
 
-function createIcon(iconUrl, size = 32) {
-  return L.icon({
-    iconUrl,
-    iconSize: [size, size],
-    iconAnchor: [size / 2, size]
-  });
+function createIcon(url) {
+  return L.icon({ iconUrl: url, iconSize: [32,32], iconAnchor: [16,16] });
 }
 
 function addMarkers(map, data, layer, icon) {
