@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Megabyte Punch Map</title>
-
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<meta charset="UTF-8">
+<title>Electro Caves 2</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<style>
+html, body { height: 100%; margin: 0; background: black; color: white; font-family: sans-serif; }
+.map-container { display: flex; height: 100%; }
+#map { flex: 1; }
+.legend { width: 200px; padding: 10px; background: #111; overflow-y: auto; }
+.legend h3 { margin-top: 0; }
+.legend label { display: block; margin: 5px 0; cursor: pointer; }
+</style>
 </head>
-
 <body>
 
 <div class="map-container">
-
   <div class="legend" id="legend">
-    <h3 id="title"></h3>
+    <h3 id="title">Electro Caves 2</h3>
+    <label><input type="checkbox" id="toggleAll" checked> Toggle All</label>
   </div>
-
   <div id="map"></div>
-
 </div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -24,19 +29,13 @@
 <script src="../js/megabyte-data.js"></script>
 
 <script>
-const mapKey = "map2"; // change for other pages
+const mapKey = "map2";
 const data = MEGABYTE_MAPS[mapKey];
 
-document.getElementById("title").innerText = data.title;
-
-// CUSTOM ICONS (your assets)
 initMap("map", data.image, (map) => {
-  // marker setup
-});
-  
   const icons = {
     Start: createIcon("../assets/marker-megabyte-start.png"),
-    End: createIcon("../assets/marker-megabyte-start.png"),
+    End: createIcon("../assets/marker-megabyte-end.png"),
     Checkpoint: createIcon("../assets/marker-megabyte-checkpoint.png"),
     BitChest: createIcon("../assets/marker-megabyte-bitchest.png"),
     PartChest: createIcon("../assets/marker-megabyte-partchest.png"),
@@ -44,13 +43,31 @@ initMap("map", data.image, (map) => {
   };
 
   const layers = {};
-
   Object.keys(data.categories).forEach(category => {
     const layer = L.layerGroup().addTo(map);
     layers[category] = layer;
-
     addMarkers(map, data.categories[category], layer, icons[category]);
+
+    const label = document.createElement("label");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = true;
+    checkbox.onchange = () => {
+      checkbox.checked ? map.addLayer(layer) : map.removeLayer(layer);
+    };
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(" " + category));
+    document.getElementById("legend").appendChild(label);
   });
 
-  buildLegend(map, layers);
+  const toggleAll = document.getElementById("toggleAll");
+  toggleAll.onchange = () => {
+    Object.values(layers).forEach(layer => toggleAll.checked ? map.addLayer(layer) : map.removeLayer(layer));
+    const checkboxes = document.querySelectorAll("#legend input[type='checkbox']");
+    checkboxes.forEach(cb => { if (cb !== toggleAll) cb.checked = toggleAll.checked; });
+  };
 });
+</script>
+
+</body>
+</html>
