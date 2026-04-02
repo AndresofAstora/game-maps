@@ -1,11 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Megabyte Punch Map</title>
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+
+<body>
+
+<div class="map-container">
+
+  <div class="legend" id="legend">
+    <h3 id="title"></h3>
+  </div>
+
+  <div id="map"></div>
+
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="../js/maps.js"></script>
+<script src="../js/megabyte-data.js"></script>
+
 <script>
-const map = initMap('map', '../assets/megabyte-electric-caves-1.png');
+const mapKey = "map1"; // change for other pages
+const data = MEGABYTE_MAPS[mapKey];
 
-const bossLayer = L.layerGroup().addTo(map);
+document.getElementById("title").innerText = data.title;
 
-const bosses = [
-  { coords: [150, 200], label: "Dock Guardian" }
-];
+const map = initMap("map", data.image);
 
-addMarkers(map, bosses, bossLayer);
+// CUSTOM ICONS (your assets)
+const icons = {
+  enemies: createIcon("../assets/marker-enemy.png", 32),
+  items: createIcon("../assets/marker-item.png", 28),
+  secrets: createIcon("../assets/marker-secret.png", 30)
+};
+
+const layers = {};
+
+// Build layers dynamically
+Object.keys(data.categories).forEach(category => {
+  const layer = L.layerGroup().addTo(map);
+  layers[category] = layer;
+
+  addMarkers(map, data.categories[category], layer, icons[category]);
+});
+
+// Build legend UI
+buildLegend(map, layers);
 </script>
+
+</body>
+</html>
