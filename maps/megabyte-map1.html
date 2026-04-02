@@ -1,0 +1,11 @@
+<script>
+const map = initMap('map', '../assets/megabyte-electric-caves-1.png');
+
+const bossLayer = L.layerGroup().addTo(map);
+
+const bosses = [
+  { coords: [150, 200], label: "Dock Guardian" }
+];
+
+addMarkers(map, bosses, bossLayer);
+</script>
