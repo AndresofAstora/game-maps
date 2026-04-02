@@ -12,7 +12,7 @@
 <div class="map-container">
 
   <div class="legend" id="legend">
-    <h3 id="Electro Caves - Stage 2"></h3>
+    <h3 id="title"></h3>
   </div>
 
   <div id="map"></div>
@@ -29,31 +29,28 @@ const data = MEGABYTE_MAPS[mapKey];
 
 document.getElementById("title").innerText = data.title;
 
-const map = initMap("map", data.image);
-
 // CUSTOM ICONS (your assets)
+initMap("map", data.image, (map) => {
+  // marker setup
+});
+  
   const icons = {
     Start: createIcon("../assets/marker-megabyte-start.png"),
     End: createIcon("../assets/marker-megabyte-start.png"),
-    Checkpoint: createIcon("../assets/marker-megabyte-checkpoint.png")
-    Bit Chest: createIcon("../assets/marker-megabyte-bitchest.png")
-    Part Chest: createIcon("../assets/marker-megabyte-partchest.png")
-    Color Capsule: createIcon("../assets/marker-megabyte-color.png")
+    Checkpoint: createIcon("../assets/marker-megabyte-checkpoint.png"),
+    BitChest: createIcon("../assets/marker-megabyte-bitchest.png"),
+    PartChest: createIcon("../assets/marker-megabyte-partchest.png"),
+    ColorCapsule: createIcon("../assets/marker-megabyte-color.png")
   };
 
-const layers = {};
+  const layers = {};
 
-// Build layers dynamically
-Object.keys(data.categories).forEach(category => {
-  const layer = L.layerGroup().addTo(map);
-  layers[category] = layer;
+  Object.keys(data.categories).forEach(category => {
+    const layer = L.layerGroup().addTo(map);
+    layers[category] = layer;
 
-  addMarkers(map, data.categories[category], layer, icons[category]);
+    addMarkers(map, data.categories[category], layer, icons[category]);
+  });
+
+  buildLegend(map, layers);
 });
-
-// Build legend UI
-buildLegend(map, layers);
-</script>
-
-</body>
-</html>
