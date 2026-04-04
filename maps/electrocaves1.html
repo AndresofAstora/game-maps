@@ -1,18 +1,22 @@
 <div id="mapView">
-<div id="mapWrapper">
-    <img src="../images/electro1.png" class="map-img">
+    <div id="mapWrapper">
+        <img src="../images/electro1.png" class="map-img">
 
-    <div class="marker start" style="x: 500px; y: 300px;"></div>
-      <div class="marker checkpoint" style="x: 500px; y: 300px;"></div>
-      <div class="marker bit chest" style="x: 500px; y: 300px;"></div>
-      <div class="marker part chest" style="x: 500px; y: 300px;"></div>
-      <div class="marker color capsule" style="x: 500px; y: 300px;"></div>
-      <div class="marker stage exit" style="x: 500px; y: 300px;"></div>
-</div>
+        <div class="marker start" style="left: 100px; top: 300px;"></div>
+        <div class="marker checkpoint" style="left: 200px; top: 300px;"></div>
+        <div class="marker bitchest" style="left: 300px; top: 300px;"></div>
+        <div class="marker partchest" style="left: 400px; top: 300px;"></div>
+        <div class="marker colorcapsule" style="left: 500px; top: 300px;"></div>
+        <div class="marker stageexit" style="left: 600px; top: 300px;"></div>
+    </div>
 
     <div class="legend">
-        <label><input type="checkbox" data-type="chest" checked> Chests</label>
-        <label><input type="checkbox" data-type="enemy" checked> Enemies</label>
+        <label><input type="checkbox" data-type="start" checked> Start</label>
+        <label><input type="checkbox" data-type="checkpoint" checked> Checkpoint</label>
+        <label><input type="checkbox" data-type="bitchest" checked> Bit Chest</label>
+        <label><input type="checkbox" data-type="partchest" checked> Part Chest</label>
+        <label><input type="checkbox" data-type="colorcapsule" checked> Color Capsule</label>
+        <label><input type="checkbox" data-type="stageexit" checked> Stage Exit</label>
         <div id="toggleAll">Toggle All</div>
     </div>
 
@@ -24,8 +28,11 @@
     <div class="back-btn" onclick="window.location.href='../index.html'">← Back</div>
 
     <div id="coords">X: 0 Y: 0</div>
+</div>
 
-  .marker {
+<style>
+.marker {
+    image-rendering: crisp-edges;
     position: absolute;
     width: 24px;
     height: 24px;
@@ -40,24 +47,27 @@
 .marker.checkpoint {
     background: url('../images/markers/marker-checkpoint.png') no-repeat center/contain;
 }
-  
-  .marker.bitchest {
+
+.marker.bitchest {
     background: url('../images/markers/marker-bitchest.png') no-repeat center/contain;
 }
-  
-  .marker.partchest {
+
+.marker.partchest {
     background: url('../images/markers/marker-partchest.png') no-repeat center/contain;
 }
-  
-  .marker.colorcapsule {
+
+.marker.colorcapsule {
     background: url('../images/markers/marker-colorcapsule.png') no-repeat center/contain;
 }
-  
-  .marker.stageexit {
+
+.marker.stageexit {
     background: url('../images/markers/marker-stageexit.png') no-repeat center/contain;
 }
 
-  document.querySelectorAll('.legend input').forEach(input => {
+</style>
+
+<script>
+document.querySelectorAll('.legend input').forEach(input => {
     input.addEventListener('change', () => {
         const type = input.dataset.type;
         document.querySelectorAll('.marker.' + type).forEach(m => {
@@ -65,3 +75,4 @@
         });
     });
 });
+</script>
