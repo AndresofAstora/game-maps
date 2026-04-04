@@ -1,0 +1,67 @@
+<div id="mapView">
+<div id="mapWrapper">
+    <img src="../images/electro1.png" class="map-img">
+
+    <div class="marker start" style="x: 500px; y: 300px;"></div>
+      <div class="marker checkpoint" style="x: 500px; y: 300px;"></div>
+      <div class="marker bit chest" style="x: 500px; y: 300px;"></div>
+      <div class="marker part chest" style="x: 500px; y: 300px;"></div>
+      <div class="marker color capsule" style="x: 500px; y: 300px;"></div>
+      <div class="marker stage exit" style="x: 500px; y: 300px;"></div>
+</div>
+
+    <div class="legend">
+        <label><input type="checkbox" data-type="chest" checked> Chests</label>
+        <label><input type="checkbox" data-type="enemy" checked> Enemies</label>
+        <div id="toggleAll">Toggle All</div>
+    </div>
+
+    <div class="zoom-controls">
+        <button id="zoomIn">+</button>
+        <button id="zoomOut">-</button>
+    </div>
+
+    <div class="back-btn" onclick="window.location.href='../index.html'">← Back</div>
+
+    <div id="coords">X: 0 Y: 0</div>
+
+  .marker {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.marker.start {
+    background: url('../images/markers/marker-start.png') no-repeat center/contain;
+}
+
+.marker.checkpoint {
+    background: url('../images/markers/marker-checkpoint.png') no-repeat center/contain;
+}
+  
+  .marker.bitchest {
+    background: url('../images/markers/marker-bitchest.png') no-repeat center/contain;
+}
+  
+  .marker.partchest {
+    background: url('../images/markers/marker-partchest.png') no-repeat center/contain;
+}
+  
+  .marker.colorcapsule {
+    background: url('../images/markers/marker-colorcapsule.png') no-repeat center/contain;
+}
+  
+  .marker.stageexit {
+    background: url('../images/markers/marker-stageexit.png') no-repeat center/contain;
+}
+
+  document.querySelectorAll('.legend input').forEach(input => {
+    input.addEventListener('change', () => {
+        const type = input.dataset.type;
+        document.querySelectorAll('.marker.' + type).forEach(m => {
+            m.style.display = input.checked ? 'block' : 'none';
+        });
+    });
+});
