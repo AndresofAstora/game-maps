@@ -1,21 +1,49 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Megabyte Punch Map</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Megabyte Punch Atlas</title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body>
-
-<div class="menu">
-    <a href="maps/electrocaves1.html" class="map-btn">Electro Caves 1</a>
-    <a href="maps/electrocaves2.html" class="map-btn">Electro Caves 2</a>
-    <a href="maps/electrocaves3.html" class="map-btn">Electro Caves 3</a>
-    <a href="maps/lostmegaclopolis1.html" class="map-btn">Lost Megaclopolis 1</a>
-    <a href="maps/lostmegaclopolis2.html" class="map-btn">Lost Megaclopolis 2</a>
-    <a href="maps/lostmegaclopolis3.html" class="map-btn">Lost Megaclopolis 3</a>
-</div>
-
+<body class="home-page">
+<div class="site-chrome"></div>
+<main class="home-layout">
+    <header class="shell-panel hero-panel">
+        <div class="hero-copy">
+            <p class="eyebrow">Megabyte Punch Atlas</p>
+            <h1>Choose any stage from one dark, modern homepage.</h1>
+            <p class="hero-summary">
+                Every available map asset now has its own dedicated page, while shared visuals and controls stay
+                consistent across the full site.
+            </p>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <span class="stat-label">Stages</span>
+                <strong id="statTotal">0</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Interactive Overlays</span>
+                <strong id="statInteractive">0</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Preview Pages</span>
+                <strong id="statPreview">0</strong>
+            </div>
+        </div>
+    </header>
+    <section class="browser-panel">
+        <div class="browser-head">
+            <div>
+                <p class="eyebrow">Stage Browser</p>
+                <h2>Map Homepage</h2>
+            </div>
+            <div class="filter-row" id="stageFilters" aria-label="Stage filters"></div>
+        </div>
+        <div id="stageSections" class="stage-sections"></div>
+    </section>
+</main>
+<script type="module" src="js/homepage.js"></script>
 </body>
 </html>

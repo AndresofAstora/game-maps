@@ -1,128 +1,283 @@
-let scale = 1;
-let offsetX = 0;
-let offsetY = 0;
-let isDragging = false;
-let startX, startY;
+﻿import {
+    MARKER_TYPES,
+    getMapById,
+    getMapImageUrl,
+    getMapStatus,
+    getMapStatusLabel,
+    getMarkerCounts,
+    getMarkerIconUrl
+} from "./map-registry.js";
 
-let currentMap = null;
+const body = document.body;
+const map = getMapById(body.dataset.mapId ?? "");
 
-function initMap(mapData) {
-    currentMap = mapData;
+const mapChapter = document.getElementById("mapChapter");
+const mapTitle = document.getElementById("mapTitle");
+const mapSummary = document.getElementById("mapSummary");
+const mapStatus = document.getElementById("mapStatus");
+const mapNote = document.getElementById("mapNote");
+const mapViewport = document.getElementById("mapViewport");
+const mapCanvas = document.getElementById("mapCanvas");
+const mapImage = document.getElementById("mapImage");
+const markerLayer = document.getElementById("markerLayer");
+const legendContent = document.getElementById("legendContent");
+const coordsReadout = document.getElementById("coordsReadout");
+const zoomInButton = document.getElementById("zoomInButton");
+const zoomOutButton = document.getElementById("zoomOutButton");
+const fitButton = document.getElementById("fitButton");
 
-    const mapImage = document.getElementById('mapImage');
-    mapImage.src = currentMap.img;
-
-    resetView();
-    loadMarkers();
-}
-
-const markerIcons = {
-    start: "../maps/marker-start.png",
-    checkpoint: "../maps/marker-checkpoint.png",
-    "bit-chest": "../maps/marker-bitchest.png",
-    "part-chest": "../maps/marker-partchest.png",
-    "color-capsule": "../maps/marker-colorcapsule.png",
-    "stage-exit": "../maps/marker-stageexit.png"
+const viewState = {
+    scale: 1,
+    offsetX: 0,
+    offsetY: 0,
+    pointerId: null,
+    startX: 0,
+    startY: 0,
+    dragOriginX: 0,
+    dragOriginY: 0,
+    moved: false
 };
 
-const mapWrapper = document.getElementById('mapWrapper');
-const markersContainer = document.getElementById('markers');
-const mapView = document.getElementById('mapView');
+if (!map) {
+    document.title = "Map Not Found | Megabyte Punch Atlas";
+    if (mapTitle) {
+        mapTitle.textContent = "Map not found";
+    }
+    if (mapSummary) {
+        mapSummary.textContent = "This page does not point to a registered map.";
+    }
+    if (mapNote) {
+        mapNote.textContent = "Check the map id in the page markup.";
+    }
+} else {
+    bootstrap();
+}
 
-function loadMarkers() {
-    markersContainer.innerHTML = '';
+function bootstrap() {
+    const markerCounts = getMarkerCounts(map);
+    const totalMarkers = map.markers.length;
+    const status = getMapStatus(map);
 
-    currentMap.markers.forEach(m => {
-        const el = document.createElement('div');
+    document.title = `${map.title} | Megabyte Punch Atlas`;
+    mapChapter.textContent = map.chapter;
+    mapTitle.textContent = map.title;
+    mapSummary.textContent = map.summary;
+    mapStatus.textContent = getMapStatusLabel(map);
+    mapStatus.dataset.status = status;
+    mapImage.src = getMapImageUrl(map);
+    mapImage.alt = `${map.title} map image`;
 
-        el.className = `marker ${m.type}`;
-        el.style.left = m.x + 'px';
-        el.style.top = m.y + 'px';
-        el.dataset.type = m.type;
+    if (totalMarkers > 0) {
+        mapNote.textContent = `${totalMarkers} markers loaded. Toggle any marker family from the sidebar or click the map to copy coordinates.`;
+    } else {
+        mapNote.textContent = "This stage page is live, but marker coordinates have not been added yet.";
+    }
 
-        if (markerIcons[m.type]) {
-            el.style.backgroundImage = `url(${markerIcons[m.type]})`;
-        }
+    renderLegend(markerCounts);
+    renderMarkers();
+    wireControls();
 
-        markersContainer.appendChild(el);
+    mapImage.addEventListener("load", fitMapToViewport, { once: true });
+    mapImage.addEventListener("error", () => {
+        mapNote.textContent = "The map image could not be loaded. Check the asset path for this stage.";
+    }, { once: true });
+}
+
+function renderLegend(markerCounts) {
+    if (!map.markers.length) {
+        legendContent.innerHTML = `
+            <div class="legend-empty">
+                No marker overlay is available for this stage yet. The dedicated page is ready for future coordinates.
+            </div>
+        `;
+        return;
+    }
+
+    const rows = MARKER_TYPES.filter((type) => markerCounts[type.id]).map((type) => `
+        <label class="legend-row">
+            <span class="legend-label">
+                <img src="${getMarkerIconUrl(type.id)}" alt="">
+                <span>${type.label}</span>
+            </span>
+            <span class="legend-count">${markerCounts[type.id]}</span>
+            <input class="legend-checkbox" type="checkbox" data-marker-type="${type.id}" checked>
+        </label>
+    `).join("");
+
+    legendContent.innerHTML = `
+        <div class="legend-list">${rows}</div>
+        <div class="legend-actions">
+            <button type="button" class="toggle-button" id="showAllButton">Show All</button>
+            <button type="button" class="toggle-button" id="hideAllButton">Hide All</button>
+        </div>
+    `;
+
+    legendContent.querySelectorAll("[data-marker-type]").forEach((input) => {
+        input.addEventListener("change", () => {
+            const type = input.dataset.markerType;
+            markerLayer.querySelectorAll(`[data-marker-type="${type}"]`).forEach((markerElement) => {
+                markerElement.hidden = !input.checked;
+            });
+        });
+    });
+
+    document.getElementById("showAllButton")?.addEventListener("click", () => setAllMarkers(true));
+    document.getElementById("hideAllButton")?.addEventListener("click", () => setAllMarkers(false));
+}
+
+function renderMarkers() {
+    markerLayer.innerHTML = "";
+    markerLayer.style.width = `${mapImage.naturalWidth || 0}px`;
+    markerLayer.style.height = `${mapImage.naturalHeight || 0}px`;
+
+    map.markers.forEach((marker) => {
+        const markerElement = document.createElement("div");
+        markerElement.className = "marker";
+        markerElement.dataset.markerType = marker.type;
+        markerElement.style.left = `${marker.x}px`;
+        markerElement.style.top = `${marker.y}px`;
+        markerElement.style.backgroundImage = `url('${getMarkerIconUrl(marker.type)}')`;
+        markerLayer.appendChild(markerElement);
     });
 }
 
-function zoom(factor) {
-    scale *= factor;
+function setAllMarkers(checked) {
+    legendContent.querySelectorAll("[data-marker-type]").forEach((input) => {
+        input.checked = checked;
+        input.dispatchEvent(new Event("change"));
+    });
+}
+
+function wireControls() {
+    zoomInButton?.addEventListener("click", () => zoomAtViewportCenter(1.2));
+    zoomOutButton?.addEventListener("click", () => zoomAtViewportCenter(0.82));
+    fitButton?.addEventListener("click", fitMapToViewport);
+
+    mapViewport.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        const factor = event.deltaY < 0 ? 1.12 : 0.9;
+        zoomAtClientPoint(factor, event.clientX, event.clientY);
+    }, { passive: false });
+
+    mapViewport.addEventListener("pointerdown", (event) => {
+        if (event.button !== 0) {
+            return;
+        }
+
+        viewState.pointerId = event.pointerId;
+        viewState.startX = event.clientX;
+        viewState.startY = event.clientY;
+        viewState.dragOriginX = viewState.offsetX;
+        viewState.dragOriginY = viewState.offsetY;
+        viewState.moved = false;
+        mapViewport.classList.add("is-dragging");
+        mapViewport.setPointerCapture(event.pointerId);
+    });
+
+    mapViewport.addEventListener("pointermove", (event) => {
+        updateCoords(event.clientX, event.clientY);
+
+        if (viewState.pointerId !== event.pointerId) {
+            return;
+        }
+
+        const deltaX = event.clientX - viewState.startX;
+        const deltaY = event.clientY - viewState.startY;
+        if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
+            viewState.moved = true;
+        }
+
+        viewState.offsetX = viewState.dragOriginX + deltaX;
+        viewState.offsetY = viewState.dragOriginY + deltaY;
+        applyTransform();
+    });
+
+    mapViewport.addEventListener("pointerup", (event) => {
+        if (viewState.pointerId !== event.pointerId) {
+            return;
+        }
+
+        mapViewport.classList.remove("is-dragging");
+        mapViewport.releasePointerCapture(event.pointerId);
+        viewState.pointerId = null;
+
+        if (!viewState.moved) {
+            copyCoords(event.clientX, event.clientY);
+        }
+    });
+
+    mapViewport.addEventListener("pointerleave", () => {
+        coordsReadout.textContent = "X: 0 Y: 0";
+    });
+}
+
+function fitMapToViewport() {
+    if (!mapImage.naturalWidth || !mapImage.naturalHeight) {
+        return;
+    }
+
+    markerLayer.style.width = `${mapImage.naturalWidth}px`;
+    markerLayer.style.height = `${mapImage.naturalHeight}px`;
+
+    const bounds = mapViewport.getBoundingClientRect();
+    const padding = 40;
+    const availableWidth = Math.max(bounds.width - padding, 100);
+    const availableHeight = Math.max(bounds.height - padding, 100);
+    const nextScale = Math.min(availableWidth / mapImage.naturalWidth, availableHeight / mapImage.naturalHeight, 1.6);
+
+    viewState.scale = clamp(nextScale, 0.14, 5);
+    viewState.offsetX = (bounds.width - mapImage.naturalWidth * viewState.scale) / 2;
+    viewState.offsetY = (bounds.height - mapImage.naturalHeight * viewState.scale) / 2;
+    applyTransform();
+}
+
+function zoomAtViewportCenter(factor) {
+    const bounds = mapViewport.getBoundingClientRect();
+    zoomAtClientPoint(factor, bounds.left + bounds.width / 2, bounds.top + bounds.height / 2);
+}
+
+function zoomAtClientPoint(factor, clientX, clientY) {
+    const bounds = mapViewport.getBoundingClientRect();
+    const viewportX = clientX - bounds.left;
+    const viewportY = clientY - bounds.top;
+    const mapX = (viewportX - viewState.offsetX) / viewState.scale;
+    const mapY = (viewportY - viewState.offsetY) / viewState.scale;
+    const nextScale = clamp(viewState.scale * factor, 0.14, 5);
+
+    viewState.scale = nextScale;
+    viewState.offsetX = viewportX - mapX * viewState.scale;
+    viewState.offsetY = viewportY - mapY * viewState.scale;
     applyTransform();
 }
 
 function applyTransform() {
-    mapWrapper.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+    mapCanvas.style.transform = `translate(${viewState.offsetX}px, ${viewState.offsetY}px) scale(${viewState.scale})`;
 }
 
-document.getElementById('zoomIn').onclick = () => zoom(1.2);
-document.getElementById('zoomOut').onclick = () => zoom(0.8);
+function updateCoords(clientX, clientY) {
+    const bounds = mapViewport.getBoundingClientRect();
+    const x = Math.round((clientX - bounds.left - viewState.offsetX) / viewState.scale);
+    const y = Math.round((clientY - bounds.top - viewState.offsetY) / viewState.scale);
+    coordsReadout.textContent = `X: ${x} Y: ${y}`;
+}
 
-mapView.addEventListener('wheel', e => {
-    e.preventDefault();
+function copyCoords(clientX, clientY) {
+    const bounds = mapViewport.getBoundingClientRect();
+    const x = Math.round((clientX - bounds.left - viewState.offsetX) / viewState.scale);
+    const y = Math.round((clientY - bounds.top - viewState.offsetY) / viewState.scale);
+    const text = `x:${x}, y:${y}`;
 
-    const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
-
-    const mapX = (e.clientX - offsetX) / scale;
-    const mapY = (e.clientY - offsetY) / scale;
-
-    scale *= zoomFactor;
-    scale = Math.min(Math.max(scale, 0.2), 5);
-
-    offsetX = e.clientX - mapX * scale;
-    offsetY = e.clientY - mapY * scale;
-
-    applyTransform();
-}, { passive: false });
-
-mapView.addEventListener('mousedown', e => {
-    if (e.target.closest('.legend, .zoom-controls, .back-btn')) return;
-
-    isDragging = true;
-    startX = e.clientX - offsetX;
-    startY = e.clientY - offsetY;
-});
-
-window.addEventListener('mouseup', () => {
-    isDragging = false;
-});
-
-mapView.addEventListener('mousemove', e => {
-    if (isDragging) {
-        offsetX = e.clientX - startX;
-        offsetY = e.clientY - startY;
-        applyTransform();
-    }
-
-    const x = Math.round((e.clientX - offsetX) / scale);
-    const y = Math.round((e.clientY - offsetY) / scale);
-
-    document.getElementById('coords').innerText = `X: ${x} Y: ${y}`;
-});
-
-document.querySelectorAll('.legend input').forEach(cb => {
-    cb.addEventListener('change', () => {
-        document.querySelectorAll(`.${cb.dataset.type}`).forEach(el => {
-            el.style.display = cb.checked ? 'block' : 'none';
+    if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+            mapNote.textContent = `Copied ${text} to the clipboard.`;
+        }).catch(() => {
+            mapNote.textContent = `Coordinate copy failed. Manual value: ${text}`;
         });
-    });
-});
+    } else {
+        mapNote.textContent = `Clipboard access is unavailable. Manual value: ${text}`;
+    }
+}
 
-document.getElementById('toggleAll').onclick = () => {
-    const boxes = document.querySelectorAll('.legend input');
-    const allOn = [...boxes].every(b => b.checked);
-
-    boxes.forEach(b => {
-        b.checked = !allOn;
-        b.dispatchEvent(new Event('change'));
-    });
-};
-
-function resetView() {
-    scale = 1;
-    offsetX = 0;
-    offsetY = 0;
-    applyTransform();
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
 }
