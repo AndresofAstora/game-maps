@@ -2,8 +2,6 @@
     MARKER_TYPES,
     getMapById,
     getMapImageUrl,
-    getMapStatus,
-    getMapStatusLabel,
     getMarkerCounts,
     getMarkerIconUrl
 } from "./map-registry.js";
@@ -11,10 +9,7 @@
 const body = document.body;
 const map = getMapById(body.dataset.mapId ?? "");
 
-const mapChapter = document.getElementById("mapChapter");
 const mapTitle = document.getElementById("mapTitle");
-const mapSummary = document.getElementById("mapSummary");
-const mapStatus = document.getElementById("mapStatus");
 const mapNote = document.getElementById("mapNote");
 const mapViewport = document.getElementById("mapViewport");
 const mapCanvas = document.getElementById("mapCanvas");
@@ -43,9 +38,6 @@ if (!map) {
     if (mapTitle) {
         mapTitle.textContent = "Map not found";
     }
-    if (mapSummary) {
-        mapSummary.textContent = "This page does not point to a registered map.";
-    }
     if (mapNote) {
         mapNote.textContent = "Check the map id in the page markup.";
     }
@@ -56,21 +48,16 @@ if (!map) {
 function bootstrap() {
     const markerCounts = getMarkerCounts(map);
     const totalMarkers = map.markers.length;
-    const status = getMapStatus(map);
 
     document.title = `${map.title} | Megabyte Punch Atlas`;
-    mapChapter.textContent = map.chapter;
     mapTitle.textContent = map.title;
-    mapSummary.textContent = map.summary;
-    mapStatus.textContent = getMapStatusLabel(map);
-    mapStatus.dataset.status = status;
     mapImage.src = getMapImageUrl(map);
     mapImage.alt = `${map.title} map image`;
 
     if (totalMarkers > 0) {
-        mapNote.textContent = `${totalMarkers} markers loaded. Toggle any marker family from the sidebar or click the map to copy coordinates.`;
+        mapNote.textContent = `${totalMarkers} markers loaded. Click the map to copy coordinates.`;
     } else {
-        mapNote.textContent = "This stage page is live, but marker coordinates have not been added yet.";
+        mapNote.textContent = "This map page is ready. Marker coordinates have not been added yet.";
     }
 
     renderLegend(markerCounts);
@@ -87,7 +74,7 @@ function renderLegend(markerCounts) {
     if (!map.markers.length) {
         legendContent.innerHTML = `
             <div class="legend-empty">
-                No marker overlay is available for this stage yet. The dedicated page is ready for future coordinates.
+                No marker overlay is available for this stage yet.
             </div>
         `;
         return;

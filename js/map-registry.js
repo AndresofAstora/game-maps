@@ -18,6 +18,9 @@ const MARKER_ICON_FILES = {
 
 export const MAP_CATALOG = [
     { id: "tutorial", title: "Tutorial", chapter: "Training Grounds", summary: "Boot sequence walkthrough and movement primer.", image: "tutorial.png", page: "maps/tutorial.html", markers: [] },
+    { id: "electrocaves1", title: "Electro Caves 1", chapter: "Electro Caves", summary: "Opening Electro Caves route.", image: "electrocaves1.png", page: "maps/electrocaves1.html", markers: [] },
+    { id: "electrocaves2", title: "Electro Caves 2", chapter: "Electro Caves", summary: "Mid-stage Electro Caves route.", image: "electrocaves2.png", page: "maps/electrocaves2.html", markers: [] },
+    { id: "electrocaves3", title: "Electro Caves 3", chapter: "Electro Caves", summary: "Final Electro Caves route.", image: "electrocaves3.png", page: "maps/electrocaves3.html", markers: [] },
     { id: "ancienttechruins1", title: "Ancient Tech Ruins 1", chapter: "Ancient Tech Ruins", summary: "Collapsed corridors and rusted chambers in the opening ruins run.", image: "ancienttechruins1.png", page: "maps/ancienttechruins1.html", markers: [] },
     { id: "ancienttechruins2", title: "Ancient Tech Ruins 2", chapter: "Ancient Tech Ruins", summary: "A second ruins pass with wider traversal lanes and hidden pockets.", image: "ancienttechruins2.png", page: "maps/ancienttechruins2.html", markers: [] },
     { id: "ancienttechruins3", title: "Ancient Tech Ruins 3", chapter: "Ancient Tech Ruins", summary: "Late-ruins stage layout with compact vertical branches.", image: "ancienttechruins3.png", page: "maps/ancienttechruins3.html", markers: [] },
