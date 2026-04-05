@@ -94,8 +94,7 @@ function renderLegend(markerCounts) {
     legendContent.innerHTML = `
         <div class="legend-list">${rows}</div>
         <div class="legend-actions">
-            <button type="button" class="toggle-button" id="showAllButton">Show All</button>
-            <button type="button" class="toggle-button" id="hideAllButton">Hide All</button>
+            <button type="button" class="toggle-button" id="toggleAllButton">Toggle All</button>
         </div>
     `;
 
@@ -108,8 +107,7 @@ function renderLegend(markerCounts) {
         });
     });
 
-    document.getElementById("showAllButton")?.addEventListener("click", () => setAllMarkers(true));
-    document.getElementById("hideAllButton")?.addEventListener("click", () => setAllMarkers(false));
+    document.getElementById("toggleAllButton")?.addEventListener("click", toggleAllMarkers);
 }
 
 function renderMarkers() {
@@ -133,6 +131,12 @@ function setAllMarkers(checked) {
         input.checked = checked;
         input.dispatchEvent(new Event("change"));
     });
+}
+
+function toggleAllMarkers() {
+    const inputs = [...legendContent.querySelectorAll("[data-marker-type]")];
+    const allChecked = inputs.every((input) => input.checked);
+    setAllMarkers(!allChecked);
 }
 
 function wireControls() {
