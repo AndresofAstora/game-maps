@@ -136,6 +136,17 @@ function setAllMarkers(checked) {
 }
 
 function wireControls() {
+    const uiControls = [zoomInButton, zoomOutButton, fitButton].filter(Boolean);
+
+    uiControls.forEach((control) => {
+        control.addEventListener("pointerdown", (event) => {
+            event.stopPropagation();
+        });
+        control.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+    });
+
     zoomInButton?.addEventListener("click", () => zoomAtViewportCenter(1.2));
     zoomOutButton?.addEventListener("click", () => zoomAtViewportCenter(0.82));
     fitButton?.addEventListener("click", fitMapToViewport);
@@ -148,6 +159,10 @@ function wireControls() {
 
     mapViewport.addEventListener("pointerdown", (event) => {
         if (event.button !== 0) {
+            return;
+        }
+
+        if (isUiTarget(event.target)) {
             return;
         }
 
@@ -267,4 +282,8 @@ function copyCoords(clientX, clientY) {
 
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
+}
+
+function isUiTarget(target) {
+    return target instanceof Element && Boolean(target.closest(".zoom-stack, .legend-panel, .back-link"));
 }
