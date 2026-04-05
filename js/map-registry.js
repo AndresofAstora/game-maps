@@ -585,7 +585,7 @@ export const MAP_CATALOG = [
 	title: "Subprogram Deadlands 3",
 	chapter: "Subprogram Deadlands",
 	summary: "Deadlands finale with a compact last sprint to the exit.",
-	mage: "subprogramdeadlands3.png",
+	image: "subprogramdeadlands3.png",
 	page: "maps/subprogramdeadlands3.html",
 	markers: [
 		{ x:100, y:100, type: "start" },
