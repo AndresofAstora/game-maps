@@ -115,6 +115,38 @@ a:focus:not(:focus-visible) {
     padding: 1rem 0 2rem;
 }
 
+.site-home-page .home-layout {
+    display: grid;
+    gap: 1.25rem;
+    padding-top: 1.5rem;
+}
+
+.site-header {
+    padding: 1.4rem 1.5rem;
+}
+
+.site-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    letter-spacing: 0.03em;
+}
+
+.site-subtitle {
+    margin: 0.3rem 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.creator-link {
+    color: var(--accent);
+}
+
+.creator-link:hover,
+.creator-link:focus-visible {
+    text-decoration: underline;
+}
+
 .browser-panel {
     position: relative;
     z-index: 1;
@@ -131,6 +163,16 @@ a:focus:not(:focus-visible) {
 
 .stage-grid--home {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    gap: 1rem;
+}
+
+.game-card {
+    max-width: 320px;
 }
 
 .stage-card {
@@ -213,6 +255,10 @@ a:focus:not(:focus-visible) {
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.2rem;
+}
+
+.game-page-topbar {
+    margin-bottom: 1rem;
 }
 
 .back-link,
@@ -441,8 +487,16 @@ a:focus:not(:focus-visible) {
         padding-top: 0.5rem;
     }
 
+    .site-header {
+        padding: 1.1rem 1rem;
+    }
+
     .stage-grid--home {
         grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
     }
 
     .map-layout {
