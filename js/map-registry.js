@@ -20,7 +20,6 @@ export const MAP_CATALOG = [
     {
     id: "tutorial",
 	title: "Tutorial",
-	chapter: "Training Grounds",
 	image: "tutorial.png",
 	page: "maps/tutorial.html",
 	markers: [
@@ -33,7 +32,6 @@ export const MAP_CATALOG = [
     {
     id: "electrocaves1",
 	title: "Electro Caves 1",
-	chapter: "Electro Caves",
 	image: "electrocaves1.png",
 	page: "maps/electrocaves1.html",
 	markers: [
@@ -60,8 +58,6 @@ export const MAP_CATALOG = [
     },
     { id: "electrocaves2",
 	title: "Electro Caves 2",
-	chapter: "Electro Caves",
-	summary: "Mid-stage Electro Caves route.",
 	image: "electrocaves2.png",
 	page: "maps/electrocaves2.html",
 	markers: [
@@ -89,8 +85,6 @@ export const MAP_CATALOG = [
     },
     { id: "electrocaves3",
 	title: "Electro Caves 3",
-	chapter: "Electro Caves",
-	summary: "Final Electro Caves route.",
 	image: "electrocaves3.png",
 	page: "maps/electrocaves3.html",
 	markers: [
@@ -120,8 +114,6 @@ export const MAP_CATALOG = [
     },
     { id: "ancienttechruins1",
 	title: "Ancient Tech Ruins 1",
-	chapter: "Ancient Tech Ruins",
-	summary: "Collapsed corridors and rusted chambers in the opening ruins run.",
 	image: "ancienttechruins1.png",
 	page: "maps/ancienttechruins1.html",
 	markers: [
@@ -159,8 +151,6 @@ export const MAP_CATALOG = [
     },
     { id: "ancienttechruins2",
 	title: "Ancient Tech Ruins 2",
-	chapter: "Ancient Tech Ruins",
-	summary: "A second ruins pass with wider traversal lanes and hidden pockets.",
 	image: "ancienttechruins2.png",
 	page: "maps/ancienttechruins2.html",
 	markers: [
@@ -193,8 +183,6 @@ export const MAP_CATALOG = [
     },
     { id: "ancienttechruins3",
 	title: "Ancient Tech Ruins 3",
-	chapter: "Ancient Tech Ruins",
-	summary: "Late-ruins stage layout with compact vertical branches.",
 	image: "ancienttechruins3.png",
 	page: "maps/ancienttechruins3.html",
 	markers: [
@@ -219,8 +207,6 @@ export const MAP_CATALOG = [
     },
     { id: "binaryfortress1",
 	title: "Binary Fortress 1",
-	chapter: "Binary Fortress",
-	summary: "Front gate route through the first fortress sector.",
 	image: "binaryfortress1.png",
 	page: "maps/binaryfortress1.html",
 	markers: [
@@ -248,8 +234,6 @@ export const MAP_CATALOG = [
     },
     { id: "binaryfortress2",
 	title: "Binary Fortress 2",
-	chapter: "Binary Fortress",
-	summary: "Mid-fortress assault path with tighter combat rooms.",
 	image: "binaryfortress2.png",
 	page: "maps/binaryfortress2.html",
 	markers: [
@@ -279,8 +263,6 @@ export const MAP_CATALOG = [
     },
     { id: "binaryfortress3",
 	title: "Binary Fortress 3",
-	chapter: "Binary Fortress",
-	summary: "Fortress finale layout with stacked routes and a hard push forward.",
 	image: "binaryfortress3.png",
 	page: "maps/binaryfortress3.html",
 	markers: [
@@ -311,8 +293,6 @@ export const MAP_CATALOG = [
     },
     { id: "frostbytedeep1",
 	title: "Frostbyte Deep 1",
-	chapter: "Frostbyte Deep",
-	summary: "Cold sector entry with long horizontal stretches and caves.",
 	image: "frostbytedeep1.png",
 	page: "maps/frostbytedeep1.html",
 	markers: [
@@ -342,8 +322,6 @@ export const MAP_CATALOG = [
     },
     { id: "frostbytedeep2",
 	title: "Frostbyte Deep 2",
-	chapter: "Frostbyte Deep",
-	summary: "Deeper frozen caverns with more branching routes.",
 	image: "frostbytedeep2.png",
 	page: "maps/frostbytedeep2.html",
 	markers: [
@@ -375,8 +353,6 @@ export const MAP_CATALOG = [
     },
     { id: "frostbytedeep3",
 	title: "Frostbyte Deep 3",
-	chapter: "Frostbyte Deep",
-	summary: "Final Frostbyte Deep stage with dense endgame traversal.",
 	image: "frostbytedeep3.png",
 	page: "maps/frostbytedeep3.html",
 	markers: [
@@ -412,8 +388,6 @@ export const MAP_CATALOG = [
     {
         id: "lostmegaclopolis1",
         title: "Lost Megaclopolis 1",
-        chapter: "Lost Megaclopolis",
-        summary: "Marker-complete city approach with early checkpoint coverage.",
         image: "lostmegaclopolis1.png",
         page: "maps/lostmegaclopolis1.html",
         markers: [
@@ -440,8 +414,6 @@ export const MAP_CATALOG = [
     {
         id: "lostmegaclopolis2",
         title: "Lost Megaclopolis 2",
-        chapter: "Lost Megaclopolis",
-        summary: "Marker-complete vertical climb with dense item placement.",
         image: "lostmegaclopolis2.png",
         page: "maps/lostmegaclopolis2.html",
         markers: [
@@ -472,8 +444,6 @@ export const MAP_CATALOG = [
     {
         id: "lostmegaclopolis3",
         title: "Lost Megaclopolis 3",
-        chapter: "Lost Megaclopolis",
-        summary: "Marker-complete city finale with packed endgame routes.",
         image: "lostmegaclopolis3.png",
         page: "maps/lostmegaclopolis3.html",
         markers: [
@@ -501,8 +471,6 @@ export const MAP_CATALOG = [
     },
     { id: "subprogramdeadlands1",
     title: "Subprogram Deadlands 1",
-	chapter: "Subprogram Deadlands",
-	summary: "Opening Deadlands route across broad, exposed terrain.",
 	image: "subprogramdeadlands1.png",
 	page: "maps/subprogramdeadlands1.html",
 	markers: [
@@ -532,8 +500,6 @@ export const MAP_CATALOG = [
     },
     { id: "subprogramdeadlands2",
 	title: "Subprogram Deadlands 2",
-	chapter: "Subprogram Deadlands",
-	summary: "Mid-Deadlands path with more dangerous choke points.",
 	image: "subprogramdeadlands2.png",
 	page: "maps/subprogramdeadlands2.html",
 	markers: [
@@ -583,8 +549,6 @@ export const MAP_CATALOG = [
     },
     { id: "subprogramdeadlands3",
 	title: "Subprogram Deadlands 3",
-	chapter: "Subprogram Deadlands",
-	summary: "Deadlands finale with a compact last sprint to the exit.",
 	image: "subprogramdeadlands3.png",
 	page: "maps/subprogramdeadlands3.html",
 	markers: [
@@ -630,8 +594,6 @@ export const MAP_CATALOG = [
     },
     { id: "frostbytechallenge",
 	title: "Frostbyte Challenge",
-	chapter: "Challenge Maps",
-	summary: "Standalone challenge route outside the main chapter flow.",
 	image: "frostbytechallenge.png",
 	page: "maps/frostbytechallenge.html",
 	markers: [
@@ -656,8 +618,6 @@ export const MAP_CATALOG = [
     },
     { id: "hiddenlevel",
 	title: "Hidden Level",
-	chapter: "Challenge Maps",
-	summary: "Special map page for the hidden level route.",
 	image: "hiddenlevel.png",
 	page: "maps/hiddenlevel.html",
 	markers: [
@@ -668,8 +628,6 @@ export const MAP_CATALOG = [
     },
     { id: "core",
 	title: "Core",
-	chapter: "Endgame",
-	summary: "Core stage overview page in the shared atlas shell.",
 	image: "core.png",
 	page: "maps/core.html",
 	markers: [
@@ -679,8 +637,6 @@ export const MAP_CATALOG = [
     },
     { id: "throneroom",
 	title: "Throne Room",
-	chapter: "Endgame",
-	summary: "Boss approach and throne room page with dedicated navigation.",
 	image: "throneroom.png",
 	page: "maps/throneroom.html",
 	markers: [
@@ -691,8 +647,6 @@ export const MAP_CATALOG = [
     },
     { id: "credits",
 	title: "Credits",
-	chapter: "Archives", 
-	summary: "Credits screen page kept inside the same dark presentation system.",
 	image: "credits.png",
 	page: "maps/credits.html",
 	markers: [
