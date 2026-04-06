@@ -1,4 +1,4 @@
-export const MARKER_TYPES = [
+﻿export const MARKER_TYPES = [
     { id: "start", label: "Start" },
     { id: "checkpoint", label: "Checkpoint" },
     { id: "bit-chest", label: "Bit Chest" },
@@ -56,7 +56,7 @@ export const MAP_CATALOG = [
 		{ x:1313, y:352, type: "part-chest" },
 		{ x:2029, y:456, type: "part-chest" },
 		{ x:2704, y:657, type: "part-chest" },
-		{ x:3214, y:668, type: "color-capsule" },
+		{ x:3214, y:668, type: "color-capsule", tooltip: "Mega Mint" },
 		{ x:3256, y:267, type: "stage-exit" }
         ]
     },

@@ -20,6 +20,7 @@ const coordsReadout = document.getElementById("coordsReadout");
 const zoomInButton = document.getElementById("zoomInButton");
 const zoomOutButton = document.getElementById("zoomOutButton");
 const fitButton = document.getElementById("fitButton");
+const markerTooltip = document.createElement("div");
 
 const viewState = {
     scale: 1,
@@ -32,6 +33,10 @@ const viewState = {
     dragOriginY: 0,
     moved: false
 };
+
+markerTooltip.className = "marker-tooltip";
+markerTooltip.hidden = true;
+mapViewport?.appendChild(markerTooltip);
 
 if (!map) {
     document.title = "Map Not Found | Megabyte Punch Atlas";
@@ -122,6 +127,21 @@ function renderMarkers() {
         markerElement.style.left = `${marker.x}px`;
         markerElement.style.top = `${marker.y}px`;
         markerElement.style.backgroundImage = `url('${getMarkerIconUrl(marker.type)}')`;
+
+        if (marker.tooltip) {
+            markerElement.classList.add("marker--interactive");
+            markerElement.dataset.markerTooltip = marker.tooltip;
+            markerElement.addEventListener("pointerenter", (event) => showMarkerTooltip(marker.tooltip, event));
+            markerElement.addEventListener("pointermove", (event) => moveMarkerTooltip(event));
+            markerElement.addEventListener("pointerleave", hideMarkerTooltip);
+            markerElement.addEventListener("pointerdown", (event) => {
+                event.stopPropagation();
+            });
+            markerElement.addEventListener("pointerup", (event) => {
+                event.stopPropagation();
+            });
+        }
+
         markerLayer.appendChild(markerElement);
     });
 }
@@ -289,5 +309,24 @@ function clamp(value, min, max) {
 }
 
 function isUiTarget(target) {
-    return target instanceof Element && Boolean(target.closest(".zoom-stack, .legend-panel, .back-link"));
+    return target instanceof Element && Boolean(target.closest(".zoom-stack, .legend-panel, .back-link, .marker--interactive, .marker-tooltip"));
+}
+
+function showMarkerTooltip(text, event) {
+    markerTooltip.textContent = text;
+    markerTooltip.hidden = false;
+    moveMarkerTooltip(event);
+}
+
+function moveMarkerTooltip(event) {
+    const bounds = mapViewport.getBoundingClientRect();
+    const left = Math.min(Math.max(event.clientX - bounds.left, 28), bounds.width - 28);
+    const top = Math.min(Math.max(event.clientY - bounds.top - 12, 24), bounds.height - 24);
+
+    markerTooltip.style.left = `${left}px`;
+    markerTooltip.style.top = `${top}px`;
+}
+
+function hideMarkerTooltip() {
+    markerTooltip.hidden = true;
 }
