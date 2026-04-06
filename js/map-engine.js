@@ -1,14 +1,8 @@
-﻿import {
-    MARKER_TYPES,
-    getMapById,
-    getMapImageUrl,
-    getMarkerCounts,
-    getMarkerIconUrl
-} from "./map-registry.js";
+﻿const body = document.body;
+const registryId = body.dataset.registry ?? "megabyte-punch";
+const mapId = body.dataset.mapId ?? "";
 
-const body = document.body;
-const map = getMapById(body.dataset.mapId ?? "");
-
+const backLink = document.querySelector(".back-link");
 const mapTitle = document.getElementById("mapTitle");
 const mapNote = document.getElementById("mapNote");
 const mapViewport = document.getElementById("mapViewport");
@@ -34,19 +28,45 @@ const viewState = {
     moved: false
 };
 
+let GAME_INFO;
+let MARKER_TYPES;
+let getMapById;
+let getMarkerCounts;
+let getMapImageUrl;
+let getMarkerIconUrl;
+let map;
+
 markerTooltip.className = "marker-tooltip";
 markerTooltip.hidden = true;
 mapViewport?.appendChild(markerTooltip);
 
-if (!map) {
-    document.title = "Map Not Found | Megabyte Punch Atlas";
-    if (mapTitle) {
-        mapTitle.textContent = "Map not found";
+init();
+
+async function init() {
+    const registry = await import(`./registries/${registryId}-registry.js`);
+    GAME_INFO = registry.GAME_INFO;
+    MARKER_TYPES = registry.MARKER_TYPES;
+    getMapById = registry.getMapById;
+    getMarkerCounts = registry.getMarkerCounts;
+    getMapImageUrl = registry.getMapImageUrl;
+    getMarkerIconUrl = registry.getMarkerIconUrl;
+    map = getMapById(mapId);
+
+    if (backLink && GAME_INFO?.page) {
+        backLink.href = `../${GAME_INFO.page}`;
     }
-    if (mapNote) {
-        mapNote.textContent = "Check the map id in the page markup.";
+
+    if (!map) {
+        document.title = `Map Not Found | ${GAME_INFO?.title ?? "Videogame Cartography"}`;
+        if (mapTitle) {
+            mapTitle.textContent = "Map not found";
+        }
+        if (mapNote) {
+            mapNote.textContent = "Check the map id in the page markup.";
+        }
+        return;
     }
-} else {
+
     bootstrap();
 }
 
@@ -54,7 +74,7 @@ function bootstrap() {
     const markerCounts = getMarkerCounts(map);
     const totalMarkers = map.markers.length;
 
-    document.title = `${map.title} | Megabyte Punch Atlas`;
+    document.title = `${map.title} | ${GAME_INFO.title} | Videogame Cartography`;
     mapTitle.textContent = map.title;
     mapImage.src = getMapImageUrl(map);
     mapImage.alt = `${map.title} map image`;
@@ -130,7 +150,6 @@ function renderMarkers() {
 
         if (marker.tooltip) {
             markerElement.classList.add("marker--interactive");
-            markerElement.dataset.markerTooltip = marker.tooltip;
             markerElement.addEventListener("pointerenter", (event) => showMarkerTooltip(marker.tooltip, event));
             markerElement.addEventListener("pointermove", (event) => moveMarkerTooltip(event));
             markerElement.addEventListener("pointerleave", hideMarkerTooltip);

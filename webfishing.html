@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,18 +6,17 @@
 <title>Webfishing | Videogame Cartography</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="home-page">
+<body class="home-page" data-registry="webfishing">
 <div class="site-chrome"></div>
 <main class="home-layout">
     <header class="page-topbar shell-panel game-page-topbar">
         <a class="back-link" href="index.html">Back</a>
-        <h1 class="map-title">Webfishing</h1>
+        <h1 class="map-title" id="gameTitle">Webfishing</h1>
     </header>
     <section class="browser-panel browser-panel--minimal">
-        <div class="empty-state shell-panel">
-            No maps have been added for this game yet.
-        </div>
+        <div id="stageGrid" class="stage-grid stage-grid--home"></div>
     </section>
 </main>
+<script type="module" src="js/homepage.js"></script>
 </body>
 </html>
