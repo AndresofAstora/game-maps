@@ -1,4 +1,4 @@
-export const MARKER_TYPES = [
+export const DEFAULT_MARKER_TYPES = [
     { id: "start", label: "Start" },
     { id: "checkpoint", label: "Checkpoint" },
     { id: "bit-chest", label: "Bit Chest" },
@@ -16,8 +16,17 @@ const DEFAULT_MARKER_ICON_FILES = {
     "stage-exit": "marker-end.png"
 };
 
-export function createGameRegistry({ gameId, title, page, maps = [], stageOrder = [], markerIconFiles = DEFAULT_MARKER_ICON_FILES }) {
+export function createGameRegistry({
+    gameId,
+    title,
+    page,
+    maps = [],
+    stageOrder = [],
+    markerTypes = DEFAULT_MARKER_TYPES,
+    markerIconFiles = DEFAULT_MARKER_ICON_FILES
+}) {
     const GAME_INFO = { gameId, title, page };
+    const MARKER_TYPES = markerTypes;
     const MAP_CATALOG = maps;
     const STAGE_ORDER = stageOrder;
 
