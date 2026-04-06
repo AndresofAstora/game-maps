@@ -356,13 +356,15 @@ a:focus:not(:focus-visible) {
     position: absolute;
     inset: 0 auto auto 0;
     pointer-events: none;
+    --marker-scale: 1;
 }
 
 .marker {
     position: absolute;
     width: 24px;
     height: 24px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(var(--marker-scale));
+    transform-origin: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
