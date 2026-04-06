@@ -142,11 +142,15 @@ function renderMarkers() {
 
     map.markers.forEach((marker) => {
         const markerElement = document.createElement("div");
+        const markerIcon = document.createElement("img");
         markerElement.className = "marker";
         markerElement.dataset.markerType = marker.type;
         markerElement.style.left = `${marker.x}px`;
         markerElement.style.top = `${marker.y}px`;
-        markerElement.style.backgroundImage = `url('${getMarkerIconUrl(marker.type)}')`;
+        markerIcon.src = getMarkerIconUrl(marker.type);
+        markerIcon.alt = "";
+        markerIcon.draggable = false;
+        markerElement.appendChild(markerIcon);
 
         if (marker.tooltip) {
             markerElement.classList.add("marker--interactive");
