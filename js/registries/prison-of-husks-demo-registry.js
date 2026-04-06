@@ -82,8 +82,7 @@ export const MAP_CATALOG = [
         { x:100, y:100, type: "locked-door", tooltip: "Liberation key required" },
         { x:100, y:100, type: "npc", tooltip: "Caged Doll (Lower cage to receive Chapel key and unlock shortcut)" },
         { x:100, y:100, type: "boss", tooltip: "Champion" },
-        { x:100, y:100, type: "boss", tooltip: "Stray Pigment (Wilting Lily key required for boss to spawn)" },
-        
+        { x:100, y:100, type: "boss", tooltip: "Stray Pigment (Wilting Lily key required for boss to spawn)" }
         ]
     },
 
