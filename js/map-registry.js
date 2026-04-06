@@ -21,7 +21,6 @@ export const MAP_CATALOG = [
     id: "tutorial",
 	title: "Tutorial",
 	chapter: "Training Grounds",
-	summary: "Boot sequence walkthrough and movement primer.",
 	image: "tutorial.png",
 	page: "maps/tutorial.html",
 	markers: [
@@ -35,7 +34,6 @@ export const MAP_CATALOG = [
     id: "electrocaves1",
 	title: "Electro Caves 1",
 	chapter: "Electro Caves",
-	summary: "Opening Electro Caves route.",
 	image: "electrocaves1.png",
 	page: "maps/electrocaves1.html",
 	markers: [
@@ -85,7 +83,7 @@ export const MAP_CATALOG = [
 		{ x:2990, y:392, type: "bit-chest" },
 		{ x:515, y:853, type: "part-chest" },
 		{ x:2597, y:870, type: "part-chest" },
-		{ x:1113, y:1035, type: "color-capsule" },
+		{ x:1113, y:1035, type: "color-capsule", tooltip: "Blue Coookie" },
 		{ x:3289, y:655, type: "stage-exit" }
         ]
     },
@@ -116,7 +114,7 @@ export const MAP_CATALOG = [
 		{ x:1194, y:868, type: "part-chest" },
 		{ x:1843, y:831, type: "part-chest" },
 		{ x:2672, y:263, type: "part-chest" },
-		{ x:3333, y:115, type: "color-capsule" },
+		{ x:3333, y:115, type: "color-capsule", tooltip: "Blorange" },
 		{ x:2936, y:353, type: "stage-exit" }
         ]
     },
@@ -155,7 +153,7 @@ export const MAP_CATALOG = [
 		{ x:2246, y:912, type: "part-chest" },
 		{ x:2346, y:159, type: "part-chest" },
 		{ x:3247, y:167, type: "part-chest" },
-		{ x:870, y:299, type: "color-capsule" },
+		{ x:870, y:299, type: "color-capsule" , tooltip: "Meteor Yellow" },
 		{ x:5206, y:708, type: "stage-exit" }
         ]
     },
@@ -188,8 +186,8 @@ export const MAP_CATALOG = [
 		{ x:1270, y:829, type: "part-chest" },
 		{ x:1740, y:820, type: "part-chest" },
 		{ x:5347, y:791, type: "part-chest" },
-		{ x:2606, y:157, type: "color-capsule" },
-        { x:4361, y:67, type: "color-capsule" },
+		{ x:2606, y:157, type: "color-capsule", tooltip: "Swift Reptile" },
+        { x:4361, y:67, type: "color-capsule", tooltip: "Burocratica" },
 		{ x:5116, y:320, type: "stage-exit" }
         ]
     },
@@ -215,7 +213,7 @@ export const MAP_CATALOG = [
 		{ x:811, y:1719, type: "bit-chest" },
 		{ x:1320, y:304, type: "part-chest" },
 		{ x:934, y:1719, type: "part-chest" },
-		{ x:685, y:1169, type: "color-capsule" },
+		{ x:685, y:1169, type: "color-capsule", tooltip: "Sweet Revenge" },
 		{ x:1183, y:2016, type: "stage-exit" }
         ]
     },
@@ -244,7 +242,7 @@ export const MAP_CATALOG = [
 		{ x:2918, y:302, type: "bit-chest" },
 		{ x:59, y:146, type: "part-chest" },
 		{ x:770, y:462, type: "part-chest" },
-		{ x:1977, y:405, type: "color-capsule" },
+		{ x:1977, y:405, type: "color-capsule", tooltip: "Magma Volta" },
 		{ x:3508, y:416, type: "stage-exit" }
         ]
     },
@@ -275,7 +273,7 @@ export const MAP_CATALOG = [
 		{ x:768, y:459, type: "part-chest" },
 		{ x:1712, y:154, type: "part-chest" },
 		{ x:1915, y:282, type: "part-chest" },
-		{ x:1686, y:121, type: "color-capsule" },
+		{ x:1686, y:121, type: "color-capsule", tooltip: "Nuclear System" },
 		{ x:1744, y:558, type: "stage-exit" }
         ]
     },
@@ -307,7 +305,7 @@ export const MAP_CATALOG = [
 		{ x:1083, y:817, type: "part-chest" },
 		{ x:1350, y:56, type: "part-chest" },
 		{ x:1982, y:734, type: "part-chest" },
-		{ x:63, y:899, type: "color-capsule" },
+		{ x:63, y:899, type: "color-capsule", tooltip: "Hydro Assault" },
 		{ x:1950, y:119, type: "stage-exit" }
         ]
     },
@@ -337,8 +335,8 @@ export const MAP_CATALOG = [
 		{ x:1775, y:264, type: "part-chest" },
 		{ x:3101, y:903, type: "part-chest" },
 		{ x:4591, y:795, type: "part-chest" },
-		{ x:1015, y:1309, type: "color-capsule" },
-        { x:4002, y:940, type: "color-capsule" },
+		{ x:1015, y:1309, type: "color-capsule", tooltip: "Strong Battery" },
+        { x:4002, y:940, type: "color-capsule", tooltip: "Dark Conductivity" },
 		{ x:5801, y:1148, type: "stage-exit" }
         ]
     },
@@ -371,7 +369,7 @@ export const MAP_CATALOG = [
 		{ x:2465, y:620, type: "part-chest" },
 		{ x:2895, y:1032, type: "part-chest" },
 		{ x:5969, y:582, type: "part-chest" },
-		{ x:2279, y:539, type: "color-capsule" },
+		{ x:2279, y:539, type: "color-capsule", tooltip: "White Cloak" },
 		{ x:6157, y:1003, type: "stage-exit" }
         ]
     },
@@ -407,7 +405,7 @@ export const MAP_CATALOG = [
 		{ x:1757, y:714, type: "part-chest" },
 		{ x:2371, y:371, type: "part-chest" },
 		{ x:2643, y:829, type: "part-chest" },
-		{ x:893, y:1274, type: "color-capsule" },
+		{ x:893, y:1274, type: "color-capsule", tooltip: "Valk Elite" },
 		{ x:5595, y:245, type: "stage-exit" }
         ]
     },
@@ -435,7 +433,7 @@ export const MAP_CATALOG = [
             { x: 87, y: 249, type: "part-chest" },
             { x: 689, y: 975, type: "part-chest" },
             { x: 1724, y: 827, type: "part-chest" },
-            { x: 98, y: 221, type: "color-capsule" },
+            { x: 98, y: 221, type: "color-capsule", tooltip: "Lethal Impact" },
             { x: 2435, y: 461, type: "stage-exit" }
         ]
     },
@@ -467,7 +465,7 @@ export const MAP_CATALOG = [
             { x: 580, y: 391, type: "part-chest" },
             { x: 657, y: 1235, type: "part-chest" },
             { x: 330, y: 2144, type: "part-chest" },
-            { x: 288, y: 76, type: "color-capsule" },
+            { x: 288, y: 76, type: "color-capsule", tooltip: "Killer's Grey" },
             { x: 696, y: 81, type: "stage-exit" }
         ]
     },
@@ -497,7 +495,7 @@ export const MAP_CATALOG = [
             { x: 1877, y: 1067, type: "bit-chest" },
             { x: 392, y: 39, type: "part-chest" },
             { x: 1933, y: 974, type: "part-chest" },
-            { x: 736, y: 201, type: "color-capsule" },
+            { x: 736, y: 201, type: "color-capsule", tooltip: "Electro Circus" },
             { x: 1795, y: 95, type: "stage-exit" }
         ]
     },
@@ -528,7 +526,7 @@ export const MAP_CATALOG = [
 		{ x:1720, y:922, type: "part-chest" },
 		{ x:2667, y:571, type: "part-chest" },
 		{ x:2899, y:922, type: "part-chest" },
-		{ x:2423, y:165, type: "color-capsule" },
+		{ x:2423, y:165, type: "color-capsule", tooltip: "Psychic Purple" },
 		{ x:4073, y:238, type: "stage-exit" }
         ]
     },
@@ -579,7 +577,7 @@ export const MAP_CATALOG = [
 		{ x:3831, y:648, type: "bit-chest" },
 		{ x:1714, y:478, type: "part-chest" },
 		{ x:3944, y:137, type: "part-chest" },
-		{ x:1524, y:149, type: "color-capsule" },
+		{ x:1524, y:149, type: "color-capsule", tooltip: "Fabulous Puncher" },
 		{ x:4249, y:740, type: "stage-exit" }
         ]
     },
@@ -626,7 +624,7 @@ export const MAP_CATALOG = [
 		{ x:4444, y:573, type: "bit-chest" },
 		{ x:783, y:331, type: "part-chest" },
 		{ x:2104, y:332, type: "part-chest" },
-		{ x:1121, y:320, type: "color-capsule" },
+		{ x:1121, y:320, type: "color-capsule", tooltip: "Imperial Ember" },
 		{ x:3931, y:665, type: "stage-exit" }
         ]
     },
@@ -648,7 +646,7 @@ export const MAP_CATALOG = [
 		{ x:100, y:100, type: "bit-chest" },
 		{ x:100, y:100, type: "bit-chest" },
 		{ x:100, y:100, type: "bit-chest" },
-		{ x:100, y:100, type: "color-capsule" },
+		{ x:100, y:100, type: "color-capsule", tooltip: "Tesla Deluxe" },
 		{ x:100, y:100, type: "stage-exit" }
         ]
     },
@@ -660,8 +658,8 @@ export const MAP_CATALOG = [
 	page: "maps/hiddenlevel.html",
 	markers: [
 		{ x:429, y:144, type: "start" },
-		{ x:429, y:99, type: "part-chest" },
-		{ x:119, y:123, type: "color-capsule" }
+		{ x:429, y:99, type: "part-chest", tooltip: "Megabyte Punch" },
+		{ x:119, y:123, type: "color-capsule", tooltip: "Venom Magnetizer" }
         ]
     },
     { id: "core",
@@ -683,7 +681,7 @@ export const MAP_CATALOG = [
 	page: "maps/throneroom.html",
 	markers: [
 		{ x:70, y:177, type: "start" },
-		{ x:393, y:45, type: "color-capsule" },
+		{ x:393, y:45, type: "color-capsule", tooltip: "New Jack Swing" },
 		{ x:1080, y:124, type: "stage-exit" }
         ]
     },
@@ -695,7 +693,7 @@ export const MAP_CATALOG = [
 	page: "maps/credits.html",
 	markers: [
 		{ x:90, y:177, type: "start" },
-		{ x:1322, y:286, type: "color-capsule" },
+		{ x:1322, y:286, type: "color-capsule", tooltip: "Flavor No.1" },
 		{ x:1375, y:177, type: "stage-exit" }
         ]
     },
