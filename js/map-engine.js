@@ -297,6 +297,7 @@ function zoomAtClientPoint(factor, clientX, clientY) {
 
 function applyTransform() {
     mapCanvas.style.transform = `translate(${viewState.offsetX}px, ${viewState.offsetY}px) scale(${viewState.scale})`;
+    markerLayer.style.setProperty("--marker-scale", `${1 / viewState.scale}`);
 }
 
 function updateCoords(clientX, clientY) {
