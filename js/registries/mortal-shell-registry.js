@@ -52,7 +52,7 @@ const maps = [
             { x:7128, y:6759, type: "item", tooltip: "Glimpse of Futility" },
             { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar" },
             { x:8589, y:2084, type: "chest", tooltip: "Large Bolt + Unkown Effigy" },
-            { x:7821, y:2632, type: "frogchest", tooltip: "Sester's Binding" },
+            { x:7821, y:2632, type: "frogchest", tooltip: "Sester's Binding" }
         ]
     }
 ];
