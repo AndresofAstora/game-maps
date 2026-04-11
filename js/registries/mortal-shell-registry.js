@@ -14,16 +14,16 @@ const markerTypes = [
 ];
 
 const MARKER_ICON_FILES = {
-    start: "marker-boss.png",
-    save: "marker-chest.png",
-    weapon: "marker-frogchest.png",
-    key: "marker-lever.png",
-    item: "marker-inscription.png",
-    "illusory-wall": "marker-item.png",
-    ladder: "marker-mushroom.png",
-    "locked-door": "marker-npc.png",
-    npc: "marker-shell.png",
-    boss: "marker-warp.png"
+    boss: "marker-boss.png",
+    chest: "marker-chest.png",
+    frogchest: "marker-frogchest.png",
+    lever: "marker-lever.png",
+    inscription: "marker-inscription.png",
+    item: "marker-item.png",
+    mushroom: "marker-mushroom.png",
+    npc: "marker-npc.png",
+    shell: "marker-shell.png",
+    warp: "marker-warp.png"
 };
 
 const maps = [
@@ -33,10 +33,11 @@ const maps = [
         image: "fallgrim.png",
         page: "maps/fallgrim.html",
         markers: [
-            { x:394, y:211, type: "start" },
-            { x:104, y:691, type: "save" },
-            { x:1803, y:463, type: "save" },
-            { x:114, y:409, type: "weapon", tooltip: "Longsword" },
+            { x:6090, y:8142, type: "shell", tooltip: "Harros, the Vassal" },
+            { x:6594, y:7243, type: "mushroom" },
+            { x:7005, y:6987, type: "inscription" },
+            { x:7128, y:6759, type: "item", tooltip: "Glimpse of Futility" },
+            { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar"}
         ]
     }
 ];
