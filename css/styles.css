@@ -363,8 +363,8 @@ a:focus:not(:focus-visible) {
     position: absolute;
     width: 48px;
     height: 48px;
-    transform: translate(-50%, -50%) scale(var(--marker-scale));
-    transform-origin: center;
+    transform: translate(-50%, -100%) scale(calc(var(--marker-scale) * 0.5));
+    transform-origin: bottom center;
     pointer-events: none;
 }
 
@@ -386,7 +386,8 @@ a:focus:not(:focus-visible) {
 .marker-tooltip {
     position: absolute;
     z-index: 4;
-    max-width: 12rem;
+    width: max-content;
+    max-width: none;
     padding: 0.45rem 0.65rem;
     border: 1px solid var(--stroke-strong);
     border-radius: 10px;
