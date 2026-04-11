@@ -81,8 +81,8 @@ const registry = createGameRegistry({
         "shrine-of-ash",
         "crypt-of-martyrs",
         "eternal-narthex",
-        "shifting-archives",
-        "dim-gate"
+        "dim-gate",
+        "shifting-archives"
     ],
     markerTypes,
     markerIconFiles: MARKER_ICON_FILES
