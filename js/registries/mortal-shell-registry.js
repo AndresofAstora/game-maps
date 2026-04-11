@@ -1,10 +1,10 @@
-﻿import { createGameRegistry } from "./shared-game-registry.js";
+import { createGameRegistry } from "./shared-game-registry.js";
 
 const markerTypes = [
     { id: "boss", label: "Boss" },
     { id: "chest", label: "Chest" },
-    { id: "frogchest", label: "Frog Chest" },
-    { id: "lever", label: "Lever" },
+    { id: "frog-chest", label: "Frog Chest" },
+    { id: "goal", label: "Goal" },
     { id: "inscription", label: "Inscription" },
     { id: "item", label: "Item" },
     { id: "mushroom", label: "Mushroom" },
@@ -17,7 +17,7 @@ const MARKER_ICON_FILES = {
     boss: "marker-boss.png",
     chest: "marker-chest.png",
     "frog-chest": "marker-frogchest.png",
-    lever: "marker-lever.png",
+    goal: "marker-goal.png",
     inscription: "marker-inscription.png",
     item: "marker-item.png",
     mushroom: "marker-mushroom.png",
@@ -32,28 +32,42 @@ const maps = [
         title: "Fallgrim",
         image: "fallgrim.png",
         page: "maps/fallgrim.html",
-        markers: [
-            { x:6090, y:8142, type: "shell", tooltip: "Harros, the Vassal" },
-            { x:7575, y:2381, type: "shell", tooltip: "Eredrim, the Venerable" },
-            { x:3716, y:8387, type: "shell", tooltip: "Tiel, the Acolyte" },
-            { x:7478, y:562, type: "npc", tooltip: "Corrupted Sester" },
-            { x:8479, y:4921, type: "npc", tooltip: "Gorf" },
-            { x:8595, y:5310, type: "npc", tooltip: "Baghead" },
-            { x:4486, y:5133, type: "npc", tooltip: "Sester Genessa" },
-            { x:4846, y:5184, type: "npc", tooltip: "Thestus" },
-            { x:4874, y:5282, type: "npc", tooltip: "Twin-Sister" },
-            { x:4386, y:5362, type: "npc", tooltip: "Hadern" },
-            { x:4633, y:5761, type: "npc", tooltip: "The Old Prisoner" },
-            { x:4607, y:6338, type: "npc", tooltip: "Vlas" },
-            { x:8543, y:1698, type: "item", tooltip: "Unkown Effigy" },
-            { x:7892, y:2935, type: "mushroom" },
-            { x:6594, y:7243, type: "mushroom" },
-            { x:7005, y:6987, type: "inscription" },
-            { x:7128, y:6759, type: "item", tooltip: "Glimpse of Futility" },
-            { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar" },
-            { x:8589, y:2084, type: "chest", tooltip: "Large Bolt + Unkown Effigy" },
-            { x:7821, y:2632, type: "frogchest", tooltip: "Sester's Binding" }
-        ]
+        markers: []
+    },
+    {
+        id: "shrine-of-ash",
+        title: "Shrine of Ash",
+        image: "shrineofash.png",
+        page: "maps/shrine-of-ash.html",
+        markers: []
+    },
+    {
+        id: "crypt-of-martyrs",
+        title: "Crypt of Martyrs",
+        image: "cryptofmartyrs.png",
+        page: "maps/crypt-of-martyrs.html",
+        markers: []
+    },
+    {
+        id: "eternal-narthex",
+        title: "Eternal Narthex",
+        image: "eternalnarthex.png",
+        page: "maps/eternal-narthex.html",
+        markers: []
+    },
+    {
+        id: "shifting-archives",
+        title: "Shifting Archives",
+        image: "shiftingarchives.png",
+        page: "maps/shifting-archives.html",
+        markers: []
+    },
+    {
+        id: "dim-gate",
+        title: "Dim Gate",
+        image: "dimgate.png",
+        page: "maps/dim-gate.html",
+        markers: []
     }
 ];
 
@@ -62,7 +76,14 @@ const registry = createGameRegistry({
     title: "Mortal Shell",
     page: "mortal-shell.html",
     maps,
-    stageOrder: ["fallgrim"],
+    stageOrder: [
+        "fallgrim",
+        "shrine-of-ash",
+        "crypt-of-martyrs",
+        "eternal-narthex",
+        "shifting-archives",
+        "dim-gate"
+    ],
     markerTypes,
     markerIconFiles: MARKER_ICON_FILES
 });
