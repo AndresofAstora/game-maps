@@ -344,8 +344,23 @@ function showMarkerTooltip(text, event) {
 
 function moveMarkerTooltip(event) {
     const bounds = mapViewport.getBoundingClientRect();
-    const left = Math.min(Math.max(event.clientX - bounds.left, 28), bounds.width - 28);
-    const top = Math.min(Math.max(event.clientY - bounds.top - 12, 24), bounds.height - 24);
+    const pointerX = event.clientX - bounds.left;
+    const pointerY = event.clientY - bounds.top - 12;
+    const tooltipBounds = markerTooltip.getBoundingClientRect();
+    const horizontalMargin = 16;
+    const verticalMargin = 16;
+    const halfTooltipWidth = tooltipBounds.width / 2;
+    const minLeft = halfTooltipWidth + horizontalMargin;
+    const maxLeft = bounds.width - halfTooltipWidth - horizontalMargin;
+    const minTop = tooltipBounds.height + 24;
+    const maxTop = bounds.height - verticalMargin + 12;
+
+    const left = minLeft <= maxLeft
+        ? clamp(pointerX, minLeft, maxLeft)
+        : bounds.width / 2;
+    const top = minTop <= maxTop
+        ? clamp(pointerY, minTop, maxTop)
+        : maxTop;
 
     markerTooltip.style.left = `${left}px`;
     markerTooltip.style.top = `${top}px`;
