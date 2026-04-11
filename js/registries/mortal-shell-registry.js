@@ -34,10 +34,25 @@ const maps = [
         page: "maps/fallgrim.html",
         markers: [
             { x:6090, y:8142, type: "shell", tooltip: "Harros, the Vassal" },
+            { x:7575, y:2381, type: "shell", tooltip: "Eredrim, the Venerable" },
+            { x:3716, y:8387, type: "shell", tooltip: "Tiel, the Acolyte" },
+            { x:7478, y:562, type: "npc", tooltip: "Corrupted Sester" },
+            { x:8479, y:4921, type: "npc", tooltip: "Gorf" },
+            { x:8595, y:5310, type: "npc", tooltip: "Baghead" },
+            { x:4486, y:5133, type: "npc", tooltip: "Sester Genessa" },
+            { x:4846, y:5184, type: "npc", tooltip: "Thestus" },
+            { x:4874, y:5282, type: "npc", tooltip: "Twin-Sister" },
+            { x:4386, y:5362, type: "npc", tooltip: "Hadern" },
+            { x:4633, y:5761, type: "npc", tooltip: "The Old Prisoner" },
+            { x:4607, y:6338, type: "npc", tooltip: "Vlas" },
+            { x:8543, y:1698, type: "item", tooltip: "Unkown Effigy" },
+            { x:7892, y:2935, type: "mushroom" },
             { x:6594, y:7243, type: "mushroom" },
             { x:7005, y:6987, type: "inscription" },
             { x:7128, y:6759, type: "item", tooltip: "Glimpse of Futility" },
-            { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar" }
+            { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar" },
+            { x:8589, y:2084, type: "chest", tooltip: "Large Bolt + Unkown Effigy" },
+            { x:7821, y:2632, type: "frogchest", tooltip: "Sester's Binding" },
         ]
     }
 ];
