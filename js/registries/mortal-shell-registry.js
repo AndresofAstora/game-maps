@@ -37,7 +37,7 @@ const maps = [
             { x:6594, y:7243, type: "mushroom" },
             { x:7005, y:6987, type: "inscription" },
             { x:7128, y:6759, type: "item", tooltip: "Glimpse of Futility" },
-            { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar"}
+            { x:7426, y:6657, type: "chest", tooltip: "Simple Lute + Remnant of Tar" }
         ]
     }
 ];
