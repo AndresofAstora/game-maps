@@ -1,6 +1,7 @@
 import { createGameRegistry } from "./shared-game-registry.js";
 
 const markerTypes = [
+    { id: "start", label: "Start" },
     { id: "boss", label: "Boss" },
     { id: "chest", label: "Chest" },
     { id: "frog-chest", label: "Frog Chest" },
@@ -14,6 +15,7 @@ const markerTypes = [
 ];
 
 const MARKER_ICON_FILES = {
+    start: "marker-start.png",
     boss: "marker-boss.png",
     chest: "marker-chest.png",
     "frog-chest": "marker-frogchest.png",
@@ -44,8 +46,8 @@ const maps = [
             { x:2552, y:3241, type: "npc", tooltip: "Sester Genessa (First Appearance)" },
             { x:505, y:1395, type: "npc", tooltip: "Sester Genessa (Second Appearance)" },
             { x:1230, y:158, type: "npc", tooltip: "Sester Genessa (Third Appearance)" },
-            { x:2620, y:3132, type: "weapon", tooltip: "Smoldering Mace" },
-            { x:2620, y:3132, type: "boss", tooltip: "Imrod, the Unrepentant (Drop: Glimpse of Annihilation" },
+            { x:1636, y:1993, type: "weapon", tooltip: "Smoldering Mace" },
+            { x:1313, y:107, type: "boss", tooltip: "Imrod, the Unrepentant (Drop: Glimpse of Annihilation" },
             { x:1864, y:2565, type: "chest", tooltip: "Offering: Glimpse of Affection + Foundry Stone" },
             { x:966, y:2670, type: "chest", tooltip: "Solemn Offering + Unguent Tar" },
             { x:185, y:2560, type: "chest", tooltip: "Offering: Glimpse of Wisdom + Unkown Effigy" },
