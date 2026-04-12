@@ -149,7 +149,7 @@ const maps = [
             { x:1196, y:3118, type: "npc", tooltip: "Sester Genessa)" },
             { x:1169, y:3161, type: "weapon", tooltip: "Hammer & Chisel" },
             { x:400, y:1613, type: "lever" },
-            { x:1422, y:15771, type: "lever },
+            { x:1422, y:15771, type: "lever" },
             { x:2452, y:1317, type: "lever" },
             { x:352, y:3021, type: "warp", tooltip: "A1" },
             { x:1263, y:2615, type: "warp", tooltip: "B1" },
