@@ -16,6 +16,7 @@ const markerTypes = [
 
 const MARKER_ICON_FILES = {
     start: "marker-start.png",
+    weapon: "marker-weapon.png",
     boss: "marker-boss.png",
     chest: "marker-chest.png",
     "frog-chest": "marker-frogchest.png",
