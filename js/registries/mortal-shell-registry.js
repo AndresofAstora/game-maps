@@ -144,7 +144,59 @@ const maps = [
         title: "Eternal Narthex",
         image: "eternalnarthex.png",
         page: "maps/eternal-narthex.html",
-        markers: []
+        markers: [
+            { x:1419, y:3369, type: "start" },
+            { x:1196, y:3118, type: "npc", tooltip: "Sester Genessa)" },
+            { x:1169, y:3161, type: "weapon", tooltip: "Hammer & Chisel" }
+            { x:400, y:1613, type: "lever" },
+            { x:1422, y:15771, type: "lever },
+            { x:2452, y:1317, type: "lever" },
+            { x:352, y:3021, type: "warp", tooltip: "A1" },
+            { x:1263, y:2615, type: "warp", tooltip: "B1" },
+            { x:1589, y:2618, type: "warp", tooltip: "C1" },
+            { x:1628, y:2045, type: "warp", tooltip: "D1" },
+            { x:1830, y:2092, type: "warp", tooltip: "E1" },
+            { x:2626, y:2998, type: "warp", tooltip: "F1" },
+            { x:1118, y:424, type: "warp", tooltip: "A2" },
+            { x:1191, y:647, type: "warp", tooltip: "B2" },
+            { x:282, y:618, type: "warp", tooltip: "C2" },
+            { x:1720, y:1327, type: "warp", tooltip: "D2" },
+            { x:1645, y:425, type: "warp", tooltip: "E2" },
+            { x:150, y:1580, type: "warp", tooltip: "F2" },
+            { x:2496, y:3044, type: "chest", tooltip: "Solemn Offering" },
+            { x:2178, y:2055, type: "chest", tooltip: "Quenching Acid" },
+            { x:123, y:1701, type: "chest", tooltip: "Scripture of Repent + Golden Bell" },
+            { x:215, y:2683, type: "item", tooltip: "Scripture of Euphoria" }
+            { x:1581, y:2442, type: "item", tooltip: "Ornate Token" }
+            { x:2178, y:2451, type: "item", tooltip: "Glimpse of Futility" }
+            { x:318, y:1979, type: "item", tooltip: "Rotten Food" }
+            { x:1465, y:2074, type: "item", tooltip: "Congealed Tar" }
+            { x:2325, y:2140, type: "item", tooltip: "Bag of Tar" }
+            { x:147, y:1758, type: "item", tooltip: "Roasted Rat" }
+            { x:244, y:1588, type: "item", tooltip: "Inferior Moonshine" }
+            { x:311, y:1595, type: "item", tooltip: "Glimpse of Futility" }
+            { x:272, y:1631, type: "item", tooltip: "Superior Moonshine" }
+            { x:1261, y:1689, type: "item", tooltip: "Congealed Tar" }
+            { x:1790, y:1900, type: "item", tooltip: "Scripture of Defiance" }
+            { x:2598, y:1882, type: "item", tooltip: "Scripture of Defiance" }
+            { x:447, y:818, type: "item", tooltip: "Scripture of Dspair" }
+            { x:591, y:1354, type: "item", tooltip: "Large Bolt" }
+            { x:543, y:681, type: "item", tooltip: "Unkown Effigy" }
+            { x:1117, y:628, type: "item", tooltip: "Remnant of Tar" }
+            { x:1614, y:200, type: "item", tooltip: "Ornate Token" }
+            { x:1718, y:1196, type: "item", tooltip: "Glimpse of Courage" }
+            { x:2358, y:524, type: "item", tooltip: "Bronze Bell" }
+            { x:2471, y:1293, type: "item", tooltip: "Perfumed Censer" }
+            { x:2254, y:1501, type: "inscription" },
+            { x:1477, y:2997, type: "mushroom" },
+            { x:859, y:3026, type: "mushroom" },
+            { x:758, y:2565, type: "mushroom" },
+            { x:2015, y:2865, type: "mushroom" },
+            { x:2435, y:2914, type: "mushroom" },
+            { x:2125, y:2316, type: "mushroom" },
+            { x:1120, y:1164, type: "mushroom" },
+            { x:1593, y:727, type: "mushroom" }
+        ]
     },
     {
         id: "shifting-archives",
