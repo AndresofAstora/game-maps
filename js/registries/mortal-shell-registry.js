@@ -210,7 +210,36 @@ const maps = [
         title: "Dim Gate",
         image: "dimgate.png",
         page: "maps/dim-gate.html",
-        markers: []
+        markers: [
+            { x:3549, y:5242, type: "start" },
+            { x:4128, y:3500, type: "npc", tooltip: "Sester Genessa" },
+            { x:1856, y:380, type: "npc", tooltip: "Brether Corvid" },
+            { x:5365, y:3791, type: "lever" },
+            { x:1254, y:3486, type: "lever", tooltip: "Remnant of Tar + Glimpse of Disdain + Scripture of Ardor" },
+            { x:2452, y:1317, type: "lever" },
+            { x:849, y:1297, type: "warp", tooltip: "A1" },
+            { x:407, y:1048, type: "warp", tooltip: "B1" },
+            { x:2524, y:1252, type: "warp", tooltip: "C1" },
+            { x:3111, y:2338, type: "warp", tooltip: "D1" },
+            { x:753, y:3129, type: "warp", tooltip: "A2" },
+            { x:2294, y:1249, type: "warp", tooltip: "B2" },
+            { x:4413, y:1585, type: "warp", tooltip: "C2" },
+            { x:2400, y:1412, type: "warp", tooltip: "D2" },
+            { x:2410, y:1678, type: "chest", tooltip: "Glimpse of Disdain + Baguette" },
+            { x:3731, y:488, type: "chest", tooltip: "Large Bolt + Bronze Bell" },
+            { x:3549, y:3181, type: "item", tooltip: "Scripture of Euphoria" },
+            { x:4569, y:3920, type: "item", tooltip: "Mortal Token" },
+            { x:5545, y:3699, type: "item", tooltip: "Glimpse of Futility" },
+            { x:1093, y:4071, type: "item", tooltip: "Glimpse of Affection" },
+            { x:872, y:3125, type: "item", tooltip: "Quenching Acid" },
+            { x:1259, y:2287, type: "item", tooltip: "Tainted Nektar" },
+            { x:3586, y:1733, type: "item", tooltip: "Golden Bell" },
+            { x:3446, y:1771, type: "item", tooltip: "Congealed Tar" },
+            { x:309, y:1049, type: "item", tooltip: "Untarnished Mask" },
+            { x:2440, y:562, type: "item", tooltip: "Scripture of Euphoria" },
+            { x:2308, y:1173, type: "item", tooltip: "Glimpse of Wisdom" },
+            { x:4356, y:1654, type: "item", tooltip: "Glimpse of Wisdom" }
+        ]
     }
 ];
 
