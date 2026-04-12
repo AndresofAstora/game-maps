@@ -47,7 +47,7 @@ const maps = [
             { x:2552, y:3241, type: "npc", tooltip: "Sester Genessa (First Appearance)" },
             { x:505, y:1395, type: "npc", tooltip: "Sester Genessa (Second Appearance)" },
             { x:1230, y:158, type: "npc", tooltip: "Sester Genessa (Third Appearance)" },
-            { x:1636, y:1993, type: "weapon", tooltip: "Smoldering Mace" },
+            { x:2616, y:3152, type: "weapon", tooltip: "Smoldering Mace" },
             { x:1313, y:107, type: "boss", tooltip: "Imrod, the Unrepentant (Drop: Glimpse of Annihilation" },
             { x:1864, y:2565, type: "chest", tooltip: "Offering: Glimpse of Affection + Foundry Stone" },
             { x:966, y:2670, type: "chest", tooltip: "Solemn Offering + Unguent Tar" },
