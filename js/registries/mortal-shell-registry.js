@@ -208,7 +208,7 @@ const maps = [
             { x:623, y:627, type: "npc", tooltip: "Sester Genessa" },
             { x:974, y:206, type: "boss", tooltip: "Crucix, The Twiceborn (Drop: Glimpse of Oblivion)" },
             { x:727, y:1211, type: "warp", tooltip: "A1" },
-            { x:547, y:2132, type: "warp", tooltip: "A2" }
+            { x:547, y:2132, type: "warp", tooltip: "A2" },
             { x:217, y:1581, type: "chest", tooltip: "Mango" },
             { x:320, y:2319, type: "item", tooltip: "Etherial Diapason" },
             { x:293, y:1798, type: "item", tooltip: "Bag of Tar" },
