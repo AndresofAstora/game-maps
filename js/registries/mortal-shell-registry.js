@@ -49,7 +49,7 @@ const maps = [
             { x:505, y:1395, type: "npc", tooltip: "Sester Genessa (Second Appearance)" },
             { x:1230, y:158, type: "npc", tooltip: "Sester Genessa (Third Appearance)" },
             { x:2616, y:3152, type: "weapon", tooltip: "Smoldering Mace" },
-            { x:1313, y:107, type: "boss", tooltip: "Imrod, the Unrepentant (Drop: Glimpse of Annihilation" },
+            { x:1313, y:107, type: "boss", tooltip: "Imrod, The Unrepentant (Drop: Glimpse of Annihilation)" },
             { x:1864, y:2565, type: "chest", tooltip: "Offering: Glimpse of Affection + Foundry Stone" },
             { x:966, y:2670, type: "chest", tooltip: "Solemn Offering + Unguent Tar" },
             { x:185, y:2560, type: "chest", tooltip: "Offering: Glimpse of Wisdom + Unkown Effigy" },
@@ -203,7 +203,29 @@ const maps = [
         title: "Shifting Archives",
         image: "shiftingarchives.png",
         page: "maps/shifting-archives.html",
-        markers: []
+        markers: [
+            { x:313, y:2600, type: "start" },
+            { x:623, y:627, type: "npc", tooltip: "Sester Genessa" },
+            { x:974, y:206, type: "boss", tooltip: "Crucix, The Twiceborn (Drop: Glimpse of Oblivion)" },
+            { x:727, y:1211, type: "warp", tooltip: "A1" },
+            { x:547, y:2132, type: "warp", tooltip: "A2" }
+            { x:217, y:1581, type: "chest", tooltip: "Mango" },
+            { x:320, y:2319, type: "item", tooltip: "Etherial Diapason" },
+            { x:293, y:1798, type: "item", tooltip: "Bag of Tar" },
+            { x:318, y:1333, type: "item", tooltip: "Quenching Acid" },
+            { x:289, y:711, type: "item", tooltip: "Unknown Effigy" },
+            { x:779, y:1302, type: "item", tooltip: "Slurry of Tar" },
+            { x:974, y:138, type: "item", tooltip: "Knotted Gland + Nascent Tar" },
+            { x:982, y:1366, type: "inscription" },
+            { x:756, y:1255, type: "inscription" },
+            { x:737, y:1110, type: "inscription" },
+            { x:736, y:988, type: "inscription" },
+            { x:1207, y:737, type: "inscription" },
+            { x:1080, y:587, type: "inscription" },
+            { x:774, y:449, type: "inscription" },
+            { x:323, y:1078, type: "mushroom" },
+            { x:1089, y:924, type: "mushroom" }
+        ]
     },
     {
         id: "dim-gate",
