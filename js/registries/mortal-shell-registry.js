@@ -146,7 +146,7 @@ const maps = [
         page: "maps/eternal-narthex.html",
         markers: [
             { x:1419, y:3369, type: "start" },
-            { x:1196, y:3118, type: "npc", tooltip: "Sester Genessa)" },
+            { x:1196, y:3118, type: "npc", tooltip: "Sester Genessa" },
             { x:1169, y:3161, type: "weapon", tooltip: "Hammer & Chisel" },
             { x:400, y:1613, type: "lever" },
             { x:1422, y:15771, type: "lever" },
