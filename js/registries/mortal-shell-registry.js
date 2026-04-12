@@ -2,31 +2,32 @@ import { createGameRegistry } from "./shared-game-registry.js";
 
 const markerTypes = [
     { id: "start", label: "Start" },
-    { id: "boss", label: "Boss" },
+    { id: "npc", label: "NPC" },
+    { id: "shell", label: "Shell" },
+    { id: "weapon", label: "Weapon" },
     { id: "chest", label: "Chest" },
     { id: "frog-chest", label: "Frog Chest" },
     { id: "lever", label: "Lever" },
     { id: "inscription", label: "Inscription" },
     { id: "item", label: "Item" },
     { id: "mushroom", label: "Mushroom" },
-    { id: "npc", label: "NPC" },
-    { id: "shell", label: "Shell" },
-    { id: "warp", label: "Warp" }
+    { id: "warp", label: "Warp" },
+    { id: "boss", label: "Boss" }
 ];
 
 const MARKER_ICON_FILES = {
     start: "marker-start.png",
+    npc: "marker-npc.png",
+    shell: "marker-shell.png",
     weapon: "marker-weapon.png",
-    boss: "marker-boss.png",
     chest: "marker-chest.png",
     "frog-chest": "marker-frogchest.png",
     lever: "marker-lever.png",
     inscription: "marker-inscription.png",
     item: "marker-item.png",
     mushroom: "marker-mushroom.png",
-    npc: "marker-npc.png",
-    shell: "marker-shell.png",
-    warp: "marker-warp.png"
+    warp: "marker-warp.png",
+    boss: "marker-boss.png"
 };
 
 const maps = [
