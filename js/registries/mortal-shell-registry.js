@@ -136,8 +136,7 @@ const maps = [
             { x:758, y:516, type: "mushroom" },
             { x:1324, y:628, type: "mushroom" },
             { x:2704, y:2532, type: "mushroom" },
-            { x:1950, y:2286, type: "mushroom" },
-
+            { x:1950, y:2286, type: "mushroom" }
         ]
     },
     {
