@@ -331,6 +331,8 @@ a:focus:not(:focus-visible) {
     box-shadow: var(--shadow);
     touch-action: none;
     cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .map-viewport.is-dragging {
@@ -343,12 +345,18 @@ a:focus:not(:focus-visible) {
     left: 0;
     transform-origin: top left;
     will-change: transform;
+    backface-visibility: hidden;
+    contain: layout paint;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .map-image {
     display: block;
     max-width: none;
     user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
     pointer-events: none;
 }
 
