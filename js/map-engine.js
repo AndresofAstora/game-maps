@@ -25,7 +25,9 @@ const viewState = {
     startY: 0,
     dragOriginX: 0,
     dragOriginY: 0,
-    moved: false
+    moved: false,
+    frameRequested: false,
+    viewportBounds: null
 };
 
 let GAME_INFO;
@@ -41,6 +43,10 @@ markerTooltip.hidden = true;
 mapViewport?.appendChild(markerTooltip);
 
 init();
+
+window.addEventListener("resize", () => {
+    viewState.viewportBounds = null;
+});
 
 async function init() {
     const registry = await import(`./registries/${registryId}-registry.js`);
@@ -76,6 +82,7 @@ function bootstrap() {
 
     document.title = `${map.title} | ${GAME_INFO.title} | Videogame Cartography`;
     mapTitle.textContent = map.title;
+    mapImage.draggable = false;
     mapImage.src = getMapImageUrl(map);
     mapImage.alt = `${map.title} map image`;
 
@@ -198,8 +205,13 @@ function wireControls() {
     zoomOutButton?.addEventListener("click", () => zoomAtViewportCenter(0.82));
     fitButton?.addEventListener("click", fitMapToViewport);
 
+    mapViewport.addEventListener("dragstart", (event) => {
+        event.preventDefault();
+    });
+
     mapViewport.addEventListener("wheel", (event) => {
         event.preventDefault();
+        refreshViewportBounds();
         const factor = event.deltaY < 0 ? 1.12 : 0.9;
         zoomAtClientPoint(factor, event.clientX, event.clientY);
     }, { passive: false });
@@ -213,6 +225,7 @@ function wireControls() {
             return;
         }
 
+        refreshViewportBounds();
         viewState.pointerId = event.pointerId;
         viewState.startX = event.clientX;
         viewState.startY = event.clientY;
@@ -238,7 +251,7 @@ function wireControls() {
 
         viewState.offsetX = viewState.dragOriginX + deltaX;
         viewState.offsetY = viewState.dragOriginY + deltaY;
-        applyTransform();
+        scheduleTransform();
     });
 
     mapViewport.addEventListener("pointerup", (event) => {
@@ -247,12 +260,26 @@ function wireControls() {
         }
 
         mapViewport.classList.remove("is-dragging");
-        mapViewport.releasePointerCapture(event.pointerId);
+        if (mapViewport.hasPointerCapture(event.pointerId)) {
+            mapViewport.releasePointerCapture(event.pointerId);
+        }
         viewState.pointerId = null;
 
         if (!viewState.moved) {
             copyCoords(event.clientX, event.clientY);
         }
+    });
+
+    mapViewport.addEventListener("pointercancel", (event) => {
+        if (viewState.pointerId !== event.pointerId) {
+            return;
+        }
+
+        mapViewport.classList.remove("is-dragging");
+        if (mapViewport.hasPointerCapture(event.pointerId)) {
+            mapViewport.releasePointerCapture(event.pointerId);
+        }
+        viewState.pointerId = null;
     });
 
     mapViewport.addEventListener("pointerleave", () => {
@@ -277,7 +304,8 @@ function fitMapToViewport() {
     viewState.scale = clamp(nextScale, 0.14, 5);
     viewState.offsetX = (bounds.width - mapImage.naturalWidth * viewState.scale) / 2;
     viewState.offsetY = (bounds.height - mapImage.naturalHeight * viewState.scale) / 2;
-    applyTransform();
+    viewState.viewportBounds = bounds;
+    scheduleTransform();
 }
 
 function zoomAtViewportCenter(factor) {
@@ -296,23 +324,31 @@ function zoomAtClientPoint(factor, clientX, clientY) {
     viewState.scale = nextScale;
     viewState.offsetX = viewportX - mapX * viewState.scale;
     viewState.offsetY = viewportY - mapY * viewState.scale;
-    applyTransform();
+    scheduleTransform();
 }
 
-function applyTransform() {
-    mapCanvas.style.transform = `translate(${viewState.offsetX}px, ${viewState.offsetY}px) scale(${viewState.scale})`;
-    markerLayer.style.setProperty("--marker-scale", `${1 / viewState.scale}`);
+function scheduleTransform() {
+    if (viewState.frameRequested) {
+        return;
+    }
+
+    viewState.frameRequested = true;
+    requestAnimationFrame(() => {
+        viewState.frameRequested = false;
+        mapCanvas.style.transform = `translate3d(${viewState.offsetX}px, ${viewState.offsetY}px, 0) scale(${viewState.scale})`;
+        markerLayer.style.setProperty("--marker-scale", `${1 / viewState.scale}`);
+    });
 }
 
 function updateCoords(clientX, clientY) {
-    const bounds = mapViewport.getBoundingClientRect();
+    const bounds = getViewportBounds();
     const x = Math.round((clientX - bounds.left - viewState.offsetX) / viewState.scale);
     const y = Math.round((clientY - bounds.top - viewState.offsetY) / viewState.scale);
     coordsReadout.textContent = `X: ${x} Y: ${y}`;
 }
 
 function copyCoords(clientX, clientY) {
-    const bounds = mapViewport.getBoundingClientRect();
+    const bounds = getViewportBounds();
     const x = Math.round((clientX - bounds.left - viewState.offsetX) / viewState.scale);
     const y = Math.round((clientY - bounds.top - viewState.offsetY) / viewState.scale);
     const text = `x:${x}, y:${y}`;
@@ -330,6 +366,15 @@ function copyCoords(clientX, clientY) {
 
 function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
+}
+
+function refreshViewportBounds() {
+    viewState.viewportBounds = mapViewport.getBoundingClientRect();
+    return viewState.viewportBounds;
+}
+
+function getViewportBounds() {
+    return viewState.viewportBounds ?? refreshViewportBounds();
 }
 
 function isUiTarget(target) {
