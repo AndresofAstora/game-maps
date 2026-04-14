@@ -228,7 +228,7 @@ const maps = [
             { x:195, y:1167, type: "consumable", tooltip: "Special Purification Ampoule" },
             { x:555, y:916, type: "consumable", tooltip: "Chain" },
             { x:729, y:961, type: "consumable", tooltip: "Electric Blitz Abrasive" },
-            { x:782, y:632, type: "consumable", tooltip: "Thtowing Cell" },
+            { x:782, y:632, type: "consumable", tooltip: "Throwing Cell" },
             { x:685, y:383, type: "consumable", tooltip: "Cluster Grenade" },
             { x:181, y:1197, type: "collectable", tooltip: "Someone's Report Note Notebook" },
             { x:1036, y:179, type: "collectable", tooltip: "Misty E'rA (Enemy Drop)" },
