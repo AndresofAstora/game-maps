@@ -27,7 +27,8 @@ const viewState = {
     dragOriginY: 0,
     moved: false,
     frameRequested: false,
-    viewportBounds: null
+    viewportBounds: null,
+    descriptionsVisible: false
 };
 
 let GAME_INFO;
@@ -112,6 +113,7 @@ function renderLegend(markerCounts) {
         return;
     }
 
+    const hasDescriptions = map.markers.some((marker) => marker.tooltip);
     const rows = MARKER_TYPES.filter((type) => markerCounts[type.id]).map((type) => `
         <label class="legend-row">
             <span class="legend-label">
@@ -127,6 +129,7 @@ function renderLegend(markerCounts) {
         <div class="legend-list">${rows}</div>
         <div class="legend-actions">
             <button type="button" class="toggle-button" id="toggleAllButton">Toggle All</button>
+            ${hasDescriptions ? '<button type="button" class="toggle-button" id="toggleDescriptionsButton">Toggle Descriptions</button>' : ""}
         </div>
     `;
 
@@ -136,10 +139,15 @@ function renderLegend(markerCounts) {
             markerLayer.querySelectorAll(`[data-marker-type="${type}"]`).forEach((markerElement) => {
                 markerElement.hidden = !input.checked;
             });
+            markerLayer.querySelectorAll(`.marker-description[data-marker-type="${type}"]`).forEach((descriptionElement) => {
+                descriptionElement.hidden = !input.checked || !viewState.descriptionsVisible;
+            });
         });
     });
 
     document.getElementById("toggleAllButton")?.addEventListener("click", toggleAllMarkers);
+    document.getElementById("toggleDescriptionsButton")?.addEventListener("click", toggleDescriptions);
+    updateDescriptionsButton();
 }
 
 function renderMarkers() {
@@ -170,6 +178,15 @@ function renderMarkers() {
             markerElement.addEventListener("pointerup", (event) => {
                 event.stopPropagation();
             });
+
+            const descriptionElement = document.createElement("div");
+            descriptionElement.className = "marker-description";
+            descriptionElement.dataset.markerType = marker.type;
+            descriptionElement.textContent = marker.tooltip;
+            descriptionElement.style.left = `${marker.x}px`;
+            descriptionElement.style.top = `${marker.y}px`;
+            descriptionElement.hidden = !viewState.descriptionsVisible;
+            markerLayer.appendChild(descriptionElement);
         }
 
         markerLayer.appendChild(markerElement);
@@ -187,6 +204,31 @@ function toggleAllMarkers() {
     const inputs = [...legendContent.querySelectorAll("[data-marker-type]")];
     const allChecked = inputs.every((input) => input.checked);
     setAllMarkers(!allChecked);
+}
+
+function setDescriptionsVisible(visible) {
+    viewState.descriptionsVisible = visible;
+    markerLayer.querySelectorAll(".marker-description").forEach((descriptionElement) => {
+        const type = descriptionElement.dataset.markerType;
+        const checkbox = type ? legendContent.querySelector(`[data-marker-type="${type}"]`) : null;
+        const typeVisible = checkbox ? checkbox.checked : true;
+        descriptionElement.hidden = !visible || !typeVisible;
+    });
+    updateDescriptionsButton();
+}
+
+function toggleDescriptions() {
+    setDescriptionsVisible(!viewState.descriptionsVisible);
+}
+
+function updateDescriptionsButton() {
+    const button = document.getElementById("toggleDescriptionsButton");
+    if (!button) {
+        return;
+    }
+
+    button.textContent = viewState.descriptionsVisible ? "Hide Descriptions" : "Toggle Descriptions";
+    button.setAttribute("aria-pressed", String(viewState.descriptionsVisible));
 }
 
 function wireControls() {
