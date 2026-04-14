@@ -216,7 +216,34 @@ const maps = [
         title: "Hermit's Cave",
         image: "hermitscave.webp",
         page: "maps/hermitscave.html",
-        markers: []
+        markers: [
+            { x:44, y:1790, type: "area", tooltip: "Barren Swamp" },
+            { x:746, y:870, type: "stargazer", tooltip: "Hermit's Cave" },
+            { x:563, y:821, type: "weapon", tooltip: "Black Steel Cutter" },
+            { x:563, y:821, type: "costume", tooltip: "Black Cat's Hunting Apparel" },
+            { x:245, y:1792, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+            { x:234, y:1418, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+            { x:200, y:1427, type: "consumable", tooltip: "Sawtoothed Wheel" },
+            { x:296, y:1428, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+            { x:195, y:1167, type: "consumable", tooltip: "Special Purification Ampoule" },
+            { x:555, y:916, type: "consumable", tooltip: "Chain" },
+            { x:729, y:961, type: "consumable", tooltip: "Electric Blitz Abrasive" },
+            { x:782, y:632, type: "consumable", tooltip: "Thtowing Cell" },
+            { x:685, y:383, type: "consumable", tooltip: "Cluster Grenade" },
+            { x:181, y:1197, type: "collectable", tooltip: "Someone's Report Note Notebook" },
+            { x:1036, y:179, type: "collectable", tooltip: "Misty E'rA (Enemy Drop)" },
+            { x:498, y:1217, type: "material", tooltip: "Half Moonstone" },
+            { x:554, y:1003, type: "material", tooltip: "Quartz" },
+            { x:736, y:816, type: "material", tooltip: "Dark Moon Moonstone of the Covenant" },
+            { x:1168, y:133, type: "material", tooltip: "Quartz" },
+            { x:344, y:1494, type: "ladder" },
+            { x:356, y:1270, type: "ladder" },
+            { x:239, y:1201, type: "ladder" },
+            { x:506, y:993, type: "ladder" },
+            { x:690, y:990, type: "ladder" },
+            { x:749, y:791, type: "ladder" },
+            { x:739, y:377, type: "ladder" }
+        ]
     }
 ];
 
