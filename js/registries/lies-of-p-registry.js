@@ -220,7 +220,7 @@ const maps = [
             { x:44, y:1790, type: "area", tooltip: "Barren Swamp" },
             { x:746, y:870, type: "stargazer", tooltip: "Hermit's Cave" },
             { x:563, y:821, type: "weapon", tooltip: "Black Steel Cutter" },
-            { x:563, y:821, type: "costume", tooltip: "Black Cat's Hunting Apparel" },
+            { x:1162, y:106, type: "costume", tooltip: "Black Cat's Hunting Apparel" },
             { x:245, y:1792, type: "consumable", tooltip: "Attribute Purification Ampoule" },
             { x:234, y:1418, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
             { x:200, y:1427, type: "consumable", tooltip: "Sawtoothed Wheel" },
