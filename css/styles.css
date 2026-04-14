@@ -380,6 +380,25 @@ a:focus:not(:focus-visible) {
     pointer-events: auto;
 }
 
+.marker-description {
+    position: absolute;
+    z-index: 1;
+    max-width: 13rem;
+    padding: 0.4rem 0.55rem;
+    border: 1px solid var(--stroke-strong);
+    border-radius: 10px;
+    background: rgba(8, 17, 26, 0.92);
+    color: var(--text);
+    font-size: 0.76rem;
+    line-height: 1.25;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+    transform: translate(18px, calc(-100% - 18px)) scale(var(--marker-scale));
+    transform-origin: left bottom;
+    pointer-events: none;
+    user-select: none;
+    white-space: normal;
+}
+
 .marker img {
     display: block;
     width: 100%;
