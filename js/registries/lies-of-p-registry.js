@@ -1,24 +1,24 @@
 import { createGameRegistry } from "./shared-game-registry.js";
 
 const markerTypes = [
-    { id: "amulet", label: "Amulet" },
     { id: "area", label: "Area" },
-    { id: "boss", label: "Boss" },
-    { id: "collectable", label: "Collectable" },
+    { id: "stargazer", label: "Stargazer" },
+    { id: "npc", label: "NPC" },
     { id: "consumable", label: "Consumable" },
-    { id: "costume", label: "Costume" },
-    { id: "crackscalling", label: "Cracks Calling" },
+    { id: "tool", label: "Tool" },
+    { id: "weapon", label: "Weapon" },
     { id: "defencepart", label: "Defence Part" },
-    { id: "dimensionalbutterfly", label: "Dimensional Butterfly" },
+    { id: "material", label: "Material" },
+    { id: "collectable", label: "Collectable" },
+    { id: "amulet", label: "Amulet" },
+    { id: "costume", label: "Costume" },
     { id: "gesture", label: "Gesture" },
+    { id: "dimensionalbutterfly", label: "Dimensional Butterfly" },
+    { id: "crackscalling", label: "Crack's Calling" },
+    { id: "boss", label: "Boss" },
     { id: "ladder", label: "Ladder" },
     { id: "lift", label: "Lift" },
-    { id: "lockeddoor", label: "Locked Door" },
-    { id: "material", label: "Material" },
-    { id: "npc", label: "NPC" },
-    { id: "stargazer", label: "Stargazer" },
-    { id: "tool", label: "Tool" },
-    { id: "weapon", label: "Weapon" }
+    { id: "lockeddoor", label: "Locked Door" }
 ];
 
 const MARKER_ICON_FILES = {
