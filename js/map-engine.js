@@ -191,7 +191,7 @@ function renderMarkers() {
             const descriptionElement = document.createElement("div");
             descriptionElement.className = "marker-description";
             descriptionElement.dataset.markerType = marker.type;
-            descriptionElement.textContent = marker.tooltip;
+            renderTooltipContent(descriptionElement, marker.tooltip);
             descriptionElement.hidden = !viewState.descriptionsVisible;
             overlayDescriptions.push({
                 element: descriptionElement,
@@ -450,7 +450,7 @@ function isUiTarget(target) {
 }
 
 function showMarkerTooltip(text, event) {
-    markerTooltip.textContent = text;
+    renderTooltipContent(markerTooltip, text);
     markerTooltip.hidden = false;
     moveMarkerTooltip(event);
 }
@@ -481,4 +481,51 @@ function moveMarkerTooltip(event) {
 
 function hideMarkerTooltip() {
     markerTooltip.hidden = true;
+}
+
+function renderTooltipContent(container, tooltip) {
+    container.replaceChildren();
+
+    const { title, items } = normalizeTooltip(tooltip);
+
+    if (title) {
+        const titleElement = document.createElement("div");
+        titleElement.className = "tooltip-title";
+        titleElement.textContent = title;
+        container.appendChild(titleElement);
+    }
+
+    if (items.length) {
+        const listElement = document.createElement("ul");
+        listElement.className = "tooltip-list";
+
+        items.forEach((item) => {
+            const listItem = document.createElement("li");
+            listItem.textContent = item;
+            listElement.appendChild(listItem);
+        });
+
+        container.appendChild(listElement);
+    }
+}
+
+function normalizeTooltip(tooltip) {
+    if (typeof tooltip === "string") {
+        return {
+            title: tooltip,
+            items: []
+        };
+    }
+
+    if (tooltip && typeof tooltip === "object") {
+        return {
+            title: typeof tooltip.title === "string" ? tooltip.title : "",
+            items: Array.isArray(tooltip.items) ? tooltip.items.filter((item) => typeof item === "string" && item.trim()) : []
+        };
+    }
+
+    return {
+        title: "",
+        items: []
+    };
 }
