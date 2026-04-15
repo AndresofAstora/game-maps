@@ -66,7 +66,7 @@ const maps = [
             { x:000, y:000, type: "boss", tooltip: "000" },
             { x:000, y:000, type: "ladder" },
             { x:000, y:000, type: "lift" },
-            { x:000, y:000, type: "lockeddoor" }
+            { x:000, y:000, type: "lockeddoor", tooltip: "000" }
         ]
     },
     {
