@@ -383,7 +383,7 @@ a:focus:not(:focus-visible) {
 .marker-description {
     position: absolute;
     z-index: 1;
-    max-width: 13rem;
+    max-width: 15rem;
     padding: 0.4rem 0.55rem;
     border: 1px solid var(--stroke-strong);
     border-radius: 10px;
@@ -412,7 +412,7 @@ a:focus:not(:focus-visible) {
     position: absolute;
     z-index: 4;
     width: max-content;
-    max-width: none;
+    max-width: 18rem;
     padding: 0.45rem 0.65rem;
     border: 1px solid var(--stroke-strong);
     border-radius: 10px;
@@ -426,7 +426,20 @@ a:focus:not(:focus-visible) {
     pointer-events: none;
     user-select: none;
     transform: translate(-50%, calc(-100% - 12px));
-    white-space: nowrap;
+    white-space: normal;
+}
+
+.tooltip-title {
+    font-weight: 700;
+}
+
+.tooltip-list {
+    margin: 0.35rem 0 0;
+    padding-left: 1rem;
+}
+
+.tooltip-list li + li {
+    margin-top: 0.16rem;
 }
 
 .zoom-stack {
