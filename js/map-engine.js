@@ -15,6 +15,8 @@ const zoomInButton = document.getElementById("zoomInButton");
 const zoomOutButton = document.getElementById("zoomOutButton");
 const fitButton = document.getElementById("fitButton");
 const markerTooltip = document.createElement("div");
+const overlayMarkers = [];
+const overlayDescriptions = [];
 
 const viewState = {
     scale: 1,
@@ -41,6 +43,9 @@ let map;
 
 markerTooltip.className = "marker-tooltip";
 markerTooltip.hidden = true;
+if (markerLayer && mapViewport && markerLayer.parentElement !== mapViewport) {
+    mapViewport.appendChild(markerLayer);
+}
 mapViewport?.appendChild(markerTooltip);
 
 init();
@@ -83,6 +88,7 @@ function bootstrap() {
 
     document.title = `${map.title} | ${GAME_INFO.title} | Videogame Cartography`;
     mapTitle.textContent = map.title;
+    markerLayer.hidden = true;
     mapImage.draggable = false;
     mapImage.src = getMapImageUrl(map);
     mapImage.alt = `${map.title} map image`;
@@ -152,20 +158,23 @@ function renderLegend(markerCounts) {
 
 function renderMarkers() {
     markerLayer.innerHTML = "";
-    markerLayer.style.width = `${mapImage.naturalWidth || 0}px`;
-    markerLayer.style.height = `${mapImage.naturalHeight || 0}px`;
+    overlayMarkers.length = 0;
+    overlayDescriptions.length = 0;
 
     map.markers.forEach((marker) => {
         const markerElement = document.createElement("div");
         const markerIcon = document.createElement("img");
         markerElement.className = "marker";
         markerElement.dataset.markerType = marker.type;
-        markerElement.style.left = `${marker.x}px`;
-        markerElement.style.top = `${marker.y}px`;
         markerIcon.src = getMarkerIconUrl(marker.type);
         markerIcon.alt = "";
         markerIcon.draggable = false;
         markerElement.appendChild(markerIcon);
+        overlayMarkers.push({
+            element: markerElement,
+            x: marker.x,
+            y: marker.y
+        });
 
         if (marker.tooltip) {
             markerElement.classList.add("marker--interactive");
@@ -183,14 +192,19 @@ function renderMarkers() {
             descriptionElement.className = "marker-description";
             descriptionElement.dataset.markerType = marker.type;
             descriptionElement.textContent = marker.tooltip;
-            descriptionElement.style.left = `${marker.x}px`;
-            descriptionElement.style.top = `${marker.y}px`;
             descriptionElement.hidden = !viewState.descriptionsVisible;
+            overlayDescriptions.push({
+                element: descriptionElement,
+                x: marker.x,
+                y: marker.y
+            });
             markerLayer.appendChild(descriptionElement);
         }
 
         markerLayer.appendChild(markerElement);
     });
+
+    updateOverlayPositions();
 }
 
 function setAllMarkers(checked) {
@@ -334,9 +348,6 @@ function fitMapToViewport() {
         return;
     }
 
-    markerLayer.style.width = `${mapImage.naturalWidth}px`;
-    markerLayer.style.height = `${mapImage.naturalHeight}px`;
-
     const bounds = mapViewport.getBoundingClientRect();
     const padding = 40;
     const availableWidth = Math.max(bounds.width - padding, 100);
@@ -347,6 +358,7 @@ function fitMapToViewport() {
     viewState.offsetX = (bounds.width - mapImage.naturalWidth * viewState.scale) / 2;
     viewState.offsetY = (bounds.height - mapImage.naturalHeight * viewState.scale) / 2;
     viewState.viewportBounds = bounds;
+    markerLayer.hidden = false;
     scheduleTransform();
 }
 
@@ -378,7 +390,21 @@ function scheduleTransform() {
     requestAnimationFrame(() => {
         viewState.frameRequested = false;
         mapCanvas.style.transform = `translate3d(${viewState.offsetX}px, ${viewState.offsetY}px, 0) scale(${viewState.scale})`;
-        markerLayer.style.setProperty("--marker-scale", `${1 / viewState.scale}`);
+        updateOverlayPositions();
+    });
+}
+
+function updateOverlayPositions() {
+    overlayMarkers.forEach(({ element, x, y }) => {
+        const screenX = viewState.offsetX + x * viewState.scale;
+        const screenY = viewState.offsetY + y * viewState.scale;
+        element.style.transform = `translate3d(${screenX}px, ${screenY}px, 0) translate(-50%, -100%)`;
+    });
+
+    overlayDescriptions.forEach(({ element, x, y }) => {
+        const screenX = viewState.offsetX + x * viewState.scale + 18;
+        const screenY = viewState.offsetY + y * viewState.scale - 18;
+        element.style.transform = `translate3d(${screenX}px, ${screenY}px, 0) translate(0, -100%)`;
     });
 }
 
