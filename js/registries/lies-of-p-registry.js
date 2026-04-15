@@ -301,6 +301,3 @@ export const getMapById = registry.getMapById;
 export const getMarkerCounts = registry.getMarkerCounts;
 export const getMapImageUrl = registry.getMapImageUrl;
 export const getMarkerIconUrl = registry.getMarkerIconUrl;
-export const getMarkerCounts = registry.getMarkerCounts;
-export const getMapImageUrl = registry.getMapImageUrl;
-export const getMarkerIconUrl = registry.getMarkerIconUrl;
