@@ -60,7 +60,7 @@ const maps = [
             { x:1654, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
             { x:779, y:1871, type: "stargazer", tooltip: "Krat Central Station Plaza" },
             { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
-	        { x:1051, y:433, type: "npc", tooltip: "Wandering Merchant" },
+	    { x:1051, y:433, type: "npc", tooltip: "Wandering Merchant" },
             { x:1147, y:1805, type: "consumable", tooltip: "Dim Ergo Fragment" },
             { x:471, y:1569, type: "consumable", tooltip: "Fable Catalyst" },
             { x:1183, y:1494, type: "consumable", tooltip: "Vivid Ergo Fragment" },
@@ -72,11 +72,22 @@ const maps = [
             { x:954, y:594, type: "consumable", tooltip: "Fable Catalyst" },
             { x:501, y:453, type: "consumable", tooltip: "Thermite" },
             { x:1034, y:472, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-            { x:1707, y:575, type: "consumable", tooltip: "Parade Master's Ergo" },
+            { x:1707, y:575, type: "consumable", tooltip: "Parade Leader's Ergo" },
             { x:1707, y:656, type: "material", tooltip: "Quartz" },
             { x:520, y:1371, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1070, y:158, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
-            { x:1656, y:605, type: "boss", tooltip: "Parade Master" },
+            {
+                x:1656,
+                y:605,
+                type: "boss",
+                tooltip: {
+                    title: "Parade Master",
+                    items: [
+                        "Parade Leader's Ergo",
+                        "Quartz"
+                    ]
+                }
+            },
             { x:1141, y:934, type: "lockeddoor", tooltip: "Opens from the other side." }
         ]
     },
@@ -287,6 +298,9 @@ export const MARKER_TYPES = registry.MARKER_TYPES;
 export const MAP_CATALOG = registry.MAP_CATALOG;
 export const STAGE_ORDER = registry.STAGE_ORDER;
 export const getMapById = registry.getMapById;
+export const getMarkerCounts = registry.getMarkerCounts;
+export const getMapImageUrl = registry.getMapImageUrl;
+export const getMarkerIconUrl = registry.getMarkerIconUrl;
 export const getMarkerCounts = registry.getMarkerCounts;
 export const getMapImageUrl = registry.getMapImageUrl;
 export const getMarkerIconUrl = registry.getMarkerIconUrl;
