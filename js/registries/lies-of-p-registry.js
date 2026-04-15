@@ -56,7 +56,7 @@ const maps = [
         image: "kratcentralstationplaza.webp",
         page: "maps/kratcentralstationplaza.html",
         markers: [
-            { x:783, y:209, type: "area", tooltip: "Krat Central Station" },
+            { x:779, y:2088, type: "area", tooltip: "Krat Central Station" },
             { x:1654, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
             { x:779, y:1871, type: "stargazer", tooltip: "Krat Central Station Plaza" },
             { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
