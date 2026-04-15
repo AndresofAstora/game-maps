@@ -2,13 +2,14 @@
 const stageGrid = document.getElementById("stageGrid");
 const gameTitle = document.getElementById("gameTitle");
 const registryId = body.dataset.registry;
+const REGISTRY_VERSION = "2026-04-15-1";
 
 if (stageGrid && registryId) {
     loadGameRegistry(registryId);
 }
 
 async function loadGameRegistry(id) {
-    const registry = await import(`./registries/${id}-registry.js`);
+    const registry = await import(`./registries/${id}-registry.js?v=${REGISTRY_VERSION}`);
     const { GAME_INFO, MAP_CATALOG, STAGE_ORDER, getMapImageUrl } = registry;
 
     if (gameTitle) {

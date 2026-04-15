@@ -17,6 +17,7 @@ const fitButton = document.getElementById("fitButton");
 const markerTooltip = document.createElement("div");
 const overlayMarkers = [];
 const overlayDescriptions = [];
+const REGISTRY_VERSION = "2026-04-15-1";
 
 const viewState = {
     scale: 1,
@@ -55,7 +56,7 @@ window.addEventListener("resize", () => {
 });
 
 async function init() {
-    const registry = await import(`./registries/${registryId}-registry.js`);
+    const registry = await import(`./registries/${registryId}-registry.js?v=${REGISTRY_VERSION}`);
     GAME_INFO = registry.GAME_INFO;
     MARKER_TYPES = registry.MARKER_TYPES;
     getMapById = registry.getMapById;
