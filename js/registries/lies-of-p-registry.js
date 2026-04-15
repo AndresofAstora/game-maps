@@ -48,14 +48,56 @@ const maps = [
         title: "Hotel Krat",
         image: "hotelkrat.webp",
         page: "maps/hotelkrat.html",
-        markers: []
+        markers: [
+            { x:000, y:000, type: "area", tooltip: "000" },
+            { x:000, y:000, type: "stargazer", tooltip: "000" },
+	        { x:000, y:000, type: "npc", tooltip: "000" },
+            { x:000, y:000, type: "consumable", tooltip: "000" },
+            { x:000, y:000, type: "tool", tooltip: "000" },
+            { x:000, y:000, type: "weapon", tooltip: "000" },
+            { x:000, y:000, type: "defencepart", tooltip: "000" },
+            { x:000, y:000, type: "material", tooltip: "000" },
+            { x:000, y:000, type: "collectable", tooltip: "000" },
+            { x:000, y:000, type: "amulet", tooltip: "000" },
+            { x:000, y:000, type: "costume", tooltip: "000" },
+            { x:000, y:000, type: "gesture", tooltip: "000" },
+            { x:000, y:000, type: "dimensionalbutterfly", tooltip: "000" },
+            { x:000, y:000, type: "crackscalling" },
+            { x:000, y:000, type: "boss", tooltip: "000" },
+            { x:000, y:000, type: "ladder" },
+            { x:000, y:000, type: "lift" },
+            { x:000, y:000, type: "lockeddoor" }
+        ]
     },
     {
         id: "kratcentralstationplaza",
         title: "Krat Central Station Plaza",
         image: "kratcentralstationplaza.webp",
         page: "maps/kratcentralstationplaza.html",
-        markers: []
+        markers: [
+            { x:783, y:2094, type: "area", tooltip: "Krat Central Station" },
+            { x:1654, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
+            { x:779, y:1871, type: "stargazer", tooltip: "Krat Central Station Plaza" },
+            { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
+	        { x:1051, y:433, type: "npc", tooltip: "Wandering Merchant" },
+            { x:1147, y:1805, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:471, y:1569, type: "consumable", tooltip: "Fable Catalyst" },
+            { x:1183, y:1494, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:1515, y:1333, type: "consumable", tooltip: "Sawtoothed Wheel" },
+            { x:105, y:1180, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:617, y:1099, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:275, y:864, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
+            { x:439, y:700, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:954, y:594, type: "consumable", tooltip: "Fable Catalyst" },
+            { x:501, y:453, type: "consumable", tooltip: "Thermite" },
+            { x:1034, y:472, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:1707, y:575, type: "consumable", tooltip: "Parade Master's Ergo" },
+            { x:1707, y:656, type: "material", tooltip: "Quartz" },
+            { x:520, y:1371, type: "collectable", tooltip: "Krat Times Issue 183" },
+            { x:1070, y:158, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
+            { x:1656, y:605, type: "boss", tooltip: "Parade Master" },
+            { x:1141, y:934, type: "lockeddoor", tooltip: "Opens from the other side." }
+        ]
     },
     {
         id: "elysianboulevard",
