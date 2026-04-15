@@ -362,18 +362,18 @@ a:focus:not(:focus-visible) {
 
 .marker-layer {
     position: absolute;
-    inset: 0 auto auto 0;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
     pointer-events: none;
-    --marker-scale: 1;
 }
 
 .marker {
     position: absolute;
-    width: 48px;
-    height: 48px;
-    transform: translate(-50%, -100%) scale(calc(var(--marker-scale) * 0.5));
-    transform-origin: bottom center;
+    width: 24px;
+    height: 24px;
     pointer-events: none;
+    will-change: transform;
 }
 
 .marker--interactive {
@@ -392,11 +392,10 @@ a:focus:not(:focus-visible) {
     font-size: 0.76rem;
     line-height: 1.25;
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
-    transform: translate(18px, calc(-100% - 18px)) scale(var(--marker-scale));
-    transform-origin: left bottom;
     pointer-events: none;
     user-select: none;
     white-space: normal;
+    will-change: transform;
 }
 
 .marker img {
@@ -404,8 +403,7 @@ a:focus:not(:focus-visible) {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
+    image-rendering: auto;
     pointer-events: none;
     user-select: none;
 }
