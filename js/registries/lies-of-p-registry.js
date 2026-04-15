@@ -48,26 +48,7 @@ const maps = [
         title: "Hotel Krat",
         image: "hotelkrat.webp",
         page: "maps/hotelkrat.html",
-        markers: [
-            { x:000, y:000, type: "area", tooltip: "000" },
-            { x:000, y:000, type: "stargazer", tooltip: "000" },
-	        { x:000, y:000, type: "npc", tooltip: "000" },
-            { x:000, y:000, type: "consumable", tooltip: "000" },
-            { x:000, y:000, type: "tool", tooltip: "000" },
-            { x:000, y:000, type: "weapon", tooltip: "000" },
-            { x:000, y:000, type: "defencepart", tooltip: "000" },
-            { x:000, y:000, type: "material", tooltip: "000" },
-            { x:000, y:000, type: "collectable", tooltip: "000" },
-            { x:000, y:000, type: "amulet", tooltip: "000" },
-            { x:000, y:000, type: "costume", tooltip: "000" },
-            { x:000, y:000, type: "gesture", tooltip: "000" },
-            { x:000, y:000, type: "dimensionalbutterfly", tooltip: "000" },
-            { x:000, y:000, type: "crackscalling" },
-            { x:000, y:000, type: "boss", tooltip: "000" },
-            { x:000, y:000, type: "ladder" },
-            { x:000, y:000, type: "lift" },
-            { x:000, y:000, type: "lockeddoor", tooltip: "000" }
-        ]
+        markers: []
     },
     {
         id: "kratcentralstationplaza",
