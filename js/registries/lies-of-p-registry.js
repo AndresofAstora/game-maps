@@ -108,93 +108,93 @@ const maps = [
         image: "elysianboulevard.webp",
         page: "maps/elysianboulevard.html",
         markers: [
-			{ x:161, y:2873, type: "area", tooltip: "Hotel Krat" },
-			{ x:164, y:2261, type: "stargazer", tooltip: "Elysian Boulevard Entrance" },
-			{ x:1925, y:1172, type: "stargazer", tooltip: "Inside the House on Elysian Boulevard" },
+			{ x:168, y:2873, type: "area", tooltip: "Hotel Krat" },
+			{ x:171, y:2261, type: "stargazer", tooltip: "Elysian Boulevard Entrance" },
+			{ x:1932, y:1172, type: "stargazer", tooltip: "Inside the House on Elysian Boulevard" },
 			{
-				x:1878, y:1055,
+				x:1885, y:1055,
 				type: "npc",
 				tooltip: {
-        			title: "Wandering Merchant",
-        			items: [
-            			"Attribute Resistance Ampoule",
+			        title: "Wandering Merchant",
+			        items: [
+			            "Attribute Resistance Ampoule",
 						"Legion Magazine",
-            			"Throwing Cell",
+			            "Throwing Cell",
 						"Electric Blitz Canister",
 						"Electric Blitz Abrasive",
 						"Gemini's Iron Protection",
 						"Gemini's Emergency Protection",
 						"Electric Coil Stick"
-        			]
-    			}
+			        ]
+			    }
 			},
 			{
-				x:1702, y:1634,
+				x:1709, y:1634,
 				type: "npc",
 				tooltip: {
-        			title: "Toma",
-        			items: [
+			        title: "Toma",
+			        items: [
 						"Radiant Ergo Fragment"
-        			]
-    			}
+			        ]
+			    }
 			},
 			{
-				x:2557, y:1455,
+				x:2564, y:1455,
 				type: "npc",
 				tooltip: {
-        			title: "Weeping Woman",
-        			items: [
+			        title: "Weeping Woman",
+			        items: [
 						"Vivid Ergo Fragment",
 						"Feel"
-        			]
-    			}
+			        ]
+			    }
 			},
-			{ x:345, y:2058, type: "consumable", tooltip: "Throwing Cell" },
-			{ x:551, y:2056, type: "consumable", tooltip: "Sawtoothed Wheel" },
-			{ x:924, y:2025, type: "consumable", tooltip: "Gemini's Emergency Protection" },
-			{ x:816, y:1753, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-			{ x:793, y:1668, type: "consumable", tooltip: "Dim Ergo Fragment" },
-			{ x:1095, y:1687, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
-			{ x:1296, y:1567, type: "consumable", tooltip: "Electric Blitz Abrasive" },
-			{ x:1288, y:1261, type: "consumable", tooltip: "Sharp Pipe" },
-			{ x:1241, y:1155, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-			{ x:1018, y:936, type: "consumable", tooltip: "Dim Ergo Fragment" },
-			{ x:1173, y:616, type: "consumable", tooltip: "Fable Catalyst" },
-			{ x:1788, y:843, type: "consumable", tooltip: "Legion Magazine" },
-			{ x:2104, y:948, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
-			{ x:2156, y:1247, type: "consumable", tooltip: "Sawtoothed Wheel" },
-			{ x:2198, y:1499, type: "consumable", tooltip: "Venigni's Emergency Protection" },
-			{ x:1721, y:1591, type: "consumable", tooltip: "Dim Ergo Fragment" },
-			{ x:1720, y:1769, type: "consumable", tooltip: "Radiant Ergo Fragment" },
-			{ x:2103, y:1797, type: "consumable", tooltip: "Radiant Ergo Fragment" },
-			{ x:1030, y:2365, type: "defencepart", tooltip: "LADA F150 Frame" },
-			{ x:1903, y:1481, type: "defencepart", tooltip: "Workshop Union Standard Insulation Converter" },
-			{ x:834, y:1478, type: "material", tooltip: "Hidden Moonstone" },
-			{ x:1584, y:1313, type: "material", tooltip: "Hidden Moonstone" },
-			{ x:1499, y:1133, type: "material", tooltip: "Star Fragment" },
-			{ x:2067, y:1302, type: "material", tooltip: "Hidden Moonstone" },
-			{ x:2294, y:1674, type: "material", tooltip: "Star Fragment" },
-			{ x:1386, y:1024, type: "collectable", tooltip: "Frozen Man's Letter" },
-			{ x:2499, y:1185, type: "collectable", tooltip: "Torn Doodle" },
-			{ x:2012, y:1565, type: "collectable", tooltip: "Venigni's Krat Landmark Guide II" },
-			{ x:1648, y:1270, type: "amulet", tooltip: "Life Amulet" },
-			{ x:2130, y:1644, type: "dimensionalbutterfly", tooltip: "Hidden Moonstone" },
-			{ x:499, y:2086, type: "ladder", tooltip: "Knocked down from above."},
-			{ x:780, y:2219, type: "ladder" },
-			{ x:1081, y:666, type: "ladder" },
-			{ x:1060, y:1244, type: "ladder" },
-			{ x:1072, y:1463, type: "ladder" },
-			{ x:1476, y:633, type: "ladder" },
-			{ x:1418, y:676, type: "ladder" },
-			{ x:1492, y:857, type: "ladder" },
-			{ x:1469, y:959, type: "ladder" },
-			{ x:1814, y:1650, type: "ladder" },
-			{ x:1970, y:1589, type: "ladder" },
-			{ x:2046, y:1607, type: "ladder" },
-			{ x:2419, y:1483, type: "ladder" },
-			{ x:2506, y:1445, type: "ladder" },
-			{ x:2028, y:1073, type: "lift" },
-			{ x:793, y:1729, type: "lockeddoor", tooltip: "Opens from the other side."}
+			{ x:352, y:2058, type: "consumable", tooltip: "Throwing Cell" },
+			{ x:558, y:2056, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:931, y:2025, type: "consumable", tooltip: "Gemini's Emergency Protection" },
+			{ x:823, y:1753, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:800, y:1668, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1102, y:1687, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
+			{ x:1303, y:1567, type: "consumable", tooltip: "Electric Blitz Abrasive" },
+			{ x:1295, y:1261, type: "consumable", tooltip: "Sharp Pipe" },
+			{ x:1248, y:1155, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1025, y:936, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1180, y:616, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:1795, y:843, type: "consumable", tooltip: "Legion Magazine" },
+			{ x:2111, y:948, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
+			{ x:2163, y:1247, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:2205, y:1499, type: "consumable", tooltip: "Venigni's Emergency Protection" },
+			{ x:1728, y:1591, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1727, y:1769, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:2110, y:1797, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:1037, y:2365, type: "defencepart", tooltip: "LADA F150 Frame" },
+			{ x:1910, y:1481, type: "defencepart", tooltip: "Workshop Union Standard Insulation Converter" },
+			{ x:841, y:1478, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:1591, y:1313, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:1506, y:1133, type: "material", tooltip: "Star Fragment" },
+			{ x:2074, y:1302, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:2301, y:1674, type: "material", tooltip: "Star Fragment" },
+			{ x:1393, y:1024, type: "collectable", tooltip: "Frozen Man's Letter" },
+			{ x:2506, y:1185, type: "collectable", tooltip: "Torn Doodle" },
+			{ x:2019, y:1565, type: "collectable", tooltip: "Venigni's Krat Landmark Guide II" },
+			{ x:1655, y:1270, type: "amulet", tooltip: "Life Amulet" },
+			{ x:2137, y:1644, type: "dimensionalbutterfly", tooltip: "Hidden Moonstone" },
+			{ x:506, y:2086, type: "ladder", tooltip: "Knocked down from above."},
+			{ x:787, y:2219, type: "ladder" },
+			{ x:1088, y:666, type: "ladder" },
+			{ x:1067, y:1244, type: "ladder" },
+			{ x:1079, y:1463, type: "ladder" },
+			{ x:1483, y:633, type: "ladder" },
+			{ x:1425, y:676, type: "ladder" },
+			{ x:1499, y:857, type: "ladder" },
+			{ x:1476, y:959, type: "ladder" },
+			{ x:1821, y:1650, type: "ladder" },
+			{ x:1977, y:1589, type: "ladder" },
+			{ x:2053, y:1607, type: "ladder" },
+			{ x:2426, y:1483, type: "ladder" },
+			{ x:2513, y:1445, type: "ladder" },
+			{ x:2035, y:1073, type: "lift" },
+			{ x:800, y:1729, type: "lockeddoor", tooltip: "Opens from the other side."}
 		]
 	},
 
