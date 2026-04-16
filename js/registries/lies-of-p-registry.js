@@ -62,7 +62,8 @@ const maps = [
             { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
 	        {
 				x:1051,
-				y:433, type: "npc",
+				y:433,
+				type: "npc",
 				tooltip: {
                     title: "Wandering Merchant",
                     items: [
