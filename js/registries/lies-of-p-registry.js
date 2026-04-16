@@ -56,13 +56,12 @@ const maps = [
         image: "kratcentralstationplaza.webp",
         page: "maps/kratcentralstationplaza.html",
         markers: [
-            { x:779, y:2088, type: "area", tooltip: "Krat Central Station" },
-            { x:1434, y:660, type: "area", tooltip: "Hotel Krat Entrance" },
-            { x:779, y:2451, type: "stargazer", tooltip: "Krat Central Station Plaza" },
-            { x:1098, y:1046, type: "stargazer", tooltip: "Cerasani Alley" },
+            { x:785, y:2588, type: "area", tooltip: "Krat Central Station" },
+            { x:1437, y:83, type: "area", tooltip: "Hotel Krat Entrance" },
+            { x:786, y:2388, type: "stargazer", tooltip: "Krat Central Station Plaza" },
+            { x:1110, y:992, type: "stargazer", tooltip: "Cerasani Alley" },
 	        {
-				x:1051,
-				y:1013,
+				x:1053, y:948,
 				type: "npc",
 				tooltip: {
                     title: "Wandering Merchant",
@@ -76,19 +75,19 @@ const maps = [
                     ]
                 }
             },
-            { x:1147, y:2385, type: "consumable", tooltip: "Dim Ergo Fragment" },
-            { x:471, y:2149, type: "consumable", tooltip: "Fable Catalyst" },
-            { x:1183, y:2074, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-            { x:1515, y:1913, type: "consumable", tooltip: "Sawtoothed Wheel" },
-            { x:105, y:1760, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-            { x:617, y:1679, type: "consumable", tooltip: "Dim Ergo Fragment" },
-            { x:275, y:1444, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
-            { x:439, y:1280, type: "consumable", tooltip: "Dim Ergo Fragment" },
-            { x:954, y:1174, type: "consumable", tooltip: "Fable Catalyst" },
-            { x:501, y:1033, type: "consumable", tooltip: "Thermite" },
-            { x:1034, y:472, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-            { x:520, y:1052, type: "collectable", tooltip: "Krat Times Issue 183" },
-            { x:1070, y:738, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
+            { x:1149, y:2327, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:476, y:2096, type: "consumable", tooltip: "Fable Catalyst" },
+            { x:1184, y:2022, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:1518, y:1858, type: "consumable", tooltip: "Sawtoothed Wheel" },
+            { x:112, y:1704, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:628, y:1620, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:286, y:1387, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
+            { x:450, y:1226, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:970, y:1118, type: "consumable", tooltip: "Fable Catalyst" },
+            { x:501, y:973, type: "consumable", tooltip: "Thermite" },
+            { x:1044, y:1017, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:532, y:1900, type: "collectable", tooltip: "Krat Times Issue 183" },
+            { x:1081, y:685, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
 	    	{
                 x:1392, y:318,
                 type: "boss",
@@ -100,7 +99,7 @@ const maps = [
                     ]
                 }
             },
-            { x:1141, y:1544, type: "lockeddoor", tooltip: "Opens from the other side." }
+            { x:1149, y:1451, type: "lockeddoor", tooltip: "Opens from the other side." }
         ]
     },
     {
