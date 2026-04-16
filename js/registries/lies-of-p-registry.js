@@ -60,8 +60,10 @@ const maps = [
             { x:1654, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
             { x:779, y:1871, type: "stargazer", tooltip: "Krat Central Station Plaza" },
             { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
-	        { x:1051, y:433, type: "npc", tooltip: "Wandering Merchant"
-			{
+	        {
+				x:1051,
+				y:433, type: "npc",
+				tooltip: {
                     title: "Wandering Merchant",
                     items: [
                         "Fable Catalyst",
@@ -86,8 +88,11 @@ const maps = [
             { x:1034, y:472, type: "consumable", tooltip: "Vivid Ergo Fragment" },
             { x:520, y:1371, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1070, y:158, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
-            { x:1656, y:605, type: "boss", tooltip:
-			{
+	    	{
+                x:1656,
+                y:605,
+                type: "boss",
+                tooltip: {
                     title: "Parade Master",
                     items: [
                         "Parade Master's Ergo",
