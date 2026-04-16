@@ -109,8 +109,99 @@ const maps = [
         title: "Elysian Boulevard",
         image: "elysianboulevard.webp",
         page: "maps/elysianboulevard.html",
-        markers: []
-    },
+        markers: [
+			{ x:203, y:2356, type: "area", tooltip: "Hotel Krat" },
+			{ x:2214, y:264, type: "area", tooltip: "Alchemist Bridge" },
+            { x:206, y:1744, type: "stargazer", tooltip: "Elysian Boulevard Entrance" },
+			{ x:1967, y:655, type: "stargazer", tooltip: "Inside the House on Elysian Boulevard" },
+	    	{
+				x:1920,
+				y:538,
+				type: "npc",
+				tooltip: {
+                    title: "Wandering Merchant",
+                    items: [
+                        "Attribute Resistance Ampoule",
+						"Legion Magazine",
+                        "Throwing Cell",
+						"Electric Blitz Canister",
+						"Electric Blitz Abrasive",
+						"Gemini's Iron Protection",
+						"Gemini's Emergency Protection",
+						"Electric Coil Stick"
+                    ]
+                }
+            },
+			{
+				x:1744,
+				y:1117,
+				type: "npc",
+				tooltip: {
+                    title: "Toma",
+                    items: [
+						"Radiant Ergo Fragment"
+                    ]
+                }
+            },
+			{
+				x:2599,
+				y:938,
+				type: "npc",
+				tooltip: {
+                    title: "Weeping Woman",
+                    items: [
+						"Vivid Ergo Fragment",
+						"Feel"
+                    ]
+                }
+            },
+            { x:387, y:1541, type: "consumable", tooltip: "Throwing Cell" },
+			{ x:593, y:1539, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:966, y:1508, type: "consumable", tooltip: "Gemini's Emergency Protection" },
+			{ x:858, y:1236, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:835, y:1151, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1137, y:1170, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
+			{ x:1338, y:1050, type: "consumable", tooltip: "Electric Blitz Abrasive" },
+			{ x:1330, y:744, type: "consumable", tooltip: "Sharp Pipe" },
+			{ x:1283, y:638, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1060, y:419, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1215, y:99, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:1830, y:326, type: "consumable", tooltip: "Legion Magazine" },
+			{ x:2146, y:431, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
+			{ x:2198, y:730, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:2240, y:982, type: "consumable", tooltip: "Venigni's Emergency Protection" },
+			{ x:1763, y:1074, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1762, y:1252, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:2145, y:1280, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+            { x:1072, y:1848, type: "defencepart", tooltip: "LADA F150 Frame" },
+			{ x:1945, y:964, type: "defencepart", tooltip: "Workshop Union Standard Insulation Converter" },
+            { x:876, y:961, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:1626, y:796, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:1541, y:616, type: "material", tooltip: "Star Fragment" },
+			{ x:2109, y:785, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:2336, y:1157, type: "material", tooltip: "Star Fragment" },
+            { x:1428, y:507, type: "collectable", tooltip: "Frozen Man's Letter" },
+			{ x:2541, y:668, type: "collectable", tooltip: "Torn Doodle" },
+			{ x:2054, y:1048, type: "collectable", tooltip: "Venigni's Krat Landmark Guide II" },
+            { x:1690, y:753, type: "amulet", tooltip: "Life Amulet" },
+            { x:2172, y:1127, type: "dimensionalbutterfly", tooltip: "Hidden Moonstone" },
+            { x:541, y:1569, type: "ladder", tooltip: "Knocked down from above."}
+			{ x:822, y:1702, type: "ladder" },
+			{ x:1123, y:149, type: "ladder" },
+			{ x:1102, y:727, type: "ladder" },
+			{ x:1114, y:946, type: "ladder" },
+			{ x:1518, y:116, type: "ladder" },
+			{ x:1460, y:159, type: "ladder" },
+			{ x:1534, y:340, type: "ladder" },
+			{ x:1511, y:442, type: "ladder" },
+			{ x:1856, y:1133, type: "ladder" },
+			{ x:2012, y:1072, type: "ladder" },
+			{ x:2088, y:1090, type: "ladder" },
+			{ x:2461, y:966, type: "ladder" },
+			{ x:2548, y:928, type: "ladder" },
+            { x:2070, y:556, type: "lift" },
+            { x:835, y:1212, type: "lockeddoor", tooltip: "Opens from the other side."}
+			
     {
         id: "kratcityhall",
         title: "Krat City Hall",
