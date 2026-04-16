@@ -111,7 +111,6 @@ const maps = [
         page: "maps/elysianboulevard.html",
         markers: [
 			{ x:203, y:2356, type: "area", tooltip: "Hotel Krat" },
-			{ x:2214, y:264, type: "area", tooltip: "Alchemist Bridge" },
             { x:206, y:1744, type: "stargazer", tooltip: "Elysian Boulevard Entrance" },
 			{ x:1967, y:655, type: "stargazer", tooltip: "Inside the House on Elysian Boulevard" },
 	    	{
