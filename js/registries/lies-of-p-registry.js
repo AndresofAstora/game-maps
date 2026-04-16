@@ -219,7 +219,7 @@ const maps = [
             { x:398, y:704, type: "amulet", tooltip: "Puppet Destroyer's Amulet" },
             { x:562, y:615, type: "crackscalling" },
 			{ x:382, y:1753, type: "lockeddoor", tooltip: "Opens from the other side." },
-            { x:899, y:354, type: "lockeddoor", tooltip: "Visit Geppetto at Hotel Krat to receive Krat City Hall Courtyard Key." },
+            { x:899, y:354, type: "lockeddoor", tooltip: "Krat City Hall Courtyard Key (Get from Geppetto at Hotel Krat)" },
 	    {
                 x:603, y:270, type: "boss",
                 tooltip: {
