@@ -59,8 +59,19 @@ const maps = [
             { x:779, y:2088, type: "area", tooltip: "Krat Central Station" },
             { x:1654, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
             { x:779, y:1871, type: "stargazer", tooltip: "Krat Central Station Plaza" },
-            { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
-	    { x:1051, y:433, type: "npc", tooltip: "Wandering Merchant" },
+            { x:1098, y:466, type: "stargazer", tooltip: {
+                    title: "Wandering Merchant",
+                    items: [
+                        "Fable Catalyst",
+                        "Throwing Cell",
+						"Electric Blitz Abrasive",
+						"Puppet's Saber",
+						"Wintry Rapier",
+						"Greatsword of Fate"
+                    ]
+                }
+            },
+	        { x:1051, y:433, type: "npc", tooltip: "Wandering Merchant" },
             { x:1147, y:1805, type: "consumable", tooltip: "Dim Ergo Fragment" },
             { x:471, y:1569, type: "consumable", tooltip: "Fable Catalyst" },
             { x:1183, y:1494, type: "consumable", tooltip: "Vivid Ergo Fragment" },
@@ -72,18 +83,12 @@ const maps = [
             { x:954, y:594, type: "consumable", tooltip: "Fable Catalyst" },
             { x:501, y:453, type: "consumable", tooltip: "Thermite" },
             { x:1034, y:472, type: "consumable", tooltip: "Vivid Ergo Fragment" },
-            { x:1707, y:575, type: "consumable", tooltip: "Parade Leader's Ergo" },
-            { x:1707, y:656, type: "material", tooltip: "Quartz" },
             { x:520, y:1371, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1070, y:158, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
-            {
-                x:1656,
-                y:605,
-                type: "boss",
-                tooltip: {
+            { x:1656, y:605, type: "boss", tooltip: {
                     title: "Parade Master",
                     items: [
-                        "Parade Leader's Ergo",
+                        "Parade Master's Ergo",
                         "Quartz"
                     ]
                 }
