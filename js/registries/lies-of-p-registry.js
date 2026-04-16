@@ -129,7 +129,7 @@ const maps = [
 			    }
 			},
 			{
-				x:1709, y:1634,
+				x:1716, y:1634,
 				type: "npc",
 				tooltip: {
 			        title: "Toma",
