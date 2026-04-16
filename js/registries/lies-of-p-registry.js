@@ -185,7 +185,7 @@ const maps = [
 			{ x:2054, y:1048, type: "collectable", tooltip: "Venigni's Krat Landmark Guide II" },
             { x:1690, y:753, type: "amulet", tooltip: "Life Amulet" },
             { x:2172, y:1127, type: "dimensionalbutterfly", tooltip: "Hidden Moonstone" },
-            { x:541, y:1569, type: "ladder", tooltip: "Knocked down from above."}
+            { x:541, y:1569, type: "ladder", tooltip: "Knocked down from above."},
 			{ x:822, y:1702, type: "ladder" },
 			{ x:1123, y:149, type: "ladder" },
 			{ x:1102, y:727, type: "ladder" },
