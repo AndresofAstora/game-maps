@@ -203,7 +203,37 @@ const maps = [
         title: "Krat City Hall",
         image: "kratcityhall.webp",
         page: "maps/kratcityhall.html",
-        markers: []
+        markers: [
+			{ x:156, y:2214, type: "area", tooltip: "Elysian Boulevard" },
+			{ x:924, y:353, type: "area", tooltip: "Union Square Entrance" },
+        	{ x:156, y:2046, type: "stargazer", tooltip: "Krat City Hall" },
+			{ x:603, y:334, type: "stargazer", tooltip: "Krat City Hall Courtyard" },
+            { x:672, y:1887, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+			{ x:407, y:1780, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:324, y:1571, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+            { x:386, y:1128, type: "collectable", tooltip: "Krat News Issue 1124" },
+			{ x:796, y:719, type: "collectable", tooltip: "Broken Baby Puppet (Give to Weeping Woman in Elysian Boulevard)" },
+			{ x:480, y:145, type: "collectable", tooltip: "Faded Whistle (Play for Toma in Elysian Boulevard)" },
+			{ x:633, y:86, type: "collectable", tooltip: "Venigni's Guide" },
+			{ x:462, y:2064, type: "material", tooltip: "Star Fragment" },
+            { x:398, y:704, type: "amulet", tooltip: "Puppet Destroyer's Amulet" },
+            { x:562, y:615, type: "crackscalling" },
+			{ x:382, y:1753, type: "lockeddoor", tooltip: "Opens from the other side." },
+            { x:899, y:354, type: "lockeddoor", tooltip: "Visit Geppetto at Hotel Krat to receive Krat City Hall Courtyard Key." },
+	    {
+                x:603, y:270, type: "boss",
+                tooltip: {
+                    title: "Scrapped Watchman",
+                    items: [
+                        "Broken Hero's Ergo",
+                        "Small Wooden Officer Puppet",
+						"Overcharged Starage Battery",
+						"Quartz",
+						"Core"
+                    ]
+                }
+            },
+		]
     },
     {
         id: "stfrangelicocathedralchapel",
