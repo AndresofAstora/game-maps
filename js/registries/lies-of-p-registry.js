@@ -201,6 +201,8 @@ const maps = [
 			{ x:2548, y:928, type: "ladder" },
             { x:2070, y:556, type: "lift" },
             { x:835, y:1212, type: "lockeddoor", tooltip: "Opens from the other side."}
+		]
+    },
 			
     {
         id: "kratcityhall",
