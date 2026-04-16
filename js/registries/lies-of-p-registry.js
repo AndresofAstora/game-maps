@@ -57,7 +57,7 @@ const maps = [
         page: "maps/kratcentralstationplaza.html",
         markers: [
             { x:779, y:2088, type: "area", tooltip: "Krat Central Station" },
-            { x:1654, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
+            { x:100, y:347, type: "area", tooltip: "Hotel Krat Entrance" },
             { x:779, y:1871, type: "stargazer", tooltip: "Krat Central Station Plaza" },
             { x:1098, y:466, type: "stargazer", tooltip: "Cerasani Alley" },
 	        {
@@ -90,7 +90,7 @@ const maps = [
             { x:520, y:1371, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1070, y:158, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
 	    	{
-                x:1656,
+                x:100,
                 y:605,
                 type: "boss",
                 tooltip: {
