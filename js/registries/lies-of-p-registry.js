@@ -61,8 +61,7 @@ const maps = [
             { x:786, y:2388, type: "stargazer", tooltip: "Krat Central Station Plaza" },
             { x:1110, y:992, type: "stargazer", tooltip: "Cerasani Alley" },
 	        {
-				x:1053, y:948,
-				type: "npc",
+				x:1053, y:948, type: "npc",
 				tooltip: {
                     title: "Wandering Merchant",
                     items: [
@@ -89,8 +88,7 @@ const maps = [
             { x:532, y:1900, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1081, y:685, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
 	    	{
-                x:1392, y:318,
-                type: "boss",
+                x:1392, y:318, type: "boss",
                 tooltip: {
                     title: "Parade Master",
                     items: [
@@ -112,8 +110,7 @@ const maps = [
 			{ x:171, y:2261, type: "stargazer", tooltip: "Elysian Boulevard Entrance" },
 			{ x:1932, y:1172, type: "stargazer", tooltip: "Inside the House on Elysian Boulevard" },
 			{
-				x:1885, y:1055,
-				type: "npc",
+				x:1885, y:1055, type: "npc",
 				tooltip: {
 			        title: "Wandering Merchant",
 			        items: [
@@ -129,8 +126,7 @@ const maps = [
 			    }
 			},
 			{
-				x:1716, y:1634,
-				type: "npc",
+				x:1716, y:1634, type: "npc",
 				tooltip: {
 			        title: "Toma",
 			        items: [
@@ -139,8 +135,7 @@ const maps = [
 			    }
 			},
 			{
-				x:2564, y:1455,
-				type: "npc",
+				x:2564, y:1455, type: "npc",
 				tooltip: {
 			        title: "Weeping Woman",
 			        items: [
@@ -305,7 +300,7 @@ const maps = [
 			{ x:621, y:958, type: "material", tooltip: "Hidden Moonstone" },
 			{ x:451, y:599, type: "material", tooltip: "Star Fragment" },
             { x:393, y:677, type: "collectable", tooltip: "So Said Pistris II" },
-		    {
+			{
                 x:371, y:194, type: "boss",
                 tooltip: {
                     title: "Door Guardian",
@@ -372,7 +367,7 @@ const maps = [
 			        ]
 			    }
 			},
-	    {
+	    	{
                 x:500, y:3110, type: "boss",
                 tooltip: {
                     title: "King of Puppets",
