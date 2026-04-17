@@ -358,8 +358,7 @@ const maps = [
 			{ x:760, y:1131, type: "ladder },
 			{ x:1, y:1, type: "lockeddoor", tooltip: "?" },
             { x:2, y:2, type: "lockeddoor", tooltip: "?" },
-			{
-				x:944, y:908, type: "npc",
+			{ x:944, y:908, type: "npc",
 				tooltip: {
 			        title: "Adelina",
 			        items: [
