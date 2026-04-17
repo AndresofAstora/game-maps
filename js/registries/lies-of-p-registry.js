@@ -269,7 +269,7 @@ const maps = [
         image: "blackseaside.webp",
         page: "maps/blackseaside.html",
         markers: [
-			{ x:332, y:2872, type: "area", tooltip: "Player Start" },
+			{ x:332, y:2872, type: "area", tooltip: "Area Start (Backtrack via Stargazer)" },
 			{ x:371, y:72, type: "area", tooltip: "Arch Abbey" },
             { x:394, y:1148, type: "stargazer", tooltip: "Black Seaside" },
 	    	{ x:451, y:2810, type: "npc", tooltip: "Sophia" },
