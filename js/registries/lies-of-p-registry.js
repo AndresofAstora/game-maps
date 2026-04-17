@@ -268,7 +268,53 @@ const maps = [
         title: "Black Seaside",
         image: "blackseaside.webp",
         page: "maps/blackseaside.html",
-        markers: []
+        markers: [
+			{ x:332, y:2872, type: "area", tooltip: "Player Start" },
+			{ x:371, y:72, type: "area", tooltip: "Arch Abbey" },
+            { x:394, y:1148, type: "stargazer", tooltip: "Black Seaside" },
+	    	{ x:451, y:2810, type: "npc", tooltip: "Sophia" },
+            { x:376, y:2596, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:512, y:2346, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:416, y:2136, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:373, y:2021, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:195, y:1610, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:357, y:1583, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:497, y:1573, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:180, y:1339, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:239, y:1192, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:463, y:1198, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:549, y:1036, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:321, y:1034, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:430, y:920, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+			{ x:498, y:893, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:126, y:893, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:265, y:864, type: "consumable", tooltip: "Gemini's Emergency Protection" },
+			{ x:435, y:792, type: "consumable", tooltip: "Shot Put" },
+			{ x:603, y:702, type: "consumable", tooltip: "Acid Canister" },
+			{ x:276, y:646, type: "consumable", tooltip: "Shot Put" },
+			{ x:291, y:478, type: "consumable", tooltip: "Acid Abrasive" },
+            { x:512, y:1969, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:410, y:1737, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:246, y:1455, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:420, y:1477, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:339, y:1235, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:457, y:1296, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:101, y:1131, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:498, y:1070, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:157, y:990, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:621, y:958, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:451, y:599, type: "material", tooltip: "Star Fragment" },
+            { x:393, y:677, type: "collectable", tooltip: "So Said Pistris II" },
+	    {
+                x:371, y:194, type: "boss",
+                tooltip: {
+                    title: "Door Guardian",
+                    items: [
+                        "High-level Alchemist Badge"
+                    ]
+                }
+            },
+		]
     },
     {
         id: "lorenziniarcade",
@@ -366,7 +412,14 @@ const maps = [
         title: "Hotel Krat Entrance",
         image: "hotelkratentrance.webp",
         page: "maps/hotelkratentrance.html",
-        markers: []
+        markers: [
+			{ x:488, y:1078, type: "area", tooltip: "Krat Central Station Plaza" },
+            { x:833, y:220, type: "area", tooltip: "Hotel Krat" },
+	    	{ x:431, y:731, type: "consumable", tooltip: "Fable Catalyst" },
+            { x:258, y:319, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:373, y:148, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1272, y:231, type: "material", tooltip: "Hidden Moonstone" }
+		]
     },
     {
         id: "hermitscave",
