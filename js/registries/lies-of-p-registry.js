@@ -328,7 +328,64 @@ const maps = [
         title: "Estella Opera House",
         image: "estellaoperahouse.webp",
         page: "maps/estellaoperahouse.html",
-        markers: []
+        markers: [
+			{ x:666, y:49, type: "area", tooltip: "Lorenzini Arcade" },
+			{ x:711, y:1904, type: "area", tooltip: "Rosa Isabelle Street" },
+			{ x:298, y:1904, type: "area", tooltip: "Rosa Isabelle Street" },
+        	{ x:504, y:1712, type: "stargazer", tooltip: "Estella Opera House Enterance" },
+			{ x:506, y:115, type: "stargazer", tooltip: "Estella Opera House Stage" },
+            { x:362, y:1576, type: "consumable", tooltip: "Electric Blitz Abrasive" },
+			{ x:518, y:1809, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+			{ x:748, y:1415, type: "consumable", tooltip: "Special Resistance Ampoule" },
+			{ x:893, y:1429, type: "consumable", tooltip: "Electric Blitz Abrasive" },
+			{ x:836, y:1172, type: "consumable", tooltip: "Legion Magazine" },
+			{ x:504, y:806, type: "consumable", tooltip: "Special Purification Ampoule" },
+			{ x:265, y:850, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:402, y:612, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1162, y:1002, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1749, y:777, type: "consumable", tooltip: "Saw Blade" },
+			{ x:2003, y:580, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:775, y:897, type: "consumable", tooltip: "Dim Ergo Chunk" },
+			{ x:1190, y:816, type: "defencepart", tooltip: "Belford Disruption Cartridge" },
+			{ x:1648, y:870, type: "defencepart", tooltip: "Belford Superior Radiation Converter" },
+			{ x:910, y:1246, type: "dimensionalbutterfly", tooltip: "Technique Crank" },
+			{ x:1459, y:1127, type: "weapon", tooltip: "Exploding Pickaxe" },
+			{ x:741, y:1196, type: "collectable", tooltip: "Notes frm an Expirament" },
+			{ x:761, y:1090, type: "collectable", tooltip: "Jeweled Cryptic Vessel" },
+			{ x:585, y:969, type: "material", tooltip: "Dark Moon Moonstone of the Covenant" },
+			{ x:1655, y:897, type: "material", tooltip: "Quartz" },
+			{ x:1858, y:831, type: "material", tooltip: "Crescent Moonstone" },
+            { x:1605, y:725, type: "amulet", tooltip: "Technique Amulet" },
+			{ x:1959, y:1098, type: "tool", tooltip: "Incredible Venigni Collection" },
+			{ x:819, y:1249, type: "ladder" },
+			{ x:819, y:1281, type: "ladder" },
+			{ x:819, y:1159, type: "ladder },
+			{ x:760, y:1131, type: "ladder },
+			{ x:0, y:0, type: "lockeddoor", tooltip: "?" },
+            { x:0, y:0, type: "lockeddoor", tooltip: "?" },
+		{
+				x:944, y:908, type: "npc",
+				tooltip: {
+			        title: "Adelina",
+			        items: [
+						"Red Actress's Locket"
+			        ]
+			    }
+			},
+	    {
+                x:500, y:3110, type: "boss",
+                tooltip: {
+                    title: "King of Puppets",
+                    items: [
+                        "Burnt-White King's Ergo",
+                        "Puppet Prince's Formal Dress",
+						"Someone's Necklace"
+                    ]
+                }
+            },
+		]
+    },
+		]
     },
     {
         id: "rosaisabbellstreet",
