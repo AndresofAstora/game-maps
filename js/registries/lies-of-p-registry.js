@@ -354,8 +354,8 @@ const maps = [
 			{ x:1959, y:1098, type: "tool", tooltip: "Incredible Venigni Collection" },
 			{ x:819, y:1249, type: "ladder" },
 			{ x:819, y:1281, type: "ladder" },
-			{ x:819, y:1159, type: "ladder },
-			{ x:760, y:1131, type: "ladder },
+			{ x:819, y:1159, type: "ladder" },
+			{ x:760, y:1131, type: "ladder" },
 			{ x:1, y:1, type: "lockeddoor", tooltip: "?" },
             { x:2, y:2, type: "lockeddoor", tooltip: "?" },
 			{
