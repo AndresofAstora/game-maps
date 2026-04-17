@@ -305,7 +305,7 @@ const maps = [
 			{ x:621, y:958, type: "material", tooltip: "Hidden Moonstone" },
 			{ x:451, y:599, type: "material", tooltip: "Star Fragment" },
             { x:393, y:677, type: "collectable", tooltip: "So Said Pistris II" },
-	    {
+		    {
                 x:371, y:194, type: "boss",
                 tooltip: {
                     title: "Door Guardian",
@@ -361,9 +361,9 @@ const maps = [
 			{ x:819, y:1281, type: "ladder" },
 			{ x:819, y:1159, type: "ladder },
 			{ x:760, y:1131, type: "ladder },
-			{ x:0, y:0, type: "lockeddoor", tooltip: "?" },
-            { x:0, y:0, type: "lockeddoor", tooltip: "?" },
-		{
+			{ x:1, y:1, type: "lockeddoor", tooltip: "?" },
+            { x:2, y:2, type: "lockeddoor", tooltip: "?" },
+			{
 				x:944, y:908, type: "npc",
 				tooltip: {
 			        title: "Adelina",
@@ -383,8 +383,6 @@ const maps = [
                     ]
                 }
             },
-		]
-    },
 		]
     },
     {
