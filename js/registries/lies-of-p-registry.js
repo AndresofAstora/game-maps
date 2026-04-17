@@ -391,7 +391,23 @@ const maps = [
         title: "Krat Central Station",
         image: "kratcentralstation.webp",
         page: "maps/kratcentralstation.html",
-        markers: []
+        markers: [
+			{ x:570, y:2028, type: "area", tooltip: "Game Start" },
+            { x:661, y:388, type: "area", tooltip: "Krat Central Station Plaza" },
+            { x:583, y:1785, type: "consumable", tooltip: "Monad's Lamp" },
+			{ x:763, y:1152, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:690, y:860, type: "consumable", tooltip: "Pulse Cell" },
+			{ x:514, y:634, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1755, y:1138, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:1214, y:872, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:1713, y:762, type: "consumable", tooltip: "Thermite" },
+			{ x:1123, y:561, type: "consumable", tooltip: "Dim Ergo Fragment" },
+            { x:1642, y:1008, type: "tool", tooltip: "Krat Central Station Main Entrance Key (Enemy Drop)" },
+            { x:570, y:1536, type: "weapon", tooltip: "Starter Weapon" },
+            { x:1586, y:1036, type: "defencepart", tooltip: "Workshop Union Lightweight Frame (Enemy Drop)" },
+            { x:1072, y:1248, type: "collectable", tooltip: "Passenger's Note" },
+            { x:688, y:388, type: "lockeddoor", tooltip: "Krat Central Station Main Entrance Key"}
+		]
     },
     {
         id: "kratcentralstationplatform",
