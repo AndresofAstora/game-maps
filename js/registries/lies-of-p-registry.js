@@ -332,7 +332,87 @@ const maps = [
         title: "Malum District",
         image: "malumdistrict.webp",
         page: "maps/malumdistrict.html",
-        markers: []
+        markers: [
+			{ x:1497, y:1639, type: "area", tooltip: "Path of the Pilgrim" },
+			{ x:108, y:2032, type: "area", tooltip: "Hotel Krat (Garden)" },
+            { x:1523, y:1421, type: "stargazer", tooltip: "Malum District" },
+			{ x:421, y:1709, type: "stargazer", tooltip: "Malum District Town Hall" },
+			{ x:768, y:1675, type: "crackscalling" },
+	    	{ x:1560, y:1395, type: "npc", tooltip: "Red Fox" },
+			{ x:1576, y:1364, type: "npc", tooltip: "Black Cat" },
+			{ x:1541, y:922, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1457, y:629, type: "consumable", tooltip: "Cluster Grenade" },
+			{ x:1499, y:577, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1432, y:525, type: "consumable", tooltip: "Sharp Pipe" },
+			{ x:1149, y:666, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:1063, y:892, type: "consumable", tooltip: "Chain" },
+			{ x:761, y:833, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:713, y:732, type: "consumable", tooltip: "Shot Put" },
+			{ x:675, y:520, type: "consumable", tooltip: "Special Resistance Ampoule" },
+			{ x:1068, y:377, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:743, y:279, type: "consumable", tooltip: "Gemini's Iron Protection" },
+			{ x:459, y:764, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:447, y:992, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:457, y:1147, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+			{ x:634, y:1145, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:740, y:1140, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:1233, y:1160, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:1355, y:1264, type: "consumable", tooltip: "Special Purification Ampoule" },
+			{ x:1055, y:281, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:459, y:764, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1262, y:257, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+			{ x:1635, y:867, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:939, y:857, type: "material", tooltip: "Motivity Crank" },
+			{ x:809, y:541, type: "material", tooltip: "Quartz" },
+			{ x:591, y:830, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:793, y:1026, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:1131, y:1259, type: "material", tooltip: "Star Fragment" },
+			{ x:1509, y:1224, type: "material", tooltip: "Legion Caliber" },
+			{ x:949, y:308, type: "material", tooltip: "Star Fragment" },
+			{ x:1353, y:310, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:238, y:1866, type: "material", tooltip: "Quartz" },
+			{ x:1102, y:238, type: "dimensionalbutterfly", tooltip: "Balance Crank" },
+			{ x:1684, y:589, type: "collectable", tooltip: "Have a taste of La Bleiwies, the greatest wine in the world!" },
+			{ x:631, y:609, type: "collectable", tooltip: "Trinity Key" },
+			{ x:1471, y:1125, type: "collectable", tooltip: "Monad Charity House Guide" },
+			{ x:205, y:1786, type: "collectable", tooltip: "[This month's trend: Stalker Masks]" },
+			{ x:249, y:1821, type: "collectable", tooltip: "Black Rabbit Brotherhood Ledger" },
+			{ x:313, y:1913, type: "collectable", tooltip: "Portrait of a Boy" },
+			{ x:1748, y:756, type: "defencepart", tooltip: "Arch Break Cartridge" },
+			{ x:1193, y:495, type: "weapon", tooltip: "Bone-Cutting Saw" },
+			{ x:825, y:748, type: "amulet", tooltip: "Patience Amulet (Enemy Drop)" },
+			{ x:108, y:2008, type: "lift" },
+			{ x:706, y:1078, type: "ladder" },
+			{ x:940, y:935, type: "ladder" },
+			{ x:651, y:736, type: "ladder" },
+			{ x:523, y:598, type: "ladder" },
+			{ x:854, y:422, type: "ladder" },
+			{ x:1092, y:114, type: "ladder" },
+			{ x:1613, y:840, type: "ladder" },
+			{ x:1542, y:1124, type: "ladder" },
+			{ x:1509, y:1323, type: "lockeddoor", tooltip: "Opens from the other side." },
+			{
+				x:1471, y:1186, type: "npc",
+				tooltip: {
+			        title: "Malum District Black Market Trader",
+			        items: [
+						"Bramble Curved Sword",
+						"Someday
+			        ]
+			    }
+			},
+	    	{
+                x:493, y:1676, type: "boss",
+                tooltip: {
+                    title: "Eldest of the Black Rabbit Brotherhood",
+                    items: [
+                        "Resplendant Ergo Chunk",
+						"Taunt"
+                    ]
+                }
+            },
+		]
+		
     },
     {
         id: "blackseaside",
