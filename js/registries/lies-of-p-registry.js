@@ -673,8 +673,8 @@ const maps = [
 			{ x:3015, y:2460, type: "collectable", tooltip: "Fairytale of the Three Brothers of the Workshop Tower" },
 			{ x:2109, y:845, type: "amulet", tooltip: "Murderer Puppet's Amulet (Enemy Drop)" },
 			{ x:2905, y:518, type: "amulet", tooltip: "Carrier's Amulet +1" },
-			{ x:2905, y:463, type: "costume", tooltip: "Workshop Master's Workwear" }
-			{ x:1050, y:805, type: "ladder" }
+			{ x:2905, y:463, type: "costume", tooltip: "Workshop Master's Workwear" },
+			{ x:1050, y:805, type: "ladder" },
 			{ x:2279, y:395, type: "ladder" },
 			{ x:1905, y:1081, type: "ladder" },
 			{
