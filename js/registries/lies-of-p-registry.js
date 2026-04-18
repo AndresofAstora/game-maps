@@ -391,6 +391,16 @@ const maps = [
 			{ x:1613, y:840, type: "ladder" },
 			{ x:1542, y:1124, type: "ladder" },
 			{ x:1509, y:1323, type: "lockeddoor", tooltip: "Opens from the other side." },
+			{
+				x:1471, y:1186, type: "npc",
+				tooltip: {
+			        title: "Malum District Black Market Trader",
+			        items: [
+						"Bramble Curved Sword",
+						"Someday"
+			        ]
+			    }
+			},
 	    	{
                 x:493, y:1676, type: "boss",
                 tooltip: {
