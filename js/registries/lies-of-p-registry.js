@@ -627,7 +627,76 @@ const maps = [
         title: "Krat Central Station Return",
         image: "kratcentralstationreturn.webp",
         page: "maps/kratcentralstationreturn.html",
-        markers: []
+        markers: [
+			{ x:419, y:1223, type: "area", tooltip: "Barren Swamp" },
+            { x:3094, y:2447, type: "area", tooltip: "Collapsing Krat" },
+			{ x:1168, y:1332, type: "stargazer", tooltip: "Krat Central Station Platform" },
+			{ x:2842, y:807, type: "stargazer", tooltip: "Krat Central Station Lobby" },
+			{ x:2991, y:2231, type: "stargazer", tooltip: "Abandoned Apartment" },
+			{ x:72, y:1170, type: "consumable", tooltip: "Saw Blade" },
+			{ x:1022, y:1260, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
+			{ x:812, y:914, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:902, y:783, type: "consumable", tooltip: "Fire Canister" },
+			{ x:1201, y:613, type: "consumable", tooltip: "Chain" },
+			{ x:1334, y:137, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:1609, y:93, type: "consumable", tooltip: "Special Purification Ampoule" },
+			{ x:1716, y:210, type: "consumable", tooltip: "Shot Put" },
+			{ x:1480, y:1570, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:2115, y:440, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:2172, y:483, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:1864, y:562, type: "consumable", tooltip: "Special Purification Ampoule" },
+			{ x:2019, y:562, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:1738, y:587, type: "consumable", tooltip: "Radiant Ergo Chunk" },
+			{ x:1971, y:813, type: "consumable", tooltip: "Special Resistance Ampoule" },
+			{ x:1754, y:1228, type: "consumable", tooltip: "Special Resistance Ampoule" },
+			{ x:1980, y:1442, type: "consumable", tooltip: "Chain" },
+			{ x:2136, y:1666, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:2073, y:1854, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:2366, y:1021, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:2947, y:1086, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:2942, y:1630, type: "consumable", tooltip: "Cat Dust" },
+			{ x:3246, y:699, type: "consumable", tooltip: "Legion Magazine" },
+			{ x:3707, y:772, type: "consumable", tooltip: "Thermite" },
+			{ x:3445, y:900, type: "consumable", tooltip: "Dim Ergo Chunk" },
+			{ x:3367, y:965, type: "consumable", tooltip: "Acid Canister" },
+			{ x:3341, y:1168, type: "consumable", tooltip: "Gemini's Emergency Protection" },
+			{ x:3442, y:1135, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:708, y:842, type: "material", tooltip: "Quartz" },
+			{ x:2773, y:1620, type: "material", tooltip: "Dark Moon Moonstone of the Covenant" },
+			{ x:2795, y:1970, type: "material", tooltip: "Half Moonstone" },
+			{ x:1363, y:711, type: "defencepart", tooltip: "LADA Break Cartridge" },
+			{ x:2001, y:1289, type: "weapon", tooltip: "Master Chef's Knife" },
+			{ x:3704, y:578, type: "weapon", tooltip: "Coil Mjolnir" },
+			{ x:2589, y:1727, type: "dimensionalbutterfly", tooltip: "Stabilized Alchemical Booster" },
+			{ x:1094, y:1011, type: "collectable", tooltip: "Bloody Letter" },
+			{ x:1453, y:693, type: "collectable", tooltip: "Letter from Someone Who has Gone Ahead" },
+			{ x:3015, y:2460, type: "collectable", tooltip: "Fairytale of the Three Brothers of the Workshop Tower" },
+			{ x:2109, y:845, type: "amulet", tooltip: "Murderer Puppet's Amulet (Enemy Drop)" },
+			{ x:2905, y:518, type: "amulet", tooltip: "Carrier's Amulet +1" },
+			{ x:2905, y:463, type: "costume", tooltip: "Workshop Master's Workwear" }
+			{ x:1050, y:805, type: "ladder" }
+			{ x:2279, y:395, type: "ladder" },
+			{ x:1905, y:1081, type: "ladder" },
+			{
+				x:3065, y:2368, type: "npc",
+				tooltip: {
+			        title: "Wandering Merchant",
+			        items: [
+						"Inventory???"
+			        ]
+			    }
+			},
+	    	{
+                x:2655, y:1238, type: "boss",
+                tooltip: {
+                    title: "Robber Weasel",
+                    items: [
+                        "Robber Weasel's Mask",
+						"Robber Weasel's Hunting Apparel"
+                    ]
+                }
+            },
+		]
     },
     {
         id: "hotelkratentrance",
