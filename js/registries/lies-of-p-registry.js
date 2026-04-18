@@ -317,7 +317,7 @@ const maps = [
 			{ x:1125, y:193, type: "ladder" },
 			{ x:1441, y:1960, type: "lockeddoor", tooltip: "(Robber's Shack Key)" },
 			{
-				x:944, y:908, type: "npc",
+				x:1496, y:1855, type: "npc",
 				tooltip: {
 			        title: "Slum Resident",
 			        items: [
