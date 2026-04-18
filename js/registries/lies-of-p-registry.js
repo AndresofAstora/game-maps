@@ -300,7 +300,6 @@ const maps = [
 			{ x:1333, y:2126, type: "collectable", tooltip: "Wanted: Black Rabbit Brotherhood" },
 			{ x:1287, y:453, type: "collectable", tooltip: "Sweepers Branch Office Newspaper Archives" },
 			{ x:1165, y:2072, type: "collectable", tooltip: "Slum Shack Key (Enemy Drop)" },
-			{ x:000, y:000, type: "collectable", tooltip: "000" },
 			{ x:1457, y:2972, type: "weapon", tooltip: "Acidic Crystal Spear" },
 			{ x:2071, y:1857, type: "dimensionalbutterfly", tooltip: "Dark Moon Moonstone of the Covenant" },
 			{ x:1111, y:2404, type: "material", tooltip: "Dark Moon Moonstone of the Covenant" },
