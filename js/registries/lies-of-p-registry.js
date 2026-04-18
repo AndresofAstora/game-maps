@@ -397,7 +397,7 @@ const maps = [
 			        title: "Malum District Black Market Trader",
 			        items: [
 						"Bramble Curved Sword",
-						"Someday
+						"Someday"
 			        ]
 			    }
 			},
