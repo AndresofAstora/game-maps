@@ -107,6 +107,7 @@ const maps = [
         page: "maps/elysianboulevard.html",
         markers: [
 			{ x:168, y:2873, type: "area", tooltip: "Hotel Krat" },
+			{ x:2167, y:59, type: "area", tooltip: "Krat City Hall" },
 			{ x:171, y:2261, type: "stargazer", tooltip: "Elysian Boulevard Entrance" },
 			{ x:1932, y:1172, type: "stargazer", tooltip: "Inside the House on Elysian Boulevard" },
 			{
@@ -144,6 +145,26 @@ const maps = [
 			        ]
 			    }
 			},
+			{
+				x:2154, y:336, type: "npc",
+				tooltip: {
+			        title: "Geppetto",
+			        items: [
+			        ]
+			    }
+			},
+			{
+				x:2182, y:422, type: "boss",
+				tooltip: {
+			        title: "Mad Donkey",
+			        items: [
+						"Krat City Hall Key",
+						"Enigma Assembly Tool",
+						"Mad Donkey's Hunting Apparel",
+						"Mad Donkey's Mask"
+			        ]
+			    }
+			},
 			{ x:352, y:2058, type: "consumable", tooltip: "Throwing Cell" },
 			{ x:558, y:2056, type: "consumable", tooltip: "Sawtoothed Wheel" },
 			{ x:931, y:2025, type: "consumable", tooltip: "Gemini's Emergency Protection" },
@@ -169,6 +190,7 @@ const maps = [
 			{ x:1506, y:1133, type: "material", tooltip: "Star Fragment" },
 			{ x:2074, y:1302, type: "material", tooltip: "Hidden Moonstone" },
 			{ x:2301, y:1674, type: "material", tooltip: "Star Fragment" },
+			{ x:2064, y:161, type: "material", tooltip: "Hidden Moonstone" },
 			{ x:1393, y:1024, type: "collectable", tooltip: "Frozen Man's Letter" },
 			{ x:2506, y:1185, type: "collectable", tooltip: "Torn Doodle" },
 			{ x:2019, y:1565, type: "collectable", tooltip: "Venigni's Krat Landmark Guide II" },
@@ -189,7 +211,8 @@ const maps = [
 			{ x:2426, y:1483, type: "ladder" },
 			{ x:2513, y:1445, type: "ladder" },
 			{ x:2035, y:1073, type: "lift" },
-			{ x:800, y:1729, type: "lockeddoor", tooltip: "Opens from the other side."}
+			{ x:800, y:1729, type: "lockeddoor", tooltip: "Opens from the other side."},
+			{ x:2193, y:71, type: "lockeddoor", tooltip: "(Krat City Hall Key"}
 		]
 	},
 
