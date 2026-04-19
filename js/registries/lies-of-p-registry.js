@@ -759,8 +759,6 @@ const maps = [
             },
 		]
     },
-		]
-    },
     {
         id: "collapsingkrat",
         title: "Collapsing Krat",
