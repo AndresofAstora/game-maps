@@ -334,7 +334,7 @@ const maps = [
         page: "maps/malumdistrict.html",
         markers: [
 			{ x:1497, y:1639, type: "area", tooltip: "Path of the Pilgrim" },
-			{ x:108, y:2032, type: "area", tooltip: "Hotel Krat (Garden)" },
+			{ x:107, y:1988, type: "area", tooltip: "Hotel Krat (Garden)" },
             { x:1523, y:1421, type: "stargazer", tooltip: "Malum District" },
 			{ x:421, y:1709, type: "stargazer", tooltip: "Malum District Town Hall" },
 			{ x:768, y:1675, type: "crackscalling" },
@@ -381,7 +381,7 @@ const maps = [
 			{ x:1748, y:756, type: "defencepart", tooltip: "Arch Break Cartridge" },
 			{ x:1193, y:495, type: "weapon", tooltip: "Bone-Cutting Saw" },
 			{ x:825, y:748, type: "amulet", tooltip: "Patience Amulet (Enemy Drop)" },
-			{ x:108, y:2008, type: "lift" },
+			{ x:107, y:2018, type: "lift" },
 			{ x:706, y:1078, type: "ladder" },
 			{ x:940, y:935, type: "ladder" },
 			{ x:651, y:736, type: "ladder" },
