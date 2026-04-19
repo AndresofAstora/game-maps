@@ -657,7 +657,71 @@ const maps = [
         title: "Relic of Trismegistus",
         image: "relicoftrismegistus.webp",
         page: "maps/relicoftrismegistus.html",
-        markers: []
+        markers: [
+			{ x:458, y:167, type: "area", tooltip: "Hotel Krat" },
+			{ x:1051, y:317, type: "area", tooltip: "Black Seaside" },
+        	{ x:516, y:92, type: "stargazer", tooltip: "Relic of Trismegistus Entrance" },
+			{ x:428, y:1758, type: "stargazer", tooltip: "Relic of Trismegistus Combat Field" },
+			{ x:359, y:1472, type: "crackscalling" },
+			{ x:369, y:1081, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:460, y:1260, type: "consumable", tooltip: "Gemini's Iron Protection" },
+			{ x:541, y:260, type: "material", tooltip: "Dark Moon Moonstone of the Covenant" },
+			{ x:257, y:836, type: "material", tooltip: "Star Fragment" },
+			{ x:346, y:930, type: "material", tooltip: "Dark Moon Moonstone of the Covenant" },
+			{ x:551, y:1028, type: "material", tooltip: "Technique Crank" },
+			{ x:293, y:1064, type: "material", tooltip: "Half Moostone" },
+			{ x:182, y:1132, type: "material", tooltip: "Legion Caliber" },
+			{ x:445, y:1182, type: "material", tooltip: "Half Moonstone" },
+			{ x:899, y:1155, type: "material", tooltip: "Full Moonstone" },
+			{ x:116, y:1331, type: "collectable", tooltip: "Trinity Key" },
+			{ x:1107, y:403, type: "collectable", tooltip: "The Great Venigni and Pistris the Submarine" },
+			{ x:583, y:1142, type: "amulet", tooltip: "Iron Wall Amulet (Enemy Drop)" },
+			{ x:677, y:1167, type: "weapon", tooltip: "Cursed Knight's Halberd" },
+			{ x:537, y:873, type: "dimensionalbutterfly", tooltip: "Half Moonstone" },
+			{ x:500, y:942, type: "dimensionalbutterfly", tooltip: "Enchanced Alchemical Booster" },
+			{ x:612, y:926, type: "dimensionalbutterfly", tooltip: "Full Moonstone of the Covenant" },
+			{ x:715, y:1362, type: "tool", tooltip: "Great Venigni Collection" },
+			{ x:302, y:1171, type: "ladder" },
+			{
+				x:694, y:1400, type: "npc",
+				tooltip: {
+			        title: "Alidoro",
+			        items: []
+			    }
+			},
+			{
+                x:411, y:1635, type: "boss",
+                tooltip: {
+                    title: "Youngest of the Black Rabbit Brotherhood",
+                    items: []
+                }
+            },
+			{
+                x:370, y:1669, type: "boss",
+                tooltip: {
+                    title: "Battle Maniac of the Black Rabbit Brotherhood",
+                    items: []
+                }
+            },
+			{
+                x:434, y:1697, type: "boss",
+                tooltip: {
+                    title: "Eccentric of the Black Rabbit Brotherhood",
+                    items: []
+                }
+            },
+	    	{
+                x:398, y:1748, type: "boss",
+                tooltip: {
+                    title: "Eldest of the Black Rabbit Brotherhood",
+                    items: [
+						"Quartz"
+                    ]
+                }
+            },
+		]
+    },
+		]
     },
     {
         id: "kratcentralstation",
