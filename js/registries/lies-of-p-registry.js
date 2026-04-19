@@ -682,6 +682,7 @@ const maps = [
 			{ x:612, y:926, type: "dimensionalbutterfly", tooltip: "Full Moonstone of the Covenant" },
 			{ x:715, y:1362, type: "tool", tooltip: "Great Venigni Collection" },
 			{ x:302, y:1171, type: "ladder" },
+			{ x:477, y:182, type: "lift" },
 			{
 				x:694, y:1400, type: "npc",
 				tooltip: {
