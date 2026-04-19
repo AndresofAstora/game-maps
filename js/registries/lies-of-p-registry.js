@@ -686,7 +686,28 @@ const maps = [
 				x:694, y:1400, type: "npc",
 				tooltip: {
 			        title: "Alidoro",
-			        items: []
+			        items: [
+						"Arm of God Amulet (Reborn Champion's Ergo)",
+                        "Awakened God's Amulet (Fallen One's Ergo)",
+						"Conquering Amulet (King's Flame Ergo)",
+						"Dancing One's Amulet (Parade Leader's Ergo)",
+						"Etiquette (Broken Hero's Ergo)",
+						"Extreme Modification Amulet (Broken Hero's Ergo)",
+						"Frozen Feast (Reborn Champion's Ergo)",
+						"Ghost Walk Amulet (Puppet-Devouering Green Hunter's Ergo)",
+						"Holy Sword of the Ark (King's Flame Ergo)",
+						"Impregnable Fortress Amulet (Sad Zealot's Ergo)",
+						"Nameless One's Amulet (Twisted Angel's Ergo)",
+						"Noblesse Oblige (Fallen One's Ergo)",
+						"Piercing Hatred Amulet (Nameless Puppet's Ergo)",
+						"Proof of Humanity (Nameless Puppet's Ergo)",
+						"Puppet Ripper (Burnt-White King's Ergo)",
+						"Seven-Coil Spring Sword (Parade Leader's Ergo)",
+						"Trident of the Covenant (Twisted Angel's Ergo)",
+						"Triumvirate Amulet (Burnt-White King's Ergo)",
+						"Two Dragons Sword (Puppet-Devouering Green Hunter's Ergo)",
+						"Uroboro's Eye (Sad Zealot's Ergo)"
+					]
 			    }
 			},
 			{
@@ -719,8 +740,6 @@ const maps = [
                     ]
                 }
             },
-		]
-    },
 		]
     },
     {
