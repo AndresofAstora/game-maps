@@ -598,7 +598,53 @@ const maps = [
         title: "Rosa Isabelle Street",
         image: "rosaisabbellstreet.webp",
         page: "maps/rosaisabbellstreet.html",
-        markers: []
+        markers: [
+			{ x:256, y:2316, type: "area", tooltip: "Hotel Krat" },
+			{ x:277, y:63, type: "area", tooltip: "Estella Opera House" },
+			{ x:555, y:63, type: "area", tooltip: "Estella Opera House" },
+			{ x:227, y:1894, type: "stargazer", tooltip: "Rosa Isabelle Street Enterance" },
+			{ x:1495, y:419, type: "stargazer", tooltip: "Rosa Isabelle Street Culvert" },
+			{
+				x:266, y:1687, type: "npc",
+				tooltip: {
+			        title: "Old Lady at the Window",
+			        items: [
+						"Venigni Commemorative Coin"
+			        ]
+			    }
+			},
+			{
+				x:1586, y:354, type: "npc",
+				tooltip: {
+			        title: "Julian the Gentleman",
+			        items: [
+						"Wedding Ring",
+						"Sad"
+			        ]
+			    }
+			},
+			{
+				x:1781, y:930, type: "boss",
+				tooltip: {
+			        title: "White Lady",
+			        items: [
+						"The White Lady's Locket",
+						"The White Lady's Mask"
+			        ]
+			    }
+			},
+			{
+				x:414, y:384, type: "boss",
+				tooltip: {
+			        title: "Mad Clown Puppet",
+			        items: [
+						"Quartz"
+			        ]
+			    }
+			},
+		]
+	},
+		]
     },
     {
         id: "venignisworkshop",
@@ -627,7 +673,7 @@ const maps = [
         image: "barrenswamp.webp",
         page: "maps/barrenswamp.html",
         markers: [
-			{ x:1006, y:524, type: "area", tooltip: "Grand Exhibition" },
+			{ x:1006, y:524, type: "area", tooltip: "Grand Exhibition (Tram)" },
 			{ x:466, y:1232, type: "area", tooltip: "Hermit's Cave (Complete Hugo's questline)" },
 			{ x:462, y:3112, type: "area", tooltip: "Krat Central Station" },
 			{ x:1774, y:165, type: "area", tooltip: "Tower (Lower Floor)" },
@@ -714,7 +760,7 @@ const maps = [
 			{ x:1151, y:271, type: "collectable", tooltip: "Venigni's Krat Landmark Guide IV" },
 			{ x:2317, y:1938, type: "collectable", tooltip: "Experiment Report of Order - Test Subject 890" },
 			{ x:558, y:1663, type: "collectable", tooltip: "Sentry's Notebook" },
-			{ x:339, y:2784, type: "collectable", tooltip: "Frayed Notebook" },
+			{ x:439, y:2866, type: "collectable", tooltip: "Frayed Notebook" },
 			{ x:1689, y:1185, type: "weapon", tooltip: "Live Puppet's Axe" },
 			{ x:1588, y:2192, type: "weapon", tooltip: "City Longspear" },
 			{ x:1741, y:472, type: "defencepart", tooltip: "Belford Superior Insulation Converter" },
@@ -773,7 +819,7 @@ const maps = [
         page: "maps/thegrandexhibition.html",
         markers: [
 			{ x:535, y:3141, type: "area", tooltip: "Lorenzini Arcade" },
-			{ x:1700, y:325, type: "area", tooltip: "Barren Swamp" },
+			{ x:1700, y:325, type: "area", tooltip: "Barren Swamp (Tram)" },
         	{ x:1328, y:1855, type: "stargazer", tooltip: "Grand Exhibition Gallery" },
 			{ x:1330, y:685, type: "stargazer", tooltip: "Grand Exhibition Conference Room" },
 			{ x:958, y:817, type: "stargazer", tooltip: "Saintess of Mercy Statue" },
@@ -847,7 +893,7 @@ const maps = [
         page: "maps/relicoftrismegistus.html",
         markers: [
 			{ x:458, y:167, type: "area", tooltip: "Hotel Krat" },
-			{ x:1051, y:317, type: "area", tooltip: "Black Seaside" },
+			{ x:1051, y:317, type: "area", tooltip: "Black Seaside (Submarine)" },
         	{ x:516, y:92, type: "stargazer", tooltip: "Relic of Trismegistus Entrance" },
 			{ x:428, y:1758, type: "stargazer", tooltip: "Relic of Trismegistus Combat Field" },
 			{ x:359, y:1472, type: "crackscalling" },
