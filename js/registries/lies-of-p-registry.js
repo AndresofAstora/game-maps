@@ -74,16 +74,14 @@ const maps = [
             { x:532, y:1900, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1081, y:685, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
 			{ x:1149, y:1451, type: "lockeddoor", tooltip: "Opens from the other side." },
-			{ x:1053, y:948, type: "npc", tooltip: { title: "Wandering Merchant",
-                    items: [
+			{ x:1053, y:948, type: "npc", tooltip: { title: "Wandering Merchant", items: [
                         "Fable Catalyst",
                         "Throwing Cell",
 						"Electric Blitz Abrasive",
 						"Puppet's Saber",
 						"Wintry Rapier",
 						"Greatsword of Fate" ]}},
-	    	{ x:1392, y:318, type: "boss", tooltip: { title: "Parade Master",
-                    items: [
+	    	{ x:1392, y:318, type: "boss", tooltip: { title: "Parade Master", items: [
                         "Parade Master's Ergo",
                         "Quartz" ]}},]},
     {
@@ -144,11 +142,8 @@ const maps = [
 			{ x:2035, y:1073, type: "lift" },
 			{ x:800, y:1729, type: "lockeddoor", tooltip: "Opens from the other side."},
 			{ x:2193, y:71, type: "lockeddoor", tooltip: "(Krat City Hall Key"},
-			{
-				x:1885, y:1055, type: "npc",
-				tooltip: {
-			        title: "Wandering Merchant",
-			        items: [
+			{ x:2154, y:336, type: "npc", tooltip: "Geppetto" },
+			{ x:1885, y:1055, type: "npc", tooltip: { title: "Wandering Merchant", items: [
 			            "Attribute Resistance Ampoule",
 						"Legion Magazine",
 			            "Throwing Cell",
@@ -156,52 +151,17 @@ const maps = [
 						"Electric Blitz Abrasive",
 						"Gemini's Iron Protection",
 						"Gemini's Emergency Protection",
-						"Electric Coil Stick"
-			        ]
-			    }
-			},
-			{
-				x:1716, y:1634, type: "npc",
-				tooltip: {
-			        title: "Toma",
-			        items: [
-						"Radiant Ergo Fragment"
-			        ]
-			    }
-			},
-			{
-				x:2564, y:1455, type: "npc",
-				tooltip: {
-			        title: "Weeping Woman",
-			        items: [
+						"Electric Coil Stick" ]}},
+			{ x:1716, y:1634, type: "npc", tooltip: { title: "Toma", items: [
+						"Radiant Ergo Fragment" ]}},
+			{ x:2564, y:1455, type: "npc", tooltip: { title: "Weeping Woman", items: [
 						"Vivid Ergo Fragment",
-						"Feel"
-			        ]
-			    }
-			},
-			{
-				x:2154, y:336, type: "npc",
-				tooltip: {
-			        title: "Geppetto",
-			        items: [
-			        ]
-			    }
-			},
-			{
-				x:2182, y:422, type: "boss",
-				tooltip: {
-			        title: "Mad Donkey",
-			        items: [
+						"Feel" ]}},
+			{ x:2182, y:422, type: "boss", tooltip: { title: "Mad Donkey", items: [
 						"Krat City Hall Key",
 						"Enigma Assembly Tool",
 						"Mad Donkey's Hunting Apparel",
-						"Mad Donkey's Mask"
-			        ]
-			    }
-			},
-		]
-	},
-
+						"Mad Donkey's Mask" ]}},]},
     {
         id: "kratcityhall",
         title: "Krat City Hall",
