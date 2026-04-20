@@ -644,8 +644,6 @@ const maps = [
 			},
 		]
 	},
-		]
-    },
     {
         id: "venignisworkshop",
         title: "Venigni's Workshop",
