@@ -74,32 +74,18 @@ const maps = [
             { x:532, y:1900, type: "collectable", tooltip: "Krat Times Issue 183" },
             { x:1081, y:685, type: "collectable", tooltip: "Introducing the Parade Puppet!" },
 			{ x:1149, y:1451, type: "lockeddoor", tooltip: "Opens from the other side." },
-			{
-				x:1053, y:948, type: "npc",
-				tooltip: {
-                    title: "Wandering Merchant",
+			{ x:1053, y:948, type: "npc", tooltip: { title: "Wandering Merchant",
                     items: [
                         "Fable Catalyst",
                         "Throwing Cell",
 						"Electric Blitz Abrasive",
 						"Puppet's Saber",
 						"Wintry Rapier",
-						"Greatsword of Fate"
-                    ]
-                }
-            },
-	    	{
-                x:1392, y:318, type: "boss",
-                tooltip: {
-                    title: "Parade Master",
+						"Greatsword of Fate" ]}},
+	    	{ x:1392, y:318, type: "boss", tooltip: { title: "Parade Master",
                     items: [
                         "Parade Master's Ergo",
-                        "Quartz"
-                    ]
-                }
-            },
-        ]
-    },
+                        "Quartz" ]}},]},
     {
         id: "elysianboulevard",
         title: "Elysian Boulevard",
