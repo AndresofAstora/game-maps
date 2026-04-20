@@ -266,9 +266,9 @@ const maps = [
         image: "stfrangelicocathedrallibrary.webp",
         page: "maps/stfrangelicocathedrallibrary.html",
         markers: [
-			{ x:956, y:1584, type: "area", tooltip: "St Frangelico Cathedral Chapel" },
+			{ x:956, y:1584, type: "area", tooltip: "St. Frangelico Cathedral Chapel" },
 			{ x:2070, y:585, type: "area", tooltip: "Path of the Pilgrim" },
-			{ x:898, y:1362, type: "stargazer", tooltip: "St Frangelico Cathedral Library" },
+			{ x:898, y:1362, type: "stargazer", tooltip: "St. Frangelico Cathedral Library" },
 			{ x:1573, y:958, type: "stargazer", tooltip: "Archbishop's Altar" },
 			{ x:1200, y:932, type: "crackscalling" },
 			{ x:167, y:1106, type: "consumable", tooltip: "Dim Ergo Fragment" },
@@ -309,8 +309,8 @@ const maps = [
 				tooltip: {
 			        title: "Cecile",
 			        items: [
-						"Help: ",
-						"Kill: Fable Catalyst"
+						"Help - ",
+						"Kill - Fable Catalyst"
 			        ]
 			    }
 			},
