@@ -266,7 +266,7 @@ const maps = [
         image: "stfrangelicocathedrallibrary.webp",
         page: "maps/stfrangelicocathedrallibrary.html",
         markers: [
-			{ x:956, y:1584, type: "area", tooltip: "St. Frangelico Cathedral Chapel" },
+			{ x:955, y:1590, type: "area", tooltip: "St. Frangelico Cathedral Chapel" },
 			{ x:2070, y:585, type: "area", tooltip: "Path of the Pilgrim" },
 			{ x:898, y:1362, type: "stargazer", tooltip: "St. Frangelico Cathedral Library" },
 			{ x:1573, y:958, type: "stargazer", tooltip: "Archbishop's Altar" },
@@ -292,8 +292,8 @@ const maps = [
 			{ x:145, y:1601, type: "ladder" },
 			{ x:475, y:1299, type: "ladder" },
 			{ x:1593, y:589, type: "ladder" },
-			{ x:1003, y:378, type: "lift" },
-			{ x:2035, y:816, type: "lift" },
+			{ x:1004, y:380, type: "lift" },
+			{ x:2036, y:819, type: "lift" },
 			{ x:992, y:1120, type: "lockeddoor", tooltip: "Opens with lever." },
 			{
 				x:970, y:207, type: "npc",
@@ -759,7 +759,20 @@ const maps = [
         title: "Workshop Union Entrance",
         image: "workshopunionentrance.webp",
         page: "maps/workshopunionentrance.html",
-        markers: []
+        markers: [
+			{ x:369, y:1275, type: "area", tooltip: "Krat City Hall" },
+			{ x:1551, y:57, type: "area", tooltip: "Venigni's Workshop" },
+			{ x:351, y:864, type: "consumable", tooltip: "Throwing Cell" },
+			{ x:714, y:654, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:766, y:1196, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
+			{ x:1145, y:1163, type: "consumable", tooltip: "Special Resistance Ampoule" },
+			{ x:1085, y:1081, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1168, y:606, type: "consumable", tooltip: "Gemini's Emergency Protection" },
+			{ x:1488, y:203, type: "consumable", tooltip: "Legion Magazine" },
+			{ x:1905, y:6085, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:803, y:1238, type: "collectable", tooltip: "Miracle Cure" },
+			{ x:1843, y:515, type: "collectable", tooltip: "Trinity Key" }
+		]
     },
     {
         id: "moonlighttown",
