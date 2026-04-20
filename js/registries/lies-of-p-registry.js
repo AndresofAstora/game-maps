@@ -630,20 +630,20 @@ const maps = [
 			        items: [
 						"The White Lady's Locket",
 						"The White Lady's Mask"
-			        ]
-			    }
-			},
+                    ]
+                }
+            },
 			{
 				x:414, y:384, type: "boss",
 				tooltip: {
 			        title: "Mad Clown Puppet",
 			        items: [
 						"Quartz"
-			        ]
-			    }
-			},
+                    ]
+                }
+            },
 		]
-	},
+    },
     {
         id: "venignisworkshop",
         title: "Venigni's Workshop",
