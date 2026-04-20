@@ -172,7 +172,7 @@ const maps = [
             { x:1075, y:2104, type: "item", tooltip: "Scripture of Despair" },
             { x:1020, y:1931, type: "item", tooltip: "Quenching Acid" },
             { x:1320, y:906, type: "item", tooltip: "Glimpse of Hope" },
-            { x:1318, y:519, type: "item", tooltip: { title: "Items", items: [ "Inflamed Gland", "Nascent Tar" ]}},
+            { x:1318, y:519, type: "item", tooltip: { items: [ "Inflamed Gland", "Nascent Tar" ]}},
             { x:1868, y:2822, type: "inscription" },
             { x:456, y:2161, type: "inscription" },
             { x:1427, y:815, type: "inscription" },
