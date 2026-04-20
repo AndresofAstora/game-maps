@@ -779,7 +779,44 @@ const maps = [
         title: "Moonlight Town",
         image: "moonlighttown.webp",
         page: "maps/moonlighttown.html",
-        markers: []
+        markers: [
+			{ x:1758, y:886, type: "area", tooltip: "Venigni's Workshop" },
+			{ x:536, y:63, type: "area", tooltip: "Path of Misery (Railway)" },
+        	{ x:744, y:583, type: "stargazer", tooltip: "Moonlight Town" },
+			{ x:1510, y:761, type: "consumable", tooltip: "Fire Canister" },
+			{ x:1095, y:893, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:1001, y:1150, type: "consumable", tooltip: "Gemini's Iron Protection" },
+			{ x:781, y:1155, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:696, y:1171, type: "consumable", tooltip: "Special Purification Ampoule" },
+			{ x:711, y:1059, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:756, y:531, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
+			{ x:764, y:309, type: "consumable", tooltip: "Thermite" },
+			{ x:676, y:338, type: "consumable", tooltip: "Saw Blade" },
+			{ x:474, y:364, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:158, y:357, type: "consumable", tooltip: "Saw Blade" },
+			{ x:230, y:178, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:775, y:1241, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:120, y:419, type: "material", tooltip: "Star Fragment" },
+			{ x:0, y:0, type: "dimensionalbutterfly", tooltip: "" },
+			{ x:672, y:1036, type: "weapon", tooltip: "Big Pipe Wrench" },
+			{ x:642, y:967, type: "collectable", tooltip: "Moonlight Town Guide" },
+			{ x:161, y:522, type: "defencepart", tooltip: "Workshop Union Standard Corrosion Resistance Converter" },
+			{ x:1745, y:801, type: "ladder" },
+			{ x:794, y:1190, type: "ladder" },
+			{ x:690, y:1099, type: "ladder" },
+			{ x:648, y:1082, type: "ladder" },
+			{ x:576, y:671, type: "ladder" },
+			{
+                x:534, y:101, type: "npc",
+                tooltip: {
+                    title: "The Atoned",
+                    items: [
+						"Lie: Cable Railway Key",
+						"Do Nothing: Fight and receive Cable Railway Key + The Atoned's Mask"
+                    ]
+                }
+            },
+		]
     },
     {
         id: "barrenswamp",
