@@ -648,6 +648,7 @@ const maps = [
 			{ x:1546, y:356, type: "ladder" },
 			{ x:1651, y:270, type: "ladder" },
 			{ x:1697, y:276, type: "ladder" },
+			{ x:1697, y:276, type: "npc", tooltip: "Test Subject 826 (Second Location)" },
 			{
 				x:266, y:1687, type: "npc",
 				tooltip: {
