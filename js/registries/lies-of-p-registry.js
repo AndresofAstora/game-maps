@@ -265,7 +265,65 @@ const maps = [
         title: "St. Frangelico Cathedral Library",
         image: "stfrangelicocathedrallibrary.webp",
         page: "maps/stfrangelicocathedrallibrary.html",
-        markers: []
+        markers: [
+			{ x:956, y:1584, type: "area", tooltip: "St Frangelico Cathedral Chapel" },
+			{ x:2070, y:585, type: "area", tooltip: "Path of the Pilgrim" },
+			{ x:898, y:1362, type: "stargazer", tooltip: "St Frangelico Cathedral Library" },
+			{ x:1573, y:958, type: "stargazer", tooltip: "Archbishop's Altar" },
+			{ x:1200, y:932, type: "crackscalling" },
+			{ x:167, y:1106, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:439, y:734, type: "consumable", tooltip: "Attribute Resistance Ampoule" },
+			{ x:621, y:887, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:552, y:1273, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:1079, y:691, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1040, y:1054, type: "consumable", tooltip: "Resplendant Ergo Fragment" },
+			{ x:1129, y:1365, type: "consumable", tooltip: "Thermite" },
+			{ x:1820, y:197, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:1728, y:240, type: "consumable", tooltip: "Gemini's Emergency Protection" },
+			{ x:1554, y:415, type: "consumable", tooltip: "Special Resistance Ampoule" },
+			{ x:1449, y:767, type: "consumable", tooltip: "Fable Catalyst" },
+			{ x:2128, y:612, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:167, y:1221, type: "dimensionalbutterfly", tooltip: "Advance Crank" },
+			{ x:1364, y:230, type: "collectable", tooltip: "Archbishop's Holy Mark" },
+			{ x:1493, y:226, type: "collectable", tooltip: "Archbishop's Diary" },
+			{ x:232, y:1348, type: "material", tooltip: "Legion Caliber" },
+			{ x:760, y:931, type: "material", tooltip: "Crescent Moonstone" },
+			{ x:1413, y:188, type: "defencepart", tooltip: "Workshop Union Strengthening Frame" },
+			{ x:145, y:1601, type: "ladder" },
+			{ x:475, y:1299, type: "ladder" },
+			{ x:1593, y:589, type: "ladder" },
+			{ x:1003, y:378, type: "lift" },
+			{ x:2035, y:816, type: "lift" },
+			{ x:992, y:1120, type: "lockeddoor", tooltip: "Opens with lever." },
+			{
+				x:970, y:207, type: "npc",
+				tooltip: {
+			        title: "Alidoro",
+			        items: [
+						"Fire Abrasive"
+			        ]
+			    }
+			},
+			{
+				x:617, y:1515, type: "npc",
+				tooltip: {
+			        title: "Cecile",
+			        items: [
+						"Help: ",
+						"Kill: Fable Catalyst"
+			        ]
+			    }
+			},
+			{
+				x:1446, y:958, type: "boss",
+				tooltip: {
+			        title: "Arch Bishop Andreus",
+			        items: [
+						"Twisted Angel's Ergo"
+			        ]
+			    }
+			},
+		]
     },
     {
         id: "pathofthepilgrim",
