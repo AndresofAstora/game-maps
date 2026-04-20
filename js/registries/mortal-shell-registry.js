@@ -56,7 +56,7 @@ const maps = [
             { x:9516, y:7087, type: "boss", tooltip: "Grisha (Mist)" },
             { x:3899, y:8383, type: "boss", tooltip: "Ven Noctivagu" },
             { x:4297, y:3450, type: "chest", tooltip: "Mechanical Spike" },
-            { x:5319, y:3698, type: "chest", tooltip: "Nascent Tar + Rotten Food" },
+            { x:5319, y:3698, type: "chest", tooltip: { title: "Chest", items: [ "Nascent Tar", "Rotten Food" ]}},
             { x:8577, y:2053, type: "chest", tooltip: "Large Bolt + Unknown Effigy" },
             { x:8848, y:3990, type: "chest", tooltip: "Superior Moonshine + Unknown Effigy" },
             { x:9249, y:7191, type: "chest", tooltip: "Superior Moonshine + Bag of Tar + Baguette" },
