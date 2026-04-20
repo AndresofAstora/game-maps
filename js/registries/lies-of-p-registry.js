@@ -641,7 +641,7 @@ const maps = [
 						"Quartz"
 			        ]
 			    }
-			},
+			}
 		]
 	},
     {
