@@ -141,7 +141,7 @@ const maps = [
 			{ x:2513, y:1445, type: "ladder" },
 			{ x:2035, y:1073, type: "lift" },
 			{ x:800, y:1729, type: "lockeddoor", tooltip: "Opens from the other side."},
-			{ x:2193, y:71, type: "lockeddoor", tooltip: "(Krat City Hall Key"},
+			{ x:2193, y:71, type: "lockeddoor", tooltip: "(Krat City Hall Key)"},
 			{ x:2154, y:336, type: "npc", tooltip: "Geppetto" },
 			{ x:1885, y:1055, type: "npc", tooltip: { title: "Wandering Merchant", items: [
 			            "Attribute Resistance Ampoule",
@@ -184,21 +184,12 @@ const maps = [
             { x:562, y:615, type: "crackscalling" },
 			{ x:382, y:1753, type: "lockeddoor", tooltip: "Opens from the other side." },
             { x:899, y:354, type: "lockeddoor", tooltip: "Krat City Hall Courtyard Key (Get from Geppetto at Hotel Krat)" },
-	    {
-                x:603, y:270, type: "boss",
-                tooltip: {
-                    title: "Scrapped Watchman",
-                    items: [
+	    	{ x:603, y:270, type: "boss", tooltip: { title: "Scrapped Watchman", items: [
                         "Broken Hero's Ergo",
                         "Small Wooden Officer Puppet",
 						"Overcharged Starage Battery",
 						"Quartz",
-						"Core"
-                    ]
-                }
-            },
-		]
-    },
+						"Core" ]}},]},
     {
         id: "stfrangelicocathedralchapel",
         title: "St. Frangelico Cathedral Chapel",
@@ -240,37 +231,14 @@ const maps = [
 			{ x:1593, y:589, type: "ladder" },
 			{ x:1004, y:380, type: "lift" },
 			{ x:2036, y:819, type: "lift" },
-			{ x:992, y:1120, type: "lockeddoor", tooltip: "Opens with lever." },
-			{
-				x:970, y:207, type: "npc",
-				tooltip: {
-			        title: "Alidoro",
-			        items: [
-						"Fire Abrasive"
-			        ]
-			    }
-			},
-			{
-				x:617, y:1515, type: "npc",
-				tooltip: {
-			        title: "Cecile",
-			        items: [
+			{ x:992, y:1120, type: "lockeddoor", tooltip: "(Lever)" },
+			{ x:970, y:207, type: "npc", tooltip: { title: "Alidoro", items: [
+						"Fire Abrasive" ]}},
+			{x:617, y:1515, type: "npc", tooltip: { title: "Cecile", items: [
 						"Help - ",
-						"Kill - Fable Catalyst"
-			        ]
-			    }
-			},
-			{
-				x:1446, y:958, type: "boss",
-				tooltip: {
-			        title: "Arch Bishop Andreus",
-			        items: [
-						"Twisted Angel's Ergo"
-			        ]
-			    }
-			},
-		]
-    },
+						"Kill - Fable Catalyst" ]}},
+			{ x:1446, y:958, type: "boss", tooltip: { title: "Arch Bishop Andreus", items: [
+						"Twisted Angel's Ergo" ]}},]},
     {
         id: "pathofthepilgrim",
         title: "Path of the Pilgrim",
@@ -320,17 +288,8 @@ const maps = [
 			{ x:1171, y:1052, type: "ladder" },
 			{ x:1125, y:193, type: "ladder" },
 			{ x:1441, y:1960, type: "lockeddoor", tooltip: "(Robber's Shack Key)" },
-			{
-				x:1496, y:1855, type: "npc",
-				tooltip: {
-			        title: "Slum Resident",
-			        items: [
-						"Robber's Shack Key"
-			        ]
-			    }
-			},
-		]
-    },
+			{ x:1496, y:1855, type: "npc", tooltip: { title: "Slum Resident", items: [
+						"Robber's Shack Key" ]}},]},
     {
         id: "malumdistrict",
         title: "Malum District",
@@ -395,29 +354,12 @@ const maps = [
 			{ x:1613, y:840, type: "ladder" },
 			{ x:1542, y:1124, type: "ladder" },
 			{ x:1509, y:1323, type: "lockeddoor", tooltip: "Opens from the other side." },
-			{
-				x:1471, y:1186, type: "npc",
-				tooltip: {
-			        title: "Malum District Black Market Trader",
-			        items: [
+			{ x:1471, y:1186, type: "npc", tooltip: { title: "Malum District Black Market Trader", items: [
 						"Bramble Curved Sword",
-						"Someday"
-			        ]
-			    }
-			},
-	    	{
-                x:493, y:1676, type: "boss",
-                tooltip: {
-                    title: "Eldest of the Black Rabbit Brotherhood",
-                    items: [
+						"Someday" ]}},
+	    	{ x:493, y:1676, type: "boss", tooltip: { title: "Eldest of the Black Rabbit Brotherhood", items: [
                         "Resplendant Ergo Chunk",
-						"Taunt"
-                    ]
-                }
-            },
-		]
-		
-    },
+						"Taunt" ]}},]},
     {
         id: "blackseaside",
         title: "Black Seaside",
@@ -460,17 +402,8 @@ const maps = [
 			{ x:621, y:958, type: "material", tooltip: "Hidden Moonstone" },
 			{ x:451, y:599, type: "material", tooltip: "Star Fragment" },
             { x:393, y:677, type: "collectable", tooltip: "So Said Pistris II" },
-			{
-                x:371, y:194, type: "boss",
-                tooltip: {
-                    title: "Door Guardian",
-                    items: [
-                        "High-level Alchemist Badge"
-                    ]
-                }
-            },
-		]
-    },
+			{ x:371, y:194, type: "boss", tooltip: { title: "Door Guardian", items: [
+                        "High-level Alchemist Badge" ]}},]},
     {
         id: "lorenziniarcade",
         title: "Lorenzini Arcade",
@@ -518,23 +451,14 @@ const maps = [
 			{ x:822, y:2259, type: "dimensionalbutterfly", tooltip: "Dark Moon Moonstone of the Covenant" },
 			{ x:285, y:2463, type: "dimensionalbutterfly", tooltip: "Alchemical Booster" },
 			{ x:2100, y:573, type: "ladder" },
-			{
-                x:1886, y:1944, type: "npc",
-                tooltip: {
-                    title: "Wandering Merchant",
-                    items: [
+			{ x:1886, y:1944, type: "npc", tooltip: { title: "Wandering Merchant", items: [
                         "Attribute Purification Ampoule",
                         "Special Purification Ampoule",
 						"Thermite",
 						"Fire Canister",
 						"Fire Abrasive",
 						"Circular Electric Chainsaw",
-						"Indomitable Amulet"
-                    ]
-                }
-            },
-		]
-    },
+						"Indomitable Amulet" ]}},]},
     {
         id: "estellaoperahouse",
         title: "Estella Opera House",
@@ -575,28 +499,12 @@ const maps = [
 			{ x:760, y:1131, type: "ladder" },
 			{ x:1, y:1, type: "lockeddoor", tooltip: "..." },
             { x:2, y:2, type: "lockeddoor", tooltip: "..." },
-			{
-				x:944, y:908, type: "npc",
-				tooltip: {
-			        title: "Adelina",
-			        items: [
-						"Red Actress's Locket"
-			        ]
-			    }
-			},
-	    	{
-                x:500, y:311, type: "boss",
-                tooltip: {
-                    title: "King of Puppets",
-                    items: [
+			{ x:944, y:908, type: "npc", tooltip: { title: "Adelina", items: [
+						"Red Actress's Locket" ]}},
+	    	{ x:500, y:311, type: "boss", tooltip: { title: "King of Puppets", items: [
                         "Burnt-White King's Ergo",
                         "Puppet Prince's Formal Dress",
-						"Someone's Necklace"
-                    ]
-                }
-            },
-		]
-    },
+						"Someone's Necklace" ]}},]},
     {
         id: "rosaisabbellstreet",
         title: "Rosa Isabelle Street",
@@ -653,46 +561,16 @@ const maps = [
 			{ x:1651, y:270, type: "ladder" },
 			{ x:1697, y:276, type: "ladder" },
 			{ x:415, y:887, type: "npc", tooltip: "Test Subject 826 (Second Location)" },
-			{
-				x:266, y:1687, type: "npc",
-				tooltip: {
-			        title: "Old Lady at the Window",
-			        items: [
-						"Venigni Commemorative Coin"
-			        ]
-			    }
-			},
-			{
-				x:1586, y:354, type: "npc",
-				tooltip: {
-			        title: "Julian the Gentleman",
-			        items: [
+			{ x:266, y:1687, type: "npc", tooltip: { title: "Old Lady at the Window", items: [
+						"Venigni Commemorative Coin" ]}},
+			{ x:1586, y:354, type: "npc", tooltip: { title: "Julian the Gentleman", items: [
 						"Wedding Ring",
-						"Sad"
-			        ]
-			    }
-			},
-			{
-				x:1781, y:930, type: "boss",
-				tooltip: {
-			        title: "White Lady",
-			        items: [
+						"Sad" ]}},
+			{ x:1781, y:930, type: "boss", tooltip: { title: "White Lady", items: [
 						"The White Lady's Locket",
-						"The White Lady's Mask"
-                    ]
-                }
-            },
-			{
-				x:414, y:384, type: "boss",
-				tooltip: {
-			        title: "Mad Clown Puppet",
-			        items: [
-						"Quartz"
-                    ]
-                }
-            },
-		]
-    },
+						"The White Lady's Mask" ]}},
+			{ x:414, y:384, type: "boss", tooltip: { title: "Mad Clown Puppet", items: [
+						"Quartz" ]}},]},
     {
         id: "venignisworkshop",
         title: "Venigni's Workshop",
@@ -753,18 +631,9 @@ const maps = [
 			{ x:690, y:1099, type: "ladder" },
 			{ x:648, y:1082, type: "ladder" },
 			{ x:576, y:671, type: "ladder" },
-			{
-                x:534, y:101, type: "npc",
-                tooltip: {
-                    title: "The Atoned",
-                    items: [
+			{ x:534, y:101, type: "npc", tooltip: { title: "The Atoned", items: [
 						"Lie: Cable Railway Key",
-						"Do Nothing: Fight and receive Cable Railway Key + The Atoned's Mask"
-                    ]
-                }
-            },
-		]
-    },
+						"Do Nothing: Fight to receive Key + The Atoned's Mask" ]}},]},
     {
         id: "barrenswamp",
         title: "Barren Swamp",
@@ -882,27 +751,11 @@ const maps = [
 			{ x:2543, y:2627, type: "ladder" },
 			{ x:468, y:2998, type: "ladder" },
 			{ x:820, y:2815, type: "ladder" },
-			{
-				x:2290, y:1876, type: "boss",
-				tooltip: {
-			        title: "Owl Doctor",
-			        items: [
-						"Owl Doctor's Mask"
-					]
-			    }
-			},
-	    	{
-                x:381, y:2498, type: "boss",
-                tooltip: {
-                    title: "Green Monster of the Swamp",
-                    items: [
+			{ x:2290, y:1876, type: "boss", tooltip: { title: "Owl Doctor", items: [
+						"Owl Doctor's Mask" ]}},
+	    	{ x:381, y:2498, type: "boss", tooltip: { title: "Green Monster of the Swamp", items: [
 						"Puppet-Devourering Green Hunter's Ergo",
-						"Golden Ergo"
-                    ]
-                }
-            },
-		]
-    },
+						"Golden Ergo" ]}},]},
     {
         id: "collapsingkrat",
         title: "Collapsing Krat",
@@ -966,24 +819,9 @@ const maps = [
 			{ x:693, y:1627, type: "ladder" },
 			{ x:1500, y:1832, type: "ladder" },
 			{ x:1330, y:1427, type: "ladder" },
-			{
-				x:970, y:713, type: "npc",
-				tooltip: {
-			        title: "Sophia",
-			        items: []
-			    }
-			},
-	    	{
-                x:1330, y:591, type: "boss",
-                tooltip: {
-                    title: "Champion Victor",
-                    items: [
-						"Reborn Champion's Ergo"
-                    ]
-                }
-            },
-		]
-    },
+			{ x:970, y:713, type: "npc", tooltip: "Sophia" },
+	    	{ x:1330, y:591, type: "boss", tooltip: { title: "Champion Victor", items: [
+						"Reborn Champion's Ergo" ]}},]},
     {
         id: "relicoftrismegistus",
         title: "Relic of Trismegistus",
@@ -1015,45 +853,12 @@ const maps = [
 			{ x:715, y:1362, type: "tool", tooltip: "Great Venigni Collection" },
 			{ x:302, y:1171, type: "ladder" },
 			{ x:477, y:182, type: "lift" },
-			{
-				x:694, y:1400, type: "npc",
-				tooltip: {
-			        title: "Alidoro (Boss Ergo Trader)",
-			        items: []
-			    }
-			},
-			{
-                x:414, y:1660, type: "boss",
-                tooltip: {
-                    title: "Youngest of the Black Rabbit Brotherhood",
-                    items: []
-                }
-            },
-			{
-                x:370, y:1669, type: "boss",
-                tooltip: {
-                    title: "Battle Maniac of the Black Rabbit Brotherhood",
-                    items: []
-                }
-            },
-			{
-                x:434, y:1697, type: "boss",
-                tooltip: {
-                    title: "Eccentric of the Black Rabbit Brotherhood",
-                    items: []
-                }
-            },
-	    	{
-                x:389, y:1706, type: "boss",
-                tooltip: {
-                    title: "Eldest of the Black Rabbit Brotherhood",
-                    items: [
-						"Quartz"
-                    ]
-                }
-            },
-		]
-    },
+			{ x:694, y:1400, type: "npc", tooltip: "Alidoro (Boss Ergo Trader)" },
+			{ x:414, y:1660, type: "boss", tooltip: { title: "Youngest of the Black Rabbit Brotherhood" },
+			{ x:370, y:1669, type: "boss", tooltip: { title: "Battle Maniac of the Black Rabbit Brotherhood" },
+			{ x:434, y:1697, type: "boss", tooltip: { title: "Eccentric of the Black Rabbit Brotherhood" },
+	    	{ x:389, y:1706, type: "boss", tooltip: { title: "Eldest of the Black Rabbit Brotherhood", items: [
+						"Quartz" ]}},]},
     {
         id: "kratcentralstation",
         title: "Krat Central Station",
@@ -1074,9 +879,7 @@ const maps = [
             { x:570, y:1536, type: "weapon", tooltip: "Starter Weapon" },
             { x:1586, y:1036, type: "defencepart", tooltip: "Workshop Union Lightweight Frame (Enemy Drop)" },
             { x:1072, y:1248, type: "collectable", tooltip: "Passenger's Note" },
-            { x:688, y:388, type: "lockeddoor", tooltip: "Krat Central Station Main Entrance Key"}
-		]
-    },
+            { x:688, y:388, type: "lockeddoor", tooltip: "Krat Central Station Main Entrance Key"}]},
     {
         id: "kratcentralstationplatform",
         title: "Krat Central Station Platform",
@@ -1139,27 +942,14 @@ const maps = [
 			{ x:1050, y:805, type: "ladder" },
 			{ x:2279, y:395, type: "ladder" },
 			{ x:1905, y:1081, type: "ladder" },
-			{
-				x:3065, y:2368, type: "npc",
-				tooltip: {
-			        title: "Wandering Merchant",
-			        items: [
+			{ x:3065, y:2368, type: "npc", tooltip: { title: "Wandering Merchant", items: [
 						"Inventory???"
 			        ]
 			    }
 			},
-	    	{
-                x:2655, y:1238, type: "boss",
-                tooltip: {
-                    title: "Robber Weasel",
-                    items: [
+	    	{ x:2655, y:1238, type: "boss", tooltip: { title: "Robber Weasel", items: [
                         "Robber Weasel's Mask",
-						"Robber Weasel's Hunting Apparel"
-                    ]
-                }
-            },
-		]
-    },
+						"Robber Weasel's Hunting Apparel" ]}},]},
     {
         id: "hotelkratentrance",
         title: "Hotel Krat Entrance",
@@ -1171,9 +961,7 @@ const maps = [
 	    	{ x:431, y:731, type: "consumable", tooltip: "Fable Catalyst" },
             { x:258, y:319, type: "consumable", tooltip: "Dim Ergo Fragment" },
 			{ x:373, y:148, type: "consumable", tooltip: "Dim Ergo Fragment" },
-			{ x:1272, y:231, type: "material", tooltip: "Hidden Moonstone" }
-		]
-    },
+			{ x:1272, y:231, type: "material", tooltip: "Hidden Moonstone" }]},
     {
         id: "hermitscave",
         title: "Hermit's Cave",
@@ -1205,9 +993,7 @@ const maps = [
             { x:506, y:993, type: "ladder" },
             { x:690, y:990, type: "ladder" },
             { x:749, y:791, type: "ladder" },
-            { x:739, y:377, type: "ladder" }
-        ]
-    }
+            { x:739, y:377, type: "ladder" }]}
 ];
 
 const stageOrder = maps.map((map) => map.id);
