@@ -854,9 +854,9 @@ const maps = [
 			{ x:302, y:1171, type: "ladder" },
 			{ x:477, y:182, type: "lift" },
 			{ x:694, y:1400, type: "npc", tooltip: "Alidoro (Boss Ergo Trader)" },
-			{ x:414, y:1660, type: "boss", tooltip: { title: "Youngest of the Black Rabbit Brotherhood" },
-			{ x:370, y:1669, type: "boss", tooltip: { title: "Battle Maniac of the Black Rabbit Brotherhood" },
-			{ x:434, y:1697, type: "boss", tooltip: { title: "Eccentric of the Black Rabbit Brotherhood" },
+			{ x:414, y:1660, type: "boss", tooltip: "Youngest of the Black Rabbit Brotherhood" },
+			{ x:370, y:1669, type: "boss", tooltip: "Battle Maniac of the Black Rabbit Brotherhood" },
+			{ x:434, y:1697, type: "boss", tooltip: "Eccentric of the Black Rabbit Brotherhood" },
 	    	{ x:389, y:1706, type: "boss", tooltip: { title: "Eldest of the Black Rabbit Brotherhood", items: [
 						"Quartz" ]}},]},
     {
