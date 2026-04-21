@@ -630,7 +630,7 @@ const maps = [
 			{ x:2112, y:1339, type: "defencepart", tooltip: "Belford Shock Cartridge" },
 			{ x:2246, y:1851, type: "ladder" },
 			{ x:2204, y:1818, type: "ladder" },
-			{ x:1901, y:1558, type: "ladder" {,
+			{ x:1901, y:1558, type: "ladder" },
 			{ x:2161, y:1173, type: "ladder" },
 			{ x:3183, y:1185, type: "ladder" },
 			{ x:2935, y:1185, type: "ladder" },
