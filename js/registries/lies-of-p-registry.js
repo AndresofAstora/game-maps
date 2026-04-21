@@ -608,7 +608,7 @@ const maps = [
 			{ x:1068, y:1015, type: "consumable", tooltip: "Gemini's Iron Protection" },
 			{ x:1067, y:763, type: "consumable", tooltip: "Attribute Purification Ampoule" },
 			{ x:1173, y:833, type: "consumable", tooltip: "Dim Ergo Fragment" },
-			{ x:3996, y:1741, type: "dimesionalbutterfly", tooltip: "Hidden Moonstone" },
+			{ x:3996, y:1741, type: "dimensionalbutterfly", tooltip: "Hidden Moonstone" },
 			{ x:1979, y:1152, type: "material", tooltip: "Hidden Moonstone" },
 			{ x:3492, y:886, type: "material", tooltip: "Legion Caliber" },
 			{ x:3968, y:1987, type: "material", tooltip: "Hidden Moonstone" },
