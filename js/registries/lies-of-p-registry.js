@@ -871,6 +871,13 @@ const maps = [
 	    	{ x:381, y:2498, type: "boss", tooltip: { title: "Green Monster of the Swamp", items: [
 						"Puppet-Devourering Green Hunter's Ergo",
 						"Golden Ergo" ]}},]},
+	{
+        id: "pathofmisery",
+        title: "Path of Misery",
+        image: "pathofmisery.webp",
+        page: "maps/pathofmisery.html",
+        markers: []
+    },
     {
         id: "collapsingkrat",
         title: "Collapsing Krat",
