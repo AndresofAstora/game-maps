@@ -532,8 +532,7 @@ const maps = [
 			{ x:819, y:1281, type: "ladder" },
 			{ x:819, y:1159, type: "ladder" },
 			{ x:760, y:1131, type: "ladder" },
-			{ x:1, y:1, type: "lockeddoor", tooltip: "..." },
-            { x:2, y:2, type: "lockeddoor", tooltip: "..." },
+			{ x:1722, y:813, type: "lockeddoor", tooltip: "(Trinity Key)" },
 			{ x:944, y:908, type: "npc", tooltip: { title: "Adelina", items: [
 						"Red Actress's Locket" ]}},
 	    	{ x:500, y:311, type: "boss", tooltip: { title: "King of Puppets", items: [
@@ -1117,6 +1116,7 @@ const maps = [
 			{ x:1050, y:805, type: "ladder" },
 			{ x:2279, y:395, type: "ladder" },
 			{ x:1905, y:1081, type: "ladder" },
+			{ x:3030, y:594, type: "lockeddoor", tooltip: "(Trinity Key)" },
 			{ x:1360, y:1385, type: "npc", tooltip: { title: "Infected Man", items: [
 						"Atkinson's Letter" ]}},
 			{ x:3065, y:2368, type: "npc", tooltip: { title: "Wandering Merchant", items: [
