@@ -1001,6 +1001,7 @@ const maps = [
 			{ x:1500, y:1832, type: "ladder" },
 			{ x:1330, y:1427, type: "ladder" },
 			{ x:970, y:713, type: "npc", tooltip: "Sophia" },
+			{ x:1255, y:1870, type: "npc", tooltip: "Belle" },
 	    	{ x:1330, y:591, type: "boss", tooltip: { title: "Champion Victor", items: [
 						"Reborn Champion's Ergo" ]}},]},
     {
@@ -1062,13 +1063,6 @@ const maps = [
             { x:1072, y:1248, type: "collectable", tooltip: "Passenger's Note" },
             { x:688, y:388, type: "lockeddoor", tooltip: "Krat Central Station Main Entrance Key"}]},
     {
-        id: "kratcentralstationplatform",
-        title: "Krat Central Station Platform",
-        image: "kratcentralstationplatform.webp",
-        page: "maps/kratcentralstationplatform.html",
-        markers: []
-    },
-    {
         id: "kratcentralstationreturn",
         title: "Krat Central Station Return",
         image: "kratcentralstationreturn.webp",
@@ -1123,11 +1117,10 @@ const maps = [
 			{ x:1050, y:805, type: "ladder" },
 			{ x:2279, y:395, type: "ladder" },
 			{ x:1905, y:1081, type: "ladder" },
+			{ x:1360, y:1385, type: "npc", tooltip: { title: "Infected Man", items: [
+						"Atkinson's Letter" ]}},
 			{ x:3065, y:2368, type: "npc", tooltip: { title: "Wandering Merchant", items: [
-						"Inventory???"
-			        ]
-			    }
-			},
+						"Inventory???" ]}},
 	    	{ x:2655, y:1238, type: "boss", tooltip: { title: "Robber Weasel", items: [
                         "Robber Weasel's Mask",
 						"Robber Weasel's Hunting Apparel" ]}},]},
