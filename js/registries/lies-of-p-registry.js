@@ -876,8 +876,24 @@ const maps = [
         title: "Path of Misery",
         image: "pathofmisery.webp",
         page: "maps/pathofmisery.html",
-        markers: []
-    },
+        markers: [
+			{ x:1255, y:500, type: "area", tooltip: "Moonlight Town" },
+			{ x:123, y:1953, type: "area", tooltip: "St. Frangelio Cathedral Chapel" },
+        	{ x:1279, y:352, type: "stargazer", tooltip: "Path of Misery" },
+			{ x:1304, y:411, type: "consumable", tooltip: "Vivid Ergo Fragment" },
+			{ x:975, y:476, type: "consumable", tooltip: "Radiant Ergo Fragment" },
+			{ x:904, y:553, type: "consumable", tooltip: "Venigni's Urgent Repair Tool" },
+			{ x:802, y:1209, type: "consumable", tooltip: "Sawtoothed Wheel" },
+			{ x:378, y:1188, type: "consumable", tooltip: "Fire Abrasive" },
+			{ x:150, y:1631, type: "consumable", tooltip: "Dim Ergo Fragment" },
+			{ x:210, y:1881, type: "consumable", tooltip: "Attribute Purification Ampoule" },
+			{ x:960, y:153, type: "material", tooltip: "Hidden Moonstone" },
+			{ x:350, y:1068, type: "collectable", tooltip: "Woman's Prayer" },
+			{ x:486, y:820, type: "defencepart", tooltip: "Belford Break Cartridge" },
+			{ x:464, y:852, type: "npc", tooltip: { title: "Giangio", items: [
+					"Cube",
+					"Guillaume's Ballad",
+					"Recovery Wishstone",]}},]},
     {
         id: "collapsingkrat",
         title: "Collapsing Krat",
